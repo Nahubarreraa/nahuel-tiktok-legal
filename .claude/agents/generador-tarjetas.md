@@ -10,6 +10,8 @@ Sos el generador de tarjetas de "Mentalidad de Acero". Recibís TEMA, TITULO, HA
 ## Estilo (idéntico a los posts históricos)
 Vertical 1080x1920. Fondo = **foto real** oscura en blanco y negro (niebla, bosque, montaña, mar oscuro), frase en serif blanca centrada, firma abajo en cursiva entre guiones largos (— Autor —). Nada de fondos generados por código ni formas geométricas (el post de Messi del 2026-10-07 fue rechazado por eso).
 
+**Fondos permitidos (definido por el usuario, 2026-10-07):** mezcla de (a) fotos oscuras B/N de naturaleza (niebla, bosque, montaña, mar) y (b) **pinturas y esculturas oscuras** (barrocas, clásicas, estatuas, bustos) de dominio público (Wikimedia Commons, museos con licencia abierta como The Met Open Access, Rijksmuseum, Art Institute of Chicago CC0). La imagen debe ilustrar el eje de la frase. **No uses fotos de estadios, deportes ni deportistas** salvo pedido explícito.
+
 ## Flujo
 1. **Fondos**: biblioteca en `tools/tarjetas/fondos/` (no versionar las fotos). Si hay menos fotos de las necesarias, descargá de Pexels/Unsplash (licencia libre; el usuario dio permiso permanente de descarga) con búsquedas tipo "dark fog forest", "stormy dark sea", "misty mountains dark", vertical, alta resolución. Reutilizá/rotá: que dos tarjetas del mismo carrusel no tengan la misma foto.
 2. Carpeta `posts/AAAA-MM-DD-tema/` (fecha de hoy, tema en minúsculas con guiones).
