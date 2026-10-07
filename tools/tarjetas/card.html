@@ -16,5 +16,5 @@ html,body{margin:0;width:1080px;height:1920px;background:#000;overflow:hidden}
 const k=window.CARDS[+(location.hash.slice(1)||0)];
 const long=k.q.length>95;
 document.getElementById("c").innerHTML=
- `<img src="${k.bg}"><div class="v"></div><div class="q${long?' sm':''}">${k.q}</div>${k.a?`<div class="a">— ${k.a} —</div>`:''}`;
+ `<img src="${k.bg}"><div class="v"></div><div class="q${long?' sm':''}"><span>${k.q}</span></div>${k.a?`<div class="a">— ${k.a} —</div>`:''}`;
 </script></body></html>
