@@ -20,3 +20,9 @@ Sitio estático mínimo con los documentos legales (términos y política de pri
 - HTML plano con CSS inline en cada página, mismo estilo (fondo `#f7f5f0`, texto `#22201b`, enlaces `#7a5c2e`, ancho máx. 680px). Mantener ese estilo en páginas nuevas.
 - Contacto publicado: barreranahuel269@gmail.com.
 - Si cambian los permisos de la app de TikTok o se agrega un servicio intermediario, actualizar la sección "Datos a los que accede" / "Dónde se almacenan" de `privacidad.html`.
+
+## Agentes (flujo de carrusel de TikTok)
+
+- Subagentes en `.claude/agents/`: `investigador-temas` → `generador-tarjetas` → `publicador-tiktok` (todos Sonnet). Los coordina el agente global `orquestador` (`~/.claude/agents/orquestador.md`), que también puede crear subagentes nuevos.
+- `tools/tarjetas/` tiene la plantilla y el script de render de tarjetas (`render.ps1`); los fondos (`tools/tarjetas/fondos/`) no se versionan.
+- Reglas de contenido: frases motivadoras contemporáneas, cohesión total con un tema de actualidad, citas verificadas, sin autores antiguos de relleno.
