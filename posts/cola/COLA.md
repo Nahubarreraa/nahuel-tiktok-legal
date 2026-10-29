@@ -6,7 +6,7 @@ Cuando el usuario diga "subí": tomá el primer post con estado `PENDIENTE`, sub
 |---|---|---|---|---|
 | 01 | `posts/cola/01-rutina` | Lo que me cambió la vida fue aburrido | Guardalo para cuando quieras abandonar la rutina #mentalidad #disciplina #constancia #motivacion #parati #fyp | SUBIDO 2026-10-29 |
 | 02 | `posts/cola/02-circulo` | Si sos el mejor de tu mesa, buscá otra mesa | Guardalo y pensá a quién tenés alrededor #mentalidad #crecimiento #circulo #motivacion #parati #fyp | SUBIDO 2026-10-29 |
-| 03 | `posts/cola/03-fallar` | Fallé tantas veces que el miedo dejó de impresionarme | Guardalo para tu próximo intento #mentalidad #fracaso #resiliencia #motivacion #parati #fyp | PENDIENTE |
+| 03 | `posts/cola/03-fallar` | Fallé tantas veces que el miedo dejó de impresionarme | Guardalo para tu próximo intento #mentalidad #fracaso #resiliencia #motivacion #parati #fyp | SUBIDO 2026-10-29 |
 | 04 | `posts/cola/04-paciencia` | Crecer es lento. Rendirse es rápido. | Guardalo para cuando sientas que no avanzás #mentalidad #paciencia #constancia #motivacion #parati #fyp | PENDIENTE |
 | 05 | `posts/cola/05-resolver` | No te pagan por lo que sabés, te pagan por lo que resolvés | Guardalo antes de pedir tu próximo aumento #mentalidad #dinero #trabajo #valor #parati #fyp | PENDIENTE |
 | 06 | `posts/cola/06-atencion` | Tu atención es lo más caro que tenés | Guardalo y soltá el celular un rato #mentalidad #atencion #enfoque #motivacion #parati #fyp | PENDIENTE |
