@@ -26,3 +26,7 @@ Sitio estático mínimo con los documentos legales (términos y política de pri
 - Subagentes en `.claude/agents/`: `investigador-temas` → `generador-tarjetas` → `publicador-tiktok` (todos Sonnet). Los coordina el agente global `orquestador` (`~/.claude/agents/orquestador.md`), que también puede crear subagentes nuevos.
 - `tools/tarjetas/` tiene la plantilla y el script de render de tarjetas (`render.ps1`); los fondos (`tools/tarjetas/fondos/`) no se versionan.
 - Reglas de contenido: frases motivadoras contemporáneas, cohesión total con un tema de actualidad, citas verificadas, sin autores antiguos de relleno.
+
+## Cola de posts listos (`posts/cola/`)
+
+- `posts/cola/COLA.md` lista los posts ya generados (tarjetas JPG + título + descripción con hashtags) y su estado (`PENDIENTE` / `SUBIDO fecha`). Cuando el usuario dice "subí": tomar el primer `PENDIENTE`, publicarlo con `publicador-tiktok` (sonido Magnolia / Claudio Constantini), marcarlo `SUBIDO AAAA-MM-DD` en COLA.md y commitear. No investigar ni regenerar tarjetas. Si la cola se vacía o quedan <3, avisar al usuario para reponer.
