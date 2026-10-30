@@ -1,5 +1,0 @@
-| 20 | `posts/cola/20-paz-lista` | 4 cosas que dejé de hacer para vivir tranquilo | Guardalo y quedate con la que más te sirva #mentalidad #paz #madurez #motivacion #parati #fyp | lista 5 | Clair de Lune - Debussy | PENDIENTE |
-| 21 | `posts/cola/21-orgullo` | Tu yo de hace un año te está mirando | Dale una razón para estar orgulloso #mentalidad #crecimiento #superacion #motivacion #parati #fyp | video | River Flows in You - Yiruma | PENDIENTE |
-| 22 | `posts/cola/22-pequeno` | Cómo hacés lo pequeño es cómo hacés todo | Guardalo y empezá por lo chico #mentalidad #disciplina #habitos #motivacion #parati #fyp | carrusel 4 | Cornfield Chase - Hans Zimmer | PENDIENTE |
-| 23 | `posts/cola/23-excusa` | El que quiere encuentra la forma | Guardalo para cuando quieras poner excusas #mentalidad #excusas #disciplina #motivacion #parati #fyp | video | Gymnopedie No. 1 - Satie | PENDIENTE |
-| 24 | `posts/cola/24-razon` | Madurar es dejar de necesitar tener razón | Guardalo antes de tu próxima discusión #mentalidad #madurez #calma #motivacion #parati #fyp | carrusel 4 | Nuvole Bianche - Einaudi | PENDIENTE |

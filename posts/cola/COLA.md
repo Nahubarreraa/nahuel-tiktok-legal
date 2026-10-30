@@ -28,3 +28,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 17 | `posts/cola/17-senales` | 5 señales de que estás creciendo | Guardalo y volvé a leerlo cuando dudes #mentalidad #crecimiento #señales #motivacion #parati #fyp | lista 5 | Magnolia - Claudio Constantini | SUBIDO 2026-10-30 |
 | 18 | `posts/cola/18-miedo-precio` | Cobrás poco por miedo | Guardalo antes de tu próxima propuesta #mentalidad #dinero #valor #emprender #parati #fyp | carrusel 4 | Cinematic Inspiring Epic | SUBIDO 2026-10-30 |
 | 19 | `posts/cola/19-no-responder` | No todo merece respuesta | Guardalo para tu próxima discusión #mentalidad #paz #madurez #motivacion #parati #fyp | video | Interstellar Main Theme - Hans Zimmer | SUBIDO 2026-10-30 |
+
+## Lote 2026-10-30 noche (20-24)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido | Estado |
+|---|---|---|---|---|---|---|
+| 20 | `posts/cola/20-paz-lista` | 4 cosas que dejé de hacer para vivir tranquilo | Guardalo y quedate con la que más te sirva #mentalidad #paz #madurez #motivacion #parati #fyp | lista 5 | Clair de Lune - Debussy | SUBIDO 2026-10-30 |
+| 21 | `posts/cola/21-orgullo` | Tu yo de hace un año te está mirando | Dale una razón para estar orgulloso #mentalidad #crecimiento #superacion #motivacion #parati #fyp | video | River Flows in You - Yiruma | SUBIDO 2026-10-30 |
+| 22 | `posts/cola/22-pequeno` | Cómo hacés lo pequeño es cómo hacés todo | Guardalo y empezá por lo chico #mentalidad #disciplina #habitos #motivacion #parati #fyp | carrusel 4 | Cornfield Chase - Hans Zimmer | SUBIDO 2026-10-30 |
+| 23 | `posts/cola/23-excusa` | El que quiere encuentra la forma | Guardalo para cuando quieras poner excusas #mentalidad #excusas #disciplina #motivacion #parati #fyp | video | Gymnopedie No. 1 - Satie | SUBIDO 2026-10-30 |
+| 24 | `posts/cola/24-razon` | Madurar es dejar de necesitar tener razón | Guardalo antes de tu próxima discusión #mentalidad #madurez #calma #motivacion #parati #fyp | carrusel 4 | Nuvole Bianche - Einaudi | SUBIDO 2026-10-30 |
