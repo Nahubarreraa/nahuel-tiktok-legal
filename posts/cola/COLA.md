@@ -14,3 +14,4 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 08 | `posts/cola/08-comodidad` | Nadie dijo que iba a ser cómodo | Guardalo para cuando se ponga difícil #mentalidad #disciplina #superacion #motivacion #parati #fyp | SUBIDO 2026-10-29 |
 | 09 | `posts/cola/09-pasado` | No te define tu peor día | Guardalo para cuando el pasado pese #mentalidad #superacion #resiliencia #motivacion #parati #fyp | SUBIDO 2026-10-29 |
 | 10 | `posts/cola/10-cerca` | Estás más cerca de lo que parece | Guardalo para el día que quieras rendirte #mentalidad #constancia #resiliencia #motivacion #parati #fyp | SUBIDO 2026-10-29 |
+| 11 | `posts/cola/11-despues` | «Después» es la forma educada de decir «nunca» | Guardalo antes de volver a postergar #mentalidad #disciplina #postergar #motivacion #parati #fyp | SUBIDO 2026-10-30 |
