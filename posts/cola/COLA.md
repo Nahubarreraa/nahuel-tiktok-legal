@@ -15,3 +15,16 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 09 | `posts/cola/09-pasado` | No te define tu peor día | Guardalo para cuando el pasado pese #mentalidad #superacion #resiliencia #motivacion #parati #fyp | SUBIDO 2026-10-29 |
 | 10 | `posts/cola/10-cerca` | Estás más cerca de lo que parece | Guardalo para el día que quieras rendirte #mentalidad #constancia #resiliencia #motivacion #parati #fyp | SUBIDO 2026-10-29 |
 | 11 | `posts/cola/11-despues` | «Después» es la forma educada de decir «nunca» | Guardalo antes de volver a postergar #mentalidad #disciplina #postergar #motivacion #parati #fyp | SUBIDO 2026-10-30 |
+
+## Lote de prueba 2026-10-30 (formatos y sonidos variados; medir vistas/likes/compartidos)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido | Estado |
+|---|---|---|---|---|---|---|
+| 12 | `posts/cola/12-salvar` | Nadie viene a salvarte | Guardalo y hacete cargo hoy #mentalidad #responsabilidad #disciplina #motivacion #parati #fyp | carrusel 4 | Beethoven's Silence | SUBIDO 2026-10-30 |
+| 13 | `posts/cola/13-palabra` | Cumplile a vos mismo | Cada vez que te fallás, te creés un poco menos #mentalidad #palabra #disciplina #motivacion #parati #fyp | video | Time - Hans Zimmer | SUBIDO 2026-10-30 |
+| 14 | `posts/cola/14-dolor` | Duele la disciplina. Duele el arrepentimiento | Guardalo y elegí tu dolor #mentalidad #disciplina #arrepentimiento #motivacion #parati #fyp | carrusel 3 sin cierre | Faded Glass Hours - Sean Miller | SUBIDO 2026-10-30 |
+| 15 | `posts/cola/15-estandares` | No bajes tu estándar | Guardalo antes de conformarte #mentalidad #estandares #crecimiento #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-10-30 |
+| 16 | `posts/cola/16-tenes` | Lo que hoy tenés fue lo que soñabas | Guardalo para los días que sientas que no avanzás #mentalidad #gratitud #crecimiento #motivacion #parati #fyp | carrusel 4 | Emotional Cinematic - AShamaluevMusic | SUBIDO 2026-10-30 |
+| 17 | `posts/cola/17-senales` | 5 señales de que estás creciendo | Guardalo y volvé a leerlo cuando dudes #mentalidad #crecimiento #señales #motivacion #parati #fyp | lista 5 | Magnolia - Claudio Constantini | SUBIDO 2026-10-30 |
+| 18 | `posts/cola/18-miedo-precio` | Cobrás poco por miedo | Guardalo antes de tu próxima propuesta #mentalidad #dinero #valor #emprender #parati #fyp | carrusel 4 | Cinematic Inspiring Epic | SUBIDO 2026-10-30 |
+| 19 | `posts/cola/19-no-responder` | No todo merece respuesta | Guardalo para tu próxima discusión #mentalidad #paz #madurez #motivacion #parati #fyp | video | Interstellar Main Theme - Hans Zimmer | SUBIDO 2026-10-30 |

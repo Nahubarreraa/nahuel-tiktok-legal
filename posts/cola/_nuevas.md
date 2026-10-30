@@ -1,8 +1,0 @@
-| 12 | `posts/cola/12-salvar` | Nadie viene a salvarte | Guardalo y hacete cargo hoy #mentalidad #responsabilidad #disciplina #motivacion #parati #fyp | carrusel 4 | Beethoven's Silence | PENDIENTE |
-| 13 | `posts/cola/13-palabra` | Cumplile a vos mismo | Cada vez que te fallás, te creés un poco menos #mentalidad #palabra #disciplina #motivacion #parati #fyp | video | Time - Hans Zimmer | PENDIENTE |
-| 14 | `posts/cola/14-dolor` | Duele la disciplina. Duele el arrepentimiento | Guardalo y elegí tu dolor #mentalidad #disciplina #arrepentimiento #motivacion #parati #fyp | carrusel 3 sin cierre | Faded Glass Hours - Sean Miller | PENDIENTE |
-| 15 | `posts/cola/15-estandares` | No bajes tu estándar | Guardalo antes de conformarte #mentalidad #estandares #crecimiento #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 16 | `posts/cola/16-tenes` | Lo que hoy tenés fue lo que soñabas | Guardalo para los días que sientas que no avanzás #mentalidad #gratitud #crecimiento #motivacion #parati #fyp | carrusel 4 | Emotional Cinematic - AShamaluevMusic | PENDIENTE |
-| 17 | `posts/cola/17-senales` | 5 señales de que estás creciendo | Guardalo y volvé a leerlo cuando dudes #mentalidad #crecimiento #señales #motivacion #parati #fyp | lista 5 | Magnolia - Claudio Constantini | PENDIENTE |
-| 18 | `posts/cola/18-miedo-precio` | Cobrás poco por miedo | Guardalo antes de tu próxima propuesta #mentalidad #dinero #valor #emprender #parati #fyp | carrusel 4 | Cinematic Inspiring Epic | PENDIENTE |
-| 19 | `posts/cola/19-no-responder` | No todo merece respuesta | Guardalo para tu próxima discusión #mentalidad #paz #madurez #motivacion #parati #fyp | video | Interstellar Main Theme - Hans Zimmer | PENDIENTE |
