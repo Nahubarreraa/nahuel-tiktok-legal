@@ -38,3 +38,11 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 22 | `posts/cola/22-pequeno` | Cómo hacés lo pequeño es cómo hacés todo | Guardalo y empezá por lo chico #mentalidad #disciplina #habitos #motivacion #parati #fyp | carrusel 4 | Cornfield Chase - Hans Zimmer | SUBIDO 2026-10-30 |
 | 23 | `posts/cola/23-excusa` | El que quiere encuentra la forma | Guardalo para cuando quieras poner excusas #mentalidad #excusas #disciplina #motivacion #parati #fyp | video | Gymnopedie No. 1 - Satie | SUBIDO 2026-10-30 |
 | 24 | `posts/cola/24-razon` | Madurar es dejar de necesitar tener razón | Guardalo antes de tu próxima discusión #mentalidad #madurez #calma #motivacion #parati #fyp | carrusel 4 | Nuvole Bianche - Einaudi | SUBIDO 2026-10-30 |
+
+## Lote 2026-10-31 (inspirado en seguidos, ver referentes/analisis-2026-10-31.md)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 25 | `posts/cola/25-cuantos-si` | ¿Cuántos sí te debés? | Decir que no también es cuidarte. Mandáselo a quien lo necesite. #mentalidad #limites #disciplina #crecimientopersonal #frases #reflexion | carrusel 5 con pregunta | Consuelo - Txmy | SUBIDO 2026-10-31 |
+| 26 | `posts/cola/26-leelo-otra-vez` | Leelo otra vez | Hay ausencias que no se ven en la agenda. #familia #reflexion #mentalidad #prioridades #frasesmotivadoras | video enigma | Every Word - Ivan Castro (o piano instrumental) | SUBIDO 2026-10-31 |
+| 27 | `posts/cola/27-aparentar` | Lo que sale caro | Ahorrar en silencio también es ambición. #dinero #finanzas #mentalidad #ahorro #disciplina #frases | carrusel 4 pregunta/lista | Runaway - Piano Rendition | SUBIDO 2026-10-31 |
