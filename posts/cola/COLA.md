@@ -46,3 +46,14 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 25 | `posts/cola/25-cuantos-si` | ¿Cuántos sí te debés? | Decir que no también es cuidarte. Mandáselo a quien lo necesite. #mentalidad #limites #disciplina #crecimientopersonal #frases #reflexion | carrusel 5 con pregunta | Consuelo - Txmy | SUBIDO 2026-10-31 |
 | 26 | `posts/cola/26-leelo-otra-vez` | Leelo otra vez | Hay ausencias que no se ven en la agenda. #familia #reflexion #mentalidad #prioridades #frasesmotivadoras | video enigma | Every Word - Ivan Castro (o piano instrumental) | SUBIDO 2026-10-31 |
 | 27 | `posts/cola/27-aparentar` | Lo que sale caro | Ahorrar en silencio también es ambición. #dinero #finanzas #mentalidad #ahorro #disciplina #frases | carrusel 4 pregunta/lista | Runaway - Piano Rendition | SUBIDO 2026-10-31 |
+
+## Lote 2026-10-31 tarde (28-33)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 28 | `posts/cola/28-primera-vez` | ¿Cuándo fue la última vez? | ¿Qué cosa nueva vas a intentar esta semana? Contámelo. #mentalidad #crecimiento #zonadeconfort #motivacion #parati #fyp | carrusel 5 pregunta | Kiss the Rain - Yiruma | SUBIDO 2026-10-31 |
+| 29 | `posts/cola/29-ahorro-salud` | Leelo otra vez | Hay cosas que no se pueden postergar. #reflexion #salud #mentalidad #prioridades #frasesmotivadoras | video enigma | Mad World - Gary Jules (piano) | SUBIDO 2026-10-31 |
+| 30 | `posts/cola/30-buenas-razones` | Siempre tenía una buena razón | Las razones salen más caras que el esfuerzo. #mentalidad #disciplina #postergar #motivacion #parati #fyp | carrusel 4 caso | Una Mattina - Einaudi | SUBIDO 2026-10-31 |
+| 31 | `posts/cola/31-no-se-rinden` | 4 cosas que hacen los que no se rinden | ¿Cuál te falta a vos? #mentalidad #constancia #resiliencia #motivacion #parati #fyp | lista 5 | Now We Are Free - Hans Zimmer | SUBIDO 2026-10-31 |
+| 32 | `posts/cola/32-se-lo-dijo` | Leelo otra vez | Lo que te repetís cada día termina siendo verdad. #mentalidad #confianza #reflexion #motivacion #frasesmotivadoras | video enigma | Hallelujah - piano instrumental | SUBIDO 2026-10-31 |
+| 33 | `posts/cola/33-exito-soledad` | El éxito al principio se parece a la soledad | Guardalo para los días en que nadie mira #mentalidad #exito #disciplina #motivacion #parati #fyp | carrusel 3 sin cierre | Snowfall - Oneheart | SUBIDO 2026-10-31 |
