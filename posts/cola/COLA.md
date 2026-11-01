@@ -57,3 +57,14 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 31 | `posts/cola/31-no-se-rinden` | 4 cosas que hacen los que no se rinden | ¿Cuál te falta a vos? #mentalidad #constancia #resiliencia #motivacion #parati #fyp | lista 5 | Now We Are Free - Hans Zimmer | SUBIDO 2026-10-31 |
 | 32 | `posts/cola/32-se-lo-dijo` | Leelo otra vez | Lo que te repetís cada día termina siendo verdad. #mentalidad #confianza #reflexion #motivacion #frasesmotivadoras | video enigma | Hallelujah - piano instrumental | SUBIDO 2026-10-31 |
 | 33 | `posts/cola/33-exito-soledad` | El éxito al principio se parece a la soledad | Guardalo para los días en que nadie mira #mentalidad #exito #disciplina #motivacion #parati #fyp | carrusel 3 sin cierre | Snowfall - Oneheart | SUBIDO 2026-10-31 |
+
+## Lote 2026-10-31 noche (34-39)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 34 | `posts/cola/34-nadie-viene` | Nadie va a venir a salvarte | Es la mejor noticia que vas a escuchar hoy. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | carrusel 4 gancho | Experience - Ludovico Einaudi | PENDIENTE |
+| 35 | `posts/cola/35-ocupado` | Leelo otra vez | Revisá en qué gastás tu día. #productividad #mentalidad #prioridades #reflexion #frasesmotivadoras | video enigma | Time - Hans Zimmer (piano) | PENDIENTE |
+| 36 | `posts/cola/36-tres-preguntas` | 3 preguntas que te cambian el día | ¿Cuál te cuesta más contestar? #mentalidad #autoconocimiento #disciplina #motivacion #parati #fyp | lista 5 preguntas | River Flows in You - Yiruma | PENDIENTE |
+| 37 | `posts/cola/37-barato` | Lo barato sale caro | El arrepentimiento cobra intereses. #mentalidad #esfuerzo #disciplina #dinero #motivacion #fyp | carrusel 4 dinero | Nuvole Bianche - Einaudi | PENDIENTE |
+| 38 | `posts/cola/38-lo-que-no-ves` | Leelo otra vez | Mientras vos esperás, otros se mueven. #mentalidad #postergar #disciplina #reflexion #frasesmotivadoras | video enigma | Experience - Ludovico Einaudi | PENDIENTE |
+| 39 | `posts/cola/39-cansancio` | No estás cansado de trabajar | Elegí un rumbo y el cuerpo te sigue. #mentalidad #motivacion #proposito #disciplina #parati #fyp | carrusel 3 sin cierre | Gymnopédie No.1 - Satie | PENDIENTE |
