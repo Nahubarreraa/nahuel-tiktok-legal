@@ -62,9 +62,9 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 34 | `posts/cola/34-nadie-viene` | Nadie va a venir a salvarte | Es la mejor noticia que vas a escuchar hoy. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | carrusel 4 gancho | Experience - Ludovico Einaudi | PENDIENTE |
-| 35 | `posts/cola/35-ocupado` | Leelo otra vez | Revisá en qué gastás tu día. #productividad #mentalidad #prioridades #reflexion #frasesmotivadoras | video enigma | Time - Hans Zimmer (piano) | PENDIENTE |
-| 36 | `posts/cola/36-tres-preguntas` | 3 preguntas que te cambian el día | ¿Cuál te cuesta más contestar? #mentalidad #autoconocimiento #disciplina #motivacion #parati #fyp | lista 5 preguntas | River Flows in You - Yiruma | PENDIENTE |
-| 37 | `posts/cola/37-barato` | Lo barato sale caro | El arrepentimiento cobra intereses. #mentalidad #esfuerzo #disciplina #dinero #motivacion #fyp | carrusel 4 dinero | Nuvole Bianche - Einaudi | PENDIENTE |
-| 38 | `posts/cola/38-lo-que-no-ves` | Leelo otra vez | Mientras vos esperás, otros se mueven. #mentalidad #postergar #disciplina #reflexion #frasesmotivadoras | video enigma | Experience - Ludovico Einaudi | PENDIENTE |
-| 39 | `posts/cola/39-cansancio` | No estás cansado de trabajar | Elegí un rumbo y el cuerpo te sigue. #mentalidad #motivacion #proposito #disciplina #parati #fyp | carrusel 3 sin cierre | Gymnopédie No.1 - Satie | PENDIENTE |
+| 34 | `posts/cola/34-nadie-viene` | Nadie va a venir a salvarte | Es la mejor noticia que vas a escuchar hoy. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | carrusel 4 gancho | Experience - Ludovico Einaudi | SUBIDO 2026-10-31 |
+| 35 | `posts/cola/35-ocupado` | Leelo otra vez | Revisá en qué gastás tu día. #productividad #mentalidad #prioridades #reflexion #frasesmotivadoras | video enigma | Time - Hans Zimmer (piano) | SUBIDO 2026-10-31 |
+| 36 | `posts/cola/36-tres-preguntas` | 3 preguntas que te cambian el día | ¿Cuál te cuesta más contestar? #mentalidad #autoconocimiento #disciplina #motivacion #parati #fyp | lista 5 preguntas | River Flows in You - Yiruma | SUBIDO 2026-10-31 |
+| 37 | `posts/cola/37-barato` | Lo barato sale caro | El arrepentimiento cobra intereses. #mentalidad #esfuerzo #disciplina #dinero #motivacion #fyp | carrusel 4 dinero | Nuvole Bianche - Einaudi | SUBIDO 2026-10-31 |
+| 38 | `posts/cola/38-lo-que-no-ves` | Leelo otra vez | Mientras vos esperás, otros se mueven. #mentalidad #postergar #disciplina #reflexion #frasesmotivadoras | video enigma | Experience - Ludovico Einaudi | SUBIDO 2026-10-31 |
+| 39 | `posts/cola/39-cansancio` | No estás cansado de trabajar | Elegí un rumbo y el cuerpo te sigue. #mentalidad #motivacion #proposito #disciplina #parati #fyp | carrusel 3 sin cierre | Gymnopédie No.1 - Satie | SUBIDO 2026-10-31 |
