@@ -68,3 +68,14 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 37 | `posts/cola/37-barato` | Lo barato sale caro | El arrepentimiento cobra intereses. #mentalidad #esfuerzo #disciplina #dinero #motivacion #fyp | carrusel 4 dinero | Nuvole Bianche - Einaudi | SUBIDO 2026-10-31 |
 | 38 | `posts/cola/38-lo-que-no-ves` | Leelo otra vez | Mientras vos esperás, otros se mueven. #mentalidad #postergar #disciplina #reflexion #frasesmotivadoras | video enigma | Experience - Ludovico Einaudi | SUBIDO 2026-10-31 |
 | 39 | `posts/cola/39-cansancio` | No estás cansado de trabajar | Elegí un rumbo y el cuerpo te sigue. #mentalidad #motivacion #proposito #disciplina #parati #fyp | carrusel 3 sin cierre | Gymnopédie No.1 - Satie | SUBIDO 2026-10-31 |
+
+## Lote 2026-11-02 (40-45)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 40 | `posts/cola/40-nadie-lo-hace` | Todos quieren el resultado | Las ganas llegan después de moverte. #mentalidad #disciplina #habitos #motivacion #parati #fyp | carrusel 4 gancho | Experience - Ludovico Einaudi | PENDIENTE |
+| 41 | `posts/cola/41-version` | Leelo otra vez | Tu futuro se arma con lo de hoy. #mentalidad #identidad #disciplina #reflexion #frasesmotivadoras | video enigma | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 42 | `posts/cola/42-cinco-minutos` | 5 señales de que estás creciendo | ¿Cuántas ya cumplís? #mentalidad #crecimientopersonal #madurez #motivacion #parati #fyp | lista 6 | River Flows in You - Yiruma | PENDIENTE |
+| 43 | `posts/cola/43-nadie-pregunta` | Nadie pregunta cuánto te costó | Hacelo bien aunque nadie lo sepa. #mentalidad #esfuerzo #disciplina #motivacion #parati #fyp | carrusel 3 sin cierre | Gymnopédie No.1 - Satie | PENDIENTE |
+| 44 | `posts/cola/44-lo-que-no-hiciste` | Leelo otra vez | Intentá. Aunque salga mal. #mentalidad #arrepentimiento #valentia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 45 | `posts/cola/45-pregunta-tiempo` | ¿Seguirías haciendo lo mismo? | Elegí una cosa y empezá hoy. Contame cuál. #mentalidad #cambio #proposito #motivacion #parati #fyp | carrusel 4 pregunta | Nuvole Bianche - Einaudi | PENDIENTE |
