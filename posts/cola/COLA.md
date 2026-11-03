@@ -79,3 +79,14 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 43 | `posts/cola/43-nadie-pregunta` | Nadie pregunta cuánto te costó | Hacelo bien aunque nadie lo sepa. #mentalidad #esfuerzo #disciplina #motivacion #parati #fyp | carrusel 3 sin cierre | Gymnopédie No.1 - Satie | SUBIDO 2026-11-02 |
 | 44 | `posts/cola/44-lo-que-no-hiciste` | Leelo otra vez | Intentá. Aunque salga mal. #mentalidad #arrepentimiento #valentia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-02 |
 | 45 | `posts/cola/45-pregunta-tiempo` | ¿Seguirías haciendo lo mismo? | Elegí una cosa y empezá hoy. Contame cuál. #mentalidad #cambio #proposito #motivacion #parati #fyp | carrusel 4 pregunta | Nuvole Bianche - Einaudi | SUBIDO 2026-11-02 |
+
+## Lote 2026-11-03 (46-51)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 46 | `posts/cola/46-mito-realidad` | Mito vs. realidad | ¿Cuál creías vos? #mentalidad #disciplina #habitos #motivacion #parati #fyp | lista mito/realidad 4 | Experience - Ludovico Einaudi | PENDIENTE |
+| 47 | `posts/cola/47-silencio` | Leelo otra vez | El silencio también es estrategia. #mentalidad #disciplina #reflexion #crecimiento #frasesmotivadoras | video enigma | Gymnopédie No.1 - Satie | PENDIENTE |
+| 48 | `posts/cola/48-dos-lobos` | Hay dos versiones tuyas | ¿A cuál alimentaste hoy? #mentalidad #disciplina #habitos #motivacion #parati #fyp | carrusel 3 pregunta | Nuvole Bianche - Einaudi | PENDIENTE |
+| 49 | `posts/cola/49-ejemplo` | Dá el ejemplo | Los demás aprenden mirando. #mentalidad #liderazgo #ejemplo #disciplina #motivacion #fyp | carrusel 4 | River Flows in You - Yiruma | PENDIENTE |
+| 50 | `posts/cola/50-ya-sabes` | Leelo otra vez | Saber no alcanza. #mentalidad #accion #disciplina #reflexion #frasesmotivadoras | video enigma | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 51 | `posts/cola/51-tres-habitos` | 3 hábitos que cambian tu vida | ¿Cuál empezás hoy? #mentalidad #habitos #rutina #motivacion #parati #fyp | lista 5 | Kiss the Rain - Yiruma | PENDIENTE |
