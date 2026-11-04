@@ -101,3 +101,18 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 55 | `posts/cola/55-incomodarse` | Leelo otra vez | El cambio empieza donde termina la comodidad. #mentalidad #disciplina #cambio #motivacion #frasesmotivadoras | video enigma | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-04 |
 | 56 | `posts/cola/56-quien-gana` | ¿Por qué los que más ganan callan? | Pagarte a vos primero no es egoísmo. Compartilo con el que llega justo a fin de mes. #dinero #finanzas #mentalidad #ahorro #disciplina #fyp | carrusel 4 pregunta portada dinero | Magnolia - Claudio Constantini | SUBIDO 2026-11-04 |
 | 57 | `posts/cola/57-terminar-dia` | Reflexión estoica para terminar el día | Compartilo con el que hoy no pudo más. #estoicismo #mentalidad #resiliencia #reflexion #parati #fyp | carrusel 4 estoico | Kiss the Rain - Yiruma | SUBIDO 2026-11-04 |
+
+## Lote 2026-11-04 tarde (58-67, ideas filosas: dinero/valor, crítica, estoico)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 58 | `posts/cola/58-sueldo` | Tu sueldo no es lo que valés | Tu valor no se negocia en la oficina. Se construye afuera. Compartilo con el que cobra lo mismo hace tres años. #dinero #mentalidad #valor #trabajo #emprender #fyp | carrusel 4 dinero | Magnolia - Claudio Constantini | PENDIENTE |
+| 59 | `posts/cola/59-hora` | Cuánto vale tu hora | Calculá cuánto vale tu hora. #dinero #mentalidad #valor #trabajo #parati #fyp | video dinero cta compartilo | Magnolia - Claudio Constantini | PENDIENTE |
+| 60 | `posts/cola/60-te-critican` | Cuando cambiás, se incomodan | Los que más critican suelen ser los que menos intentaron. Compartilo con el que cambió y nadie lo apoya. #mentalidad #disciplina #crecimiento #motivacion #parati #fyp | carrusel 4 social | Experience - Ludovico Einaudi | PENDIENTE |
+| 61 | `posts/cola/61-este-es-ese-ano` | Este es ese año | Hace un año dijiste: el año que viene empiezo. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 62 | `posts/cola/62-volver-a-empezar` | Volver a empezar no es volver a cero | Guardalo para cuando quieras abandonar. Compartilo con el que acaba de fracasar. #mentalidad #resiliencia #fracaso #disciplina #motivacion #fyp | carrusel 4 winner angle | Nuvole Bianche - Einaudi | PENDIENTE |
+| 63 | `posts/cola/63-calma` | Mensaje estoico para hoy | Nadie puede quitarte la calma si vos no se la entregás. #estoicismo #mentalidad #calma #resiliencia #parati #fyp | video estoico | Gymnopédie No.1 - Satie | PENDIENTE |
+| 64 | `posts/cola/64-no-llega-fin-de-mes` | 3 cosas que hace el que no llega a fin de mes | Anotá todo durante 30 días. #dinero #finanzas #ahorro #mentalidad #disciplina #fyp | lista dinero 5 | Magnolia - Claudio Constantini | PENDIENTE |
+| 65 | `posts/cola/65-celular` | No te falta tiempo | No te falta tiempo. Te sobra celular. #disciplina #mentalidad #tiempo #enfoque #parati #fyp | video disciplina | Hallelujah - piano | PENDIENTE |
+| 66 | `posts/cola/66-empezaron-antes` | No es talento, empezaron antes | Los que llegan primero no corrieron más. Empezaron antes. #mentalidad #disciplina #constancia #motivacion #parati #fyp | carrusel 4 | River Flows in You - Yiruma | PENDIENTE |
+| 67 | `posts/cola/67-cuenta` | Leelo otra vez | No es cuánto ganás. Es cuánto te queda. #dinero #mentalidad #ahorro #finanzas #frasesmotivadoras | video enigma dinero | Magnolia - Claudio Constantini | PENDIENTE |
