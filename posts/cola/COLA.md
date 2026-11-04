@@ -90,3 +90,14 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 49 | `posts/cola/49-ejemplo` | Dá el ejemplo | Los demás aprenden mirando. #mentalidad #liderazgo #ejemplo #disciplina #motivacion #fyp | carrusel 4 | River Flows in You - Yiruma | SUBIDO 2026-11-03 |
 | 50 | `posts/cola/50-ya-sabes` | Leelo otra vez | Saber no alcanza. #mentalidad #accion #disciplina #reflexion #frasesmotivadoras | video enigma | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-03 |
 | 51 | `posts/cola/51-tres-habitos` | 3 hábitos que cambian tu vida | ¿Cuál empezás hoy? #mentalidad #habitos #rutina #motivacion #parati #fyp | lista 5 | Kiss the Rain - Yiruma | SUBIDO 2026-11-03 |
+
+## Lote 2026-11-04 (52-57, tras el análisis: 4 videos + 2 carruseles, dinero/estoico)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 52 | `posts/cola/52-cobrar-barato` | Cobrar barato | Tu precio también dice cuánto te valorás. #dinero #mentalidad #valor #emprender #parati #fyp | video dinero cta compartilo | Magnolia - Claudio Constantini | PENDIENTE |
+| 53 | `posts/cola/53-trabajar-valer` | Leelo otra vez | Trabajar duro no es lo mismo que valer más. #dinero #mentalidad #valor #trabajo #frasesmotivadoras | video enigma dinero | Hallelujah - piano | PENDIENTE |
+| 54 | `posts/cola/54-estoico-hoy` | Mensaje estoico para hoy | No controlás lo que pasa. Controlás lo que hacés después. #estoicismo #mentalidad #resiliencia #disciplina #parati #fyp | video estoico cta compartilo | Experience - Ludovico Einaudi | PENDIENTE |
+| 55 | `posts/cola/55-incomodarse` | Leelo otra vez | El cambio empieza donde termina la comodidad. #mentalidad #disciplina #cambio #motivacion #frasesmotivadoras | video enigma | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 56 | `posts/cola/56-quien-gana` | ¿Por qué los que más ganan callan? | Pagarte a vos primero no es egoísmo. Compartilo con el que llega justo a fin de mes. #dinero #finanzas #mentalidad #ahorro #disciplina #fyp | carrusel 4 pregunta portada dinero | Magnolia - Claudio Constantini | PENDIENTE |
+| 57 | `posts/cola/57-terminar-dia` | Reflexión estoica para terminar el día | Compartilo con el que hoy no pudo más. #estoicismo #mentalidad #resiliencia #reflexion #parati #fyp | carrusel 4 estoico | Kiss the Rain - Yiruma | PENDIENTE |
