@@ -125,3 +125,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 69 | `posts/cola/69-levantarse` | Nadie te mira cuando te caés | Guardalo para el día que te caigas. Compartilo con el que hoy se cayó. #mentalidad #resiliencia #disciplina #motivacion #parati #fyp | carrusel 4 levantarse | Kiss the Rain - Yiruma | SUBIDO 2026-11-05 |
 | 70 | `posts/cola/70-se-alejan` | Leelo otra vez | El que avanza muchas veces avanza solo. #mentalidad #crecimiento #soledad #disciplina #frasesmotivadoras | video enigma soledad | Hallelujah - piano | SUBIDO 2026-11-05 |
 | 71 | `posts/cola/71-dolor-ensena` | 4 cosas que solo te enseña el dolor | Guardalo para tu próximo mal día. #mentalidad #resiliencia #dolor #fortaleza #motivacion #fyp | lista 5 | River Flows in You - Yiruma | SUBIDO 2026-11-05 |
+
+## Lote 2026-11-05 noche (72-76, sin tarjeta final clara ni "compartí" en tarjetas)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 72 | `posts/cola/72-despues-del-animo` | La disciplina | Guardalo para cuando se te vaya el ánimo. Compartilo con el que empieza y abandona. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video disciplina sin cta | Experience - Ludovico Einaudi | PENDIENTE |
+| 73 | `posts/cola/73-fuerte-no-es` | Ser fuerte no es no sentir | Compartilo con el que anda cargando solo. #mentalidad #fortaleza #resiliencia #disciplina #motivacion #fyp | carrusel 4 remate oscuro | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 74 | `posts/cola/74-mente-para` | Leelo otra vez | Casi siempre podés un poco más. #mentalidad #disciplina #fortaleza #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 75 | `posts/cola/75-dejan-de-hacer` | 5 cosas que dejan de hacer los que mejoran | Guardalo y quedate con la que más te falte. Compartilo con el que quiere mejorar. #mentalidad #crecimiento #habitos #disciplina #motivacion #fyp | lista 6 remate oscuro | Nuvole Bianche - Einaudi | PENDIENTE |
+| 76 | `posts/cola/76-un-dia-mas` | Un día más | Un día más. Compartilo con el que está por rendirse. #mentalidad #constancia #resiliencia #disciplina #parati #fyp | video constancia sin cta | Kiss the Rain - Yiruma | PENDIENTE |
