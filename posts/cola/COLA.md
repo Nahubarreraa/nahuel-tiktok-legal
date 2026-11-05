@@ -130,8 +130,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 72 | `posts/cola/72-despues-del-animo` | La disciplina | Guardalo para cuando se te vaya el ánimo. Compartilo con el que empieza y abandona. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video disciplina sin cta | Experience - Ludovico Einaudi | PENDIENTE |
-| 73 | `posts/cola/73-fuerte-no-es` | Ser fuerte no es no sentir | Compartilo con el que anda cargando solo. #mentalidad #fortaleza #resiliencia #disciplina #motivacion #fyp | carrusel 4 remate oscuro | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 74 | `posts/cola/74-mente-para` | Leelo otra vez | Casi siempre podés un poco más. #mentalidad #disciplina #fortaleza #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 75 | `posts/cola/75-dejan-de-hacer` | 5 cosas que dejan de hacer los que mejoran | Guardalo y quedate con la que más te falte. Compartilo con el que quiere mejorar. #mentalidad #crecimiento #habitos #disciplina #motivacion #fyp | lista 6 remate oscuro | Nuvole Bianche - Einaudi | PENDIENTE |
-| 76 | `posts/cola/76-un-dia-mas` | Un día más | Un día más. Compartilo con el que está por rendirse. #mentalidad #constancia #resiliencia #disciplina #parati #fyp | video constancia sin cta | Kiss the Rain - Yiruma | PENDIENTE |
+| 72 | `posts/cola/72-despues-del-animo` | La disciplina | Guardalo para cuando se te vaya el ánimo. Compartilo con el que empieza y abandona. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video disciplina sin cta | Experience - Ludovico Einaudi | SUBIDO 2026-11-05 |
+| 73 | `posts/cola/73-fuerte-no-es` | Ser fuerte no es no sentir | Compartilo con el que anda cargando solo. #mentalidad #fortaleza #resiliencia #disciplina #motivacion #fyp | carrusel 4 remate oscuro | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-05 |
+| 74 | `posts/cola/74-mente-para` | Leelo otra vez | Casi siempre podés un poco más. #mentalidad #disciplina #fortaleza #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-05 |
+| 75 | `posts/cola/75-dejan-de-hacer` | 5 cosas que dejan de hacer los que mejoran | Guardalo y quedate con la que más te falte. Compartilo con el que quiere mejorar. #mentalidad #crecimiento #habitos #disciplina #motivacion #fyp | lista 6 remate oscuro | Nuvole Bianche - Einaudi | SUBIDO 2026-11-05 |
+| 76 | `posts/cola/76-un-dia-mas` | Un día más | Un día más. Compartilo con el que está por rendirse. #mentalidad #constancia #resiliencia #disciplina #parati #fyp | video constancia sin cta | Kiss the Rain - Yiruma | SUBIDO 2026-11-05 |
