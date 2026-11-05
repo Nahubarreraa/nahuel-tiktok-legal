@@ -121,7 +121,7 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 68 | `posts/cola/68-valientes` | Nadie nace valiente | Hacelo con miedo. Hacelo igual. #mentalidad #valentia #miedo #disciplina #parati #fyp | video miedo | Experience - Ludovico Einaudi | PENDIENTE |
-| 69 | `posts/cola/69-levantarse` | Nadie te mira cuando te caés | Guardalo para el día que te caigas. Compartilo con el que hoy se cayó. #mentalidad #resiliencia #disciplina #motivacion #parati #fyp | carrusel 4 levantarse | Kiss the Rain - Yiruma | PENDIENTE |
-| 70 | `posts/cola/70-se-alejan` | Leelo otra vez | El que avanza muchas veces avanza solo. #mentalidad #crecimiento #soledad #disciplina #frasesmotivadoras | video enigma soledad | Hallelujah - piano | PENDIENTE |
-| 71 | `posts/cola/71-dolor-ensena` | 4 cosas que solo te enseña el dolor | Guardalo para tu próximo mal día. #mentalidad #resiliencia #dolor #fortaleza #motivacion #fyp | lista 5 | River Flows in You - Yiruma | PENDIENTE |
+| 68 | `posts/cola/68-valientes` | Nadie nace valiente | Hacelo con miedo. Hacelo igual. #mentalidad #valentia #miedo #disciplina #parati #fyp | video miedo | Experience - Ludovico Einaudi | SUBIDO 2026-11-05 |
+| 69 | `posts/cola/69-levantarse` | Nadie te mira cuando te caés | Guardalo para el día que te caigas. Compartilo con el que hoy se cayó. #mentalidad #resiliencia #disciplina #motivacion #parati #fyp | carrusel 4 levantarse | Kiss the Rain - Yiruma | SUBIDO 2026-11-05 |
+| 70 | `posts/cola/70-se-alejan` | Leelo otra vez | El que avanza muchas veces avanza solo. #mentalidad #crecimiento #soledad #disciplina #frasesmotivadoras | video enigma soledad | Hallelujah - piano | SUBIDO 2026-11-05 |
+| 71 | `posts/cola/71-dolor-ensena` | 4 cosas que solo te enseña el dolor | Guardalo para tu próximo mal día. #mentalidad #resiliencia #dolor #fortaleza #motivacion #fyp | lista 5 | River Flows in You - Yiruma | SUBIDO 2026-11-05 |
