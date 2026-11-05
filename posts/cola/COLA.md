@@ -116,3 +116,12 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 65 | `posts/cola/65-celular` | No te falta tiempo | No te falta tiempo. Te sobra celular. #disciplina #mentalidad #tiempo #enfoque #parati #fyp | video disciplina | Hallelujah - piano | SUBIDO 2026-11-04 |
 | 66 | `posts/cola/66-empezaron-antes` | No es talento, empezaron antes | Los que llegan primero no corrieron más. Empezaron antes. #mentalidad #disciplina #constancia #motivacion #parati #fyp | carrusel 4 | River Flows in You - Yiruma | SUBIDO 2026-11-04 |
 | 67 | `posts/cola/67-cuenta` | Leelo otra vez | No es cuánto ganás. Es cuánto te queda. #dinero #mentalidad #ahorro #finanzas #frasesmotivadoras | video enigma dinero | Magnolia - Claudio Constantini | DESCARTADO (tema plata, no va con la cuenta) |
+
+## Lote 2026-11-05 (68-71, fuerza mental)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 68 | `posts/cola/68-valientes` | Nadie nace valiente | Hacelo con miedo. Hacelo igual. #mentalidad #valentia #miedo #disciplina #parati #fyp | video miedo | Experience - Ludovico Einaudi | PENDIENTE |
+| 69 | `posts/cola/69-levantarse` | Nadie te mira cuando te caés | Guardalo para el día que te caigas. Compartilo con el que hoy se cayó. #mentalidad #resiliencia #disciplina #motivacion #parati #fyp | carrusel 4 levantarse | Kiss the Rain - Yiruma | PENDIENTE |
+| 70 | `posts/cola/70-se-alejan` | Leelo otra vez | El que avanza muchas veces avanza solo. #mentalidad #crecimiento #soledad #disciplina #frasesmotivadoras | video enigma soledad | Hallelujah - piano | PENDIENTE |
+| 71 | `posts/cola/71-dolor-ensena` | 4 cosas que solo te enseña el dolor | Guardalo para tu próximo mal día. #mentalidad #resiliencia #dolor #fortaleza #motivacion #fyp | lista 5 | River Flows in You - Yiruma | PENDIENTE |
