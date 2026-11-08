@@ -150,3 +150,18 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 84 | `posts/cola/84-nadie-admira` | Nadie admira al que la tuvo fácil | Lo difícil te forma. Compartilo con el que está pasando por algo difícil. #mentalidad #resiliencia #esfuerzo #disciplina #motivacion #fyp | carrusel 4 | River Flows in You - Yiruma | SUBIDO 2026-11-07 |
 | 85 | `posts/cola/85-descansar` | Descansar no es rendirse | Descansá si lo necesitás. Pero volvé. Compartilo con el que está agotado. #mentalidad #constancia #resiliencia #motivacion #parati #fyp | video constancia | Kiss the Rain - Yiruma | SUBIDO 2026-11-07 |
 | 86 | `posts/cola/86-manana` | ¿Cuántos mañanas llevás? | Hoy es el día. Compartilo con el que siempre dice mañana. #mentalidad #disciplina #postergar #motivacion #parati #fyp | carrusel 4 pregunta portada | Nuvole Bianche - Einaudi | SUBIDO 2026-11-07 |
+
+## Lote 2026-11-08 (87-96, fuerza mental)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 87 | `posts/cola/87-hartazgo` | No necesitás motivación | Hasta que no te canses de vos, nada cambia. Compartilo con el que está esperando ganas. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video hartazgo | Experience - Ludovico Einaudi | PENDIENTE |
+| 88 | `posts/cola/88-sentirte-listo` | Nadie se sintió listo | Empezá asustado. Compartilo con el que espera estar listo. #mentalidad #valentia #miedo #disciplina #parati #fyp | video listo | Kiss the Rain - Yiruma | PENDIENTE |
+| 89 | `posts/cola/89-practica-rendirse` | Leelo otra vez | Cada vez que abandonás, entrenás para abandonar. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 90 | `posts/cola/90-mal-dia` | 4 cosas que hace la gente fuerte cuando está mal | Guardalo para tu próximo mal día. Compartilo con el que hoy la está pasando mal. #mentalidad #fortaleza #resiliencia #disciplina #motivacion #fyp | lista 5 | River Flows in You - Yiruma | PENDIENTE |
+| 91 | `posts/cola/91-mil-razones` | Mil razones | Hacelo igual. Compartilo con el que busca excusas. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video razones | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 92 | `posts/cola/92-ultima-vez-miedo` | ¿Cuándo fue la última vez que te animaste? | Contame qué fue. Compartilo con el que se quedó en su zona cómoda. #mentalidad #miedo #valentia #crecimiento #parati #fyp | carrusel 4 pregunta portada | Nuvole Bianche - Einaudi | PENDIENTE |
+| 93 | `posts/cola/93-comodidad` | La comodidad | Salí de ahí. Compartilo con el que se acostumbró. #mentalidad #disciplina #comodidad #motivacion #parati #fyp | video comodidad | Experience - Ludovico Einaudi | PENDIENTE |
+| 94 | `posts/cola/94-reglas` | 5 reglas del que no se rinde | Guardalo y aplicá una hoy. Compartilo con el que quiere ser constante. #mentalidad #disciplina #constancia #habitos #motivacion #fyp | lista 6 remate oscuro | Nuvole Bianche - Einaudi | PENDIENTE |
+| 95 | `posts/cola/95-tu-excusa` | Leelo otra vez | Dejá de mirar al costado. #mentalidad #disciplina #excusas #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 96 | `posts/cola/96-enojo` | Quien te hace enojar te controla | Practicá la calma. Compartilo con el que se enoja fácil. #estoicismo #mentalidad #calma #disciplina #parati #fyp | carrusel 3 estoico | Gymnopédie No.1 - Satie | PENDIENTE |
