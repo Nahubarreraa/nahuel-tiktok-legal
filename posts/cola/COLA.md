@@ -165,3 +165,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 94 | `posts/cola/94-reglas` | 5 reglas del que no se rinde | Guardalo y aplicá una hoy. Compartilo con el que quiere ser constante. #mentalidad #disciplina #constancia #habitos #motivacion #fyp | lista 6 remate oscuro | Nuvole Bianche - Einaudi | SUBIDO 2026-11-08 |
 | 95 | `posts/cola/95-tu-excusa` | Leelo otra vez | Dejá de mirar al costado. #mentalidad #disciplina #excusas #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-08 |
 | 96 | `posts/cola/96-enojo` | Quien te hace enojar te controla | Practicá la calma. Compartilo con el que se enoja fácil. #estoicismo #mentalidad #calma #disciplina #parati #fyp | carrusel 3 estoico | Gymnopédie No.1 - Satie | SUBIDO 2026-11-08 |
+
+## Lote 2026-11-10 (97-101, 4 videos + 1 carrusel estoico)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 97 | `posts/cola/97-sin-ganas` | Sin ganas | Lo que hacés sin ganas te cambia. Compartilo con el que hoy no quiere. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video sin ganas | Experience - Ludovico Einaudi | PENDIENTE |
+| 98 | `posts/cola/98-talento` | Leelo otra vez | Nadie ve los años de práctica. #mentalidad #constancia #disciplina #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 99 | `posts/cola/99-no-parar` | No parar | Lento también es avanzar. Compartilo con el que está por frenar. #mentalidad #constancia #resiliencia #motivacion #parati #fyp | video constancia | Kiss the Rain - Yiruma | PENDIENTE |
+| 100 | `posts/cola/100-nadie-te-obliga` | Cuando nadie te obliga | Ahí se ve quién sos. Compartilo con el que se exige solo. #mentalidad #disciplina #caracter #motivacion #parati #fyp | video caracter | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 101 | `posts/cola/101-lo-que-te-frena` | Lo que te frena te entrena | Pedí ser más fuerte. Compartilo con el que está pasando una prueba. #estoicismo #mentalidad #resiliencia #disciplina #parati #fyp | carrusel 3 estoico | Gymnopédie No.1 - Satie | PENDIENTE |
