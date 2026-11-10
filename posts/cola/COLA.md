@@ -175,3 +175,11 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 99 | `posts/cola/99-no-parar` | No parar | Lento también es avanzar. Compartilo con el que está por frenar. #mentalidad #constancia #resiliencia #motivacion #parati #fyp | video constancia | Kiss the Rain - Yiruma | SUBIDO 2026-11-10 |
 | 100 | `posts/cola/100-nadie-te-obliga` | Cuando nadie te obliga | Ahí se ve quién sos. Compartilo con el que se exige solo. #mentalidad #disciplina #caracter #motivacion #parati #fyp | video caracter | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-10 |
 | 101 | `posts/cola/101-lo-que-te-frena` | Lo que te frena te entrena | Pedí ser más fuerte. Compartilo con el que está pasando una prueba. #estoicismo #mentalidad #resiliencia #disciplina #parati #fyp | carrusel 3 estoico | Gymnopédie No.1 - Satie | SUBIDO 2026-11-10 |
+
+## Lote 2026-11-10 tarde (102-104, sonidos en tendencia)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 102 | `posts/cola/102-nadie-viene` | Nadie viene a rescatarte | Y eso es lo mejor que te pasó. Compartilo con el que espera que alguien lo salve. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | video | AURA - Ogryzek (viral phonk/sigma) | PENDIENTE |
+| 103 | `posts/cola/103-version-un-año` | Tu versión del futuro | Lo que hagas hoy lo decide. Compartilo con el que quiere cambiar. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Spectacular Moment - life motivation (en Para ti) | PENDIENTE |
+| 104 | `posts/cola/104-mas-disciplina` | Los fuertes no tienen más ganas | Las ganas se van. La disciplina se queda. Compartilo con el que depende del ánimo. #mentalidad #disciplina #fortaleza #motivacion #parati #fyp | video | mi único rival soy yo - Fito wpas (en Para ti) | PENDIENTE |
