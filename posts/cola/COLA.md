@@ -170,8 +170,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 97 | `posts/cola/97-sin-ganas` | Sin ganas | Lo que hacés sin ganas te cambia. Compartilo con el que hoy no quiere. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video sin ganas | Experience - Ludovico Einaudi | PENDIENTE |
-| 98 | `posts/cola/98-talento` | Leelo otra vez | Nadie ve los años de práctica. #mentalidad #constancia #disciplina #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 99 | `posts/cola/99-no-parar` | No parar | Lento también es avanzar. Compartilo con el que está por frenar. #mentalidad #constancia #resiliencia #motivacion #parati #fyp | video constancia | Kiss the Rain - Yiruma | PENDIENTE |
-| 100 | `posts/cola/100-nadie-te-obliga` | Cuando nadie te obliga | Ahí se ve quién sos. Compartilo con el que se exige solo. #mentalidad #disciplina #caracter #motivacion #parati #fyp | video caracter | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 101 | `posts/cola/101-lo-que-te-frena` | Lo que te frena te entrena | Pedí ser más fuerte. Compartilo con el que está pasando una prueba. #estoicismo #mentalidad #resiliencia #disciplina #parati #fyp | carrusel 3 estoico | Gymnopédie No.1 - Satie | PENDIENTE |
+| 97 | `posts/cola/97-sin-ganas` | Sin ganas | Lo que hacés sin ganas te cambia. Compartilo con el que hoy no quiere. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video sin ganas | Experience - Ludovico Einaudi | SUBIDO 2026-11-10 |
+| 98 | `posts/cola/98-talento` | Leelo otra vez | Nadie ve los años de práctica. #mentalidad #constancia #disciplina #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-10 |
+| 99 | `posts/cola/99-no-parar` | No parar | Lento también es avanzar. Compartilo con el que está por frenar. #mentalidad #constancia #resiliencia #motivacion #parati #fyp | video constancia | Kiss the Rain - Yiruma | SUBIDO 2026-11-10 |
+| 100 | `posts/cola/100-nadie-te-obliga` | Cuando nadie te obliga | Ahí se ve quién sos. Compartilo con el que se exige solo. #mentalidad #disciplina #caracter #motivacion #parati #fyp | video caracter | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-10 |
+| 101 | `posts/cola/101-lo-que-te-frena` | Lo que te frena te entrena | Pedí ser más fuerte. Compartilo con el que está pasando una prueba. #estoicismo #mentalidad #resiliencia #disciplina #parati #fyp | carrusel 3 estoico | Gymnopédie No.1 - Satie | SUBIDO 2026-11-10 |
