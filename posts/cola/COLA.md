@@ -193,3 +193,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 107 | `posts/cola/107-que-te-vean-llegar` | Que te vean llegar | No expliques tanto. Compartilo con el que nadie cree todavía. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Epic Inspiration - AShamaluevMusic | SUBIDO 2026-11-10 |
 | 108 | `posts/cola/108-mente-pide-parar` | Tu mente pide parar | Seguí un poco más. Compartilo con el que está por frenar. #mentalidad #fortaleza #disciplina #motivacion #parati #fyp | video | Spectacular Moment - life motivation | SUBIDO 2026-11-10 |
 | 109 | `posts/cola/109-quien-manda` | Quién manda | Entrenala todos los días. Compartilo con el que pelea con su mente. #mentalidad #disciplina #fuerzamental #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-10 |
+
+## Lote 2026-11-11 tarde (110-114, videos sin zoom)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 110 | `posts/cola/110-clima` | Es un clima | Pasa. Seguí. Compartilo con el que hoy está mal. #mentalidad #resiliencia #fortaleza #motivacion #parati #fyp | video | To Build A Home - The Cinematic Orchestra | PENDIENTE |
+| 111 | `posts/cola/111-nadie-se-arrepiente` | Nadie se arrepiente | Ni una sola vez. Compartilo con el que duda. #mentalidad #fortaleza #disciplina #motivacion #parati #fyp | video | MONTAGEM FEARLESS - Ultra Slowed | PENDIENTE |
+| 112 | `posts/cola/112-mas-fuerte` | Más fuerte | Eso es crecer. Compartilo con el que la está peleando. #mentalidad #resiliencia #fortaleza #motivacion #parati #fyp | video | Cinematic Background - Ivan Luzan | PENDIENTE |
+| 113 | `posts/cola/113-un-dia-mas-que-el-resto` | Un día más que el resto | Aguantá un día más. Compartilo con el que está por rendirse. #mentalidad #constancia #disciplina #motivacion #parati #fyp | video | Firme en el Concreto - Rocío y los Martes | PENDIENTE |
+| 114 | `posts/cola/114-dia-treinta` | El día treinta | Empezá hoy. Compartilo con el que lo viene postergando. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | AURA - Ogryzek | PENDIENTE |
