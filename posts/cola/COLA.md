@@ -188,8 +188,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 105 | `posts/cola/105-caerte` | Caerte no te hace débil | Levantate. Compartilo con el que hoy se cayó. #mentalidad #resiliencia #fortaleza #motivacion #parati #fyp | video | Firme en el Concreto - Rocío y los Martes | PENDIENTE |
-| 106 | `posts/cola/106-callado` | Callado y avanzando | Hablá con resultados. Compartilo con el que trabaja en silencio. #mentalidad #disciplina #aura #sigma #parati #fyp | video | AURA - Ogryzek | PENDIENTE |
-| 107 | `posts/cola/107-que-te-vean-llegar` | Que te vean llegar | No expliques tanto. Compartilo con el que nadie cree todavía. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Epic Inspiration - AShamaluevMusic | PENDIENTE |
-| 108 | `posts/cola/108-mente-pide-parar` | Tu mente pide parar | Seguí un poco más. Compartilo con el que está por frenar. #mentalidad #fortaleza #disciplina #motivacion #parati #fyp | video | Spectacular Moment - life motivation | PENDIENTE |
-| 109 | `posts/cola/109-quien-manda` | Quién manda | Entrenala todos los días. Compartilo con el que pelea con su mente. #mentalidad #disciplina #fuerzamental #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 105 | `posts/cola/105-caerte` | Caerte no te hace débil | Levantate. Compartilo con el que hoy se cayó. #mentalidad #resiliencia #fortaleza #motivacion #parati #fyp | video | Firme en el Concreto - Rocío y los Martes | SUBIDO 2026-11-10 |
+| 106 | `posts/cola/106-callado` | Callado y avanzando | Hablá con resultados. Compartilo con el que trabaja en silencio. #mentalidad #disciplina #aura #sigma #parati #fyp | video | AURA - Ogryzek | SUBIDO 2026-11-10 |
+| 107 | `posts/cola/107-que-te-vean-llegar` | Que te vean llegar | No expliques tanto. Compartilo con el que nadie cree todavía. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Epic Inspiration - AShamaluevMusic | SUBIDO 2026-11-10 |
+| 108 | `posts/cola/108-mente-pide-parar` | Tu mente pide parar | Seguí un poco más. Compartilo con el que está por frenar. #mentalidad #fortaleza #disciplina #motivacion #parati #fyp | video | Spectacular Moment - life motivation | SUBIDO 2026-11-10 |
+| 109 | `posts/cola/109-quien-manda` | Quién manda | Entrenala todos los días. Compartilo con el que pelea con su mente. #mentalidad #disciplina #fuerzamental #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-10 |
