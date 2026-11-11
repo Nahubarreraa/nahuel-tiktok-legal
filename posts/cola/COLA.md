@@ -183,3 +183,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 102 | `posts/cola/102-nadie-viene` | Nadie viene a rescatarte | Y eso es lo mejor que te pasó. Compartilo con el que espera que alguien lo salve. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | video | AURA - Ogryzek (viral phonk/sigma) | SUBIDO 2026-11-10 |
 | 103 | `posts/cola/103-version-un-año` | Tu versión del futuro | Lo que hagas hoy lo decide. Compartilo con el que quiere cambiar. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Spectacular Moment - life motivation (en Para ti) | SUBIDO 2026-11-10 |
 | 104 | `posts/cola/104-mas-disciplina` | Los fuertes no tienen más ganas | Las ganas se van. La disciplina se queda. Compartilo con el que depende del ánimo. #mentalidad #disciplina #fortaleza #motivacion #parati #fyp | video | mi único rival soy yo - Fito wpas (en Para ti) | SUBIDO 2026-11-10 |
+
+## Lote 2026-11-11 (105-109, videos con sonidos en tendencia)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 105 | `posts/cola/105-caerte` | Caerte no te hace débil | Levantate. Compartilo con el que hoy se cayó. #mentalidad #resiliencia #fortaleza #motivacion #parati #fyp | video | Firme en el Concreto - Rocío y los Martes | PENDIENTE |
+| 106 | `posts/cola/106-callado` | Callado y avanzando | Hablá con resultados. Compartilo con el que trabaja en silencio. #mentalidad #disciplina #aura #sigma #parati #fyp | video | AURA - Ogryzek | PENDIENTE |
+| 107 | `posts/cola/107-que-te-vean-llegar` | Que te vean llegar | No expliques tanto. Compartilo con el que nadie cree todavía. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Epic Inspiration - AShamaluevMusic | PENDIENTE |
+| 108 | `posts/cola/108-mente-pide-parar` | Tu mente pide parar | Seguí un poco más. Compartilo con el que está por frenar. #mentalidad #fortaleza #disciplina #motivacion #parati #fyp | video | Spectacular Moment - life motivation | PENDIENTE |
+| 109 | `posts/cola/109-quien-manda` | Quién manda | Entrenala todos los días. Compartilo con el que pelea con su mente. #mentalidad #disciplina #fuerzamental #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
