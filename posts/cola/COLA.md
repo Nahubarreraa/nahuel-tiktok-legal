@@ -213,3 +213,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 117 | `posts/cola/117-cuando-todos-se-van` | Tu ventaja | Quedate. Compartilo con el que sigue cuando otros abandonan. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Dramatic Tension - Litne | SUBIDO 2026-11-12 |
 | 118 | `posts/cola/118-empezar-igual` | Empezá igual | Nadie lo hace por vos. Compartilo con el que espera aprobación. #mentalidad #disciplina #confianza #motivacion #parati #fyp | video | Motivation Guitar - eggTunes | SUBIDO 2026-11-12 |
 | 119 | `posts/cola/119-a-solas` | A solas con tus pensamientos | Sin celular. Sin ruido. Compartilo con el que no soporta el silencio. #mentalidad #fuerzamental #disciplina #motivacion #parati #fyp | video | AURA - Ogryzek | SUBIDO 2026-11-12 |
+
+## Lote 2026-11-12 tarde (120-124, piano calmo + frases que interpelan)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 120 | `posts/cola/120-te-quejas` | Te quejás de tu vida | Cambiá una cosa hoy. Compartilo con el que se queja y no actúa. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 121 | `posts/cola/121-despues` | Después | Hacelo hoy. Compartilo con el que siempre dice después. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 122 | `posts/cola/122-mentirse` | Leelo otra vez | Empezá por ser honesto con vos. #mentalidad #disciplina #honestidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 123 | `posts/cola/123-no-terminas` | El que no termina | Terminá algo hoy. Compartilo con el que empieza todo y no termina nada. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 124 | `posts/cola/124-no-sos-vago` | No sos vago | Incomodate. Compartilo con el que se cree vago. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | River Flows in You - Yiruma | PENDIENTE |
