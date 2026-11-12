@@ -228,6 +228,6 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 125 | `posts/cola/125-lo-que-evitas` | Lo que evitás | Enfrentalo hoy. Compartilo con el que viene esquivando algo. #mentalidad #disciplina #valentia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 126 | `posts/cola/126-te-falta-hacerlo` | Te falta hacerlo | Dejá de mirar videos y hacelo. Compartilo con el que consume y no ejecuta. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 127 | `posts/cola/127-misma-energia` | La energía de postergar | Hacelo ahora. Compartilo con el que siempre lo deja para después. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 125 | `posts/cola/125-lo-que-evitas` | Lo que evitás | Enfrentalo hoy. Compartilo con el que viene esquivando algo. #mentalidad #disciplina #valentia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-12 |
+| 126 | `posts/cola/126-te-falta-hacerlo` | Te falta hacerlo | Dejá de mirar videos y hacelo. Compartilo con el que consume y no ejecuta. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-12 |
+| 127 | `posts/cola/127-misma-energia` | La energía de postergar | Hacelo ahora. Compartilo con el que siempre lo deja para después. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-12 |
