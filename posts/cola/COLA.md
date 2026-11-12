@@ -223,3 +223,11 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 122 | `posts/cola/122-mentirse` | Leelo otra vez | Empezá por ser honesto con vos. #mentalidad #disciplina #honestidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-12 |
 | 123 | `posts/cola/123-no-terminas` | El que no termina | Terminá algo hoy. Compartilo con el que empieza todo y no termina nada. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-12 |
 | 124 | `posts/cola/124-no-sos-vago` | No sos vago | Incomodate. Compartilo con el que se cree vago. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | River Flows in You - Yiruma | SUBIDO 2026-11-12 |
+
+## Lote 2026-11-13 (125-127, piano + frases que interpelan)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 125 | `posts/cola/125-lo-que-evitas` | Lo que evitás | Enfrentalo hoy. Compartilo con el que viene esquivando algo. #mentalidad #disciplina #valentia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 126 | `posts/cola/126-te-falta-hacerlo` | Te falta hacerlo | Dejá de mirar videos y hacelo. Compartilo con el que consume y no ejecuta. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 127 | `posts/cola/127-misma-energia` | La energía de postergar | Hacelo ahora. Compartilo con el que siempre lo deja para después. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
