@@ -208,8 +208,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 115 | `posts/cola/115-ir-lento` | Ir lento no es el problema | No importa el ritmo. Importa no parar. Compartilo con el que cree que va tarde. #mentalidad #constancia #disciplina #motivacion #parati #fyp | video | mi único rival soy yo - Fito wpas | PENDIENTE |
-| 116 | `posts/cola/116-orgullo` | Lo que hoy te duele | Aguantá. Compartilo con el que está en el tramo difícil. #mentalidad #resiliencia #fortaleza #motivacion #parati #fyp | video | Deep Reflection - Morris Tapes | PENDIENTE |
-| 117 | `posts/cola/117-cuando-todos-se-van` | Tu ventaja | Quedate. Compartilo con el que sigue cuando otros abandonan. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Dramatic Tension - Litne | PENDIENTE |
-| 118 | `posts/cola/118-empezar-igual` | Empezá igual | Nadie lo hace por vos. Compartilo con el que espera aprobación. #mentalidad #disciplina #confianza #motivacion #parati #fyp | video | Motivation Guitar - eggTunes | PENDIENTE |
-| 119 | `posts/cola/119-a-solas` | A solas con tus pensamientos | Sin celular. Sin ruido. Compartilo con el que no soporta el silencio. #mentalidad #fuerzamental #disciplina #motivacion #parati #fyp | video | AURA - Ogryzek | PENDIENTE |
+| 115 | `posts/cola/115-ir-lento` | Ir lento no es el problema | No importa el ritmo. Importa no parar. Compartilo con el que cree que va tarde. #mentalidad #constancia #disciplina #motivacion #parati #fyp | video | mi único rival soy yo - Fito wpas | SUBIDO 2026-11-12 |
+| 116 | `posts/cola/116-orgullo` | Lo que hoy te duele | Aguantá. Compartilo con el que está en el tramo difícil. #mentalidad #resiliencia #fortaleza #motivacion #parati #fyp | video | Deep Reflection - Morris Tapes | SUBIDO 2026-11-12 |
+| 117 | `posts/cola/117-cuando-todos-se-van` | Tu ventaja | Quedate. Compartilo con el que sigue cuando otros abandonan. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Dramatic Tension - Litne | SUBIDO 2026-11-12 |
+| 118 | `posts/cola/118-empezar-igual` | Empezá igual | Nadie lo hace por vos. Compartilo con el que espera aprobación. #mentalidad #disciplina #confianza #motivacion #parati #fyp | video | Motivation Guitar - eggTunes | SUBIDO 2026-11-12 |
+| 119 | `posts/cola/119-a-solas` | A solas con tus pensamientos | Sin celular. Sin ruido. Compartilo con el que no soporta el silencio. #mentalidad #fuerzamental #disciplina #motivacion #parati #fyp | video | AURA - Ogryzek | SUBIDO 2026-11-12 |
