@@ -218,8 +218,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 120 | `posts/cola/120-te-quejas` | Te quejás de tu vida | Cambiá una cosa hoy. Compartilo con el que se queja y no actúa. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 121 | `posts/cola/121-despues` | Después | Hacelo hoy. Compartilo con el que siempre dice después. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 122 | `posts/cola/122-mentirse` | Leelo otra vez | Empezá por ser honesto con vos. #mentalidad #disciplina #honestidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 123 | `posts/cola/123-no-terminas` | El que no termina | Terminá algo hoy. Compartilo con el que empieza todo y no termina nada. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 124 | `posts/cola/124-no-sos-vago` | No sos vago | Incomodate. Compartilo con el que se cree vago. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | River Flows in You - Yiruma | PENDIENTE |
+| 120 | `posts/cola/120-te-quejas` | Te quejás de tu vida | Cambiá una cosa hoy. Compartilo con el que se queja y no actúa. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-12 |
+| 121 | `posts/cola/121-despues` | Después | Hacelo hoy. Compartilo con el que siempre dice después. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-12 |
+| 122 | `posts/cola/122-mentirse` | Leelo otra vez | Empezá por ser honesto con vos. #mentalidad #disciplina #honestidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-12 |
+| 123 | `posts/cola/123-no-terminas` | El que no termina | Terminá algo hoy. Compartilo con el que empieza todo y no termina nada. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-12 |
+| 124 | `posts/cola/124-no-sos-vago` | No sos vago | Incomodate. Compartilo con el que se cree vago. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | River Flows in You - Yiruma | SUBIDO 2026-11-12 |
