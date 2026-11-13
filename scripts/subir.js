@@ -20,7 +20,8 @@ const encPath = (carpeta, f) => carpeta.split('/').map(encodeURIComponent).join(
 async function composio(pathname, body) {
   const r = await fetch(BASE + pathname, {
     method: 'POST',
-    headers: { 'x-api-key': KEY, 'Content-Type': 'application/json' },
+    // La clave del panel "Sesiones y clave API" es de cuenta (consumer): se manda con los tres nombres de header posibles.
+    headers: { 'x-api-key': KEY, 'x-user-api-key': KEY, 'x-consumer-api-key': KEY, 'Content-Type': 'application/json' },
     body: JSON.stringify(body),
   });
   const txt = await r.text();
