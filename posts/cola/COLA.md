@@ -231,3 +231,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 125 | `posts/cola/125-lo-que-evitas` | Lo que evitás | Enfrentalo hoy. Compartilo con el que viene esquivando algo. #mentalidad #disciplina #valentia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-12 |
 | 126 | `posts/cola/126-te-falta-hacerlo` | Te falta hacerlo | Dejá de mirar videos y hacelo. Compartilo con el que consume y no ejecuta. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-12 |
 | 127 | `posts/cola/127-misma-energia` | La energía de postergar | Hacelo ahora. Compartilo con el que siempre lo deja para después. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-12 |
+
+## Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 128 | `posts/cola/128-en-silencio` | Lo que hacés en silencio | Nadie lo ve hoy. Todos lo ven después. Compartilo con el que trabaja sin aplausos. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 129 | `posts/cola/129-empezar-de-cero` | Empezar de cero | Empezá igual. Compartilo con el que tiene miedo a arrancar. #mentalidad #valentia #cambio #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 130 | `posts/cola/130-no-podes` | Leelo otra vez | Incomodate un poco más. #mentalidad #disciplina #incomodidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 131 | `posts/cola/131-cansancio` | El cansancio | Distinguí cansancio de pereza. Compartilo con el que siempre está cansado para empezar. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 132 | `posts/cola/132-la-senal` | La señal | Es ahora. Compartilo con el que espera una señal. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |

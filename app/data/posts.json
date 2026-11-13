@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-12T23:55:20.932Z",
+ "generado": "2026-11-13T00:13:47.015Z",
  "posts": [
   {
    "id": 1,
@@ -3714,6 +3714,140 @@
    "lote": "Lote 2026-11-13 (125-127, piano + frases que interpelan)",
    "frases": [
     "Si lo hicieras con la energía que gastás en postergarlo, ya estaría terminado."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 128,
+   "carpeta": "posts/cola/128-en-silencio",
+   "titulo": "Lo que hacés en silencio",
+   "caption": "Nadie lo ve hoy. Todos lo ven después. Compartilo con el que trabaja sin aplausos.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "tipo": "video",
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
+   "frases": [
+    "Lo que hagas esta semana en silencio es lo que vas a mostrar en cinco años."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 129,
+   "carpeta": "posts/cola/129-empezar-de-cero",
+   "titulo": "Empezar de cero",
+   "caption": "Empezá igual. Compartilo con el que tiene miedo a arrancar.",
+   "hashtags": [
+    "#mentalidad",
+    "#valentia",
+    "#cambio",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "tipo": "video",
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
+   "frases": [
+    "Si te da vergüenza empezar de cero, te va a dar más quedarte igual."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 130,
+   "carpeta": "posts/cola/130-no-podes",
+   "titulo": "Leelo otra vez",
+   "caption": "Incomodate un poco más.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#incomodidad",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "tipo": "video",
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
+   "frases": [
+    "No es que no puedas. Es que no querés incomodarte lo suficiente."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 131,
+   "carpeta": "posts/cola/131-cansancio",
+   "titulo": "El cansancio",
+   "caption": "Distinguí cansancio de pereza. Compartilo con el que siempre está cansado para empezar.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#excusas",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "tipo": "video",
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
+   "frases": [
+    "El cansancio es una excusa que se disfraza de razón."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 132,
+   "carpeta": "posts/cola/132-la-senal",
+   "titulo": "La señal",
+   "caption": "Es ahora. Compartilo con el que espera una señal.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#accion",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "tipo": "video",
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
+   "frases": [
+    "Dejá de esperar una señal. Esta es."
    ],
    "archivos": [
     "tarjeta_1.jpg",
