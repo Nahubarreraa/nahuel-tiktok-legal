@@ -58,8 +58,11 @@ async function llamarModelo(mensajes) {
   });
   const txt = await r.text();
   if (!r.ok) throw new Error(`El modelo gratuito respondió HTTP ${r.status}: ${txt.slice(0, 400)}`);
-  const content = JSON.parse(txt).choices[0].message.content;
-  return JSON.parse(content);
+  let content;
+  try { content = JSON.parse(txt).choices[0].message.content; }
+  catch { throw new Error('Respuesta rara del servicio de modelos (HTTP ' + r.status + '): ' + JSON.stringify(txt.slice(0, 300))); }
+  try { return JSON.parse(content); }
+  catch { throw new Error('El modelo no devolvió JSON: ' + JSON.stringify(String(content).slice(0, 300))); }
 }
 
 function resumenBiblioteca(lib) {
