@@ -58,11 +58,20 @@ async function llamarModelo(mensajes) {
   const token = process.env.GITHUB_TOKEN;
   if (!token) throw new Error('Falta GITHUB_TOKEN');
   const errores = [];
+  if (!llamarModelo.catalogo) {
+    llamarModelo.catalogo = true;
+    try {
+      const c = await fetch('https://models.github.ai/catalog/models', { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' } });
+      const t = await c.text();
+      console.log('Catálogo HTTP', c.status, t.slice(0, 120).replace(/\s+/g, ' '));
+      try { console.log('Modelos:', JSON.parse(t).map((m) => m.id).slice(0, 40).join(', ')); } catch {}
+    } catch (e) { console.log('Catálogo falló:', e.message); }
+  }
   for (const ep of ENDPOINTS) {
     try {
       const r = await fetch(ep.url, {
         method: 'POST',
-        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', Accept: 'application/json' },
+        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', Accept: 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' },
         body: JSON.stringify({ model: ep.model, messages: mensajes, temperature: 0.9, max_tokens: 700, response_format: { type: 'json_object' } }),
       });
       const txt = await r.text();
