@@ -30,7 +30,7 @@ Sitio estático mínimo con los documentos legales (términos y política de pri
 ## App del celular (PWA) — `app/`
 
 - PWA en https://nahubarreraa.github.io/nahuel-tiktok-legal/app/ (pestañas Subir / Biblioteca / Pedir / Ajustes). Lee `app/data/posts.json`, que se **regenera con `node tools/build-library.js`** a partir de `posts/cola/COLA.md` (correrlo después de cambiar COLA.md y commitear el JSON).
-- El botón "Subir a borradores" dispara `.github/workflows/subir.yml` → `scripts/subir.js` → API REST de Composio (TikTok). Requiere el secreto `COMPOSIO_API_KEY` del repo. Sin PC prendida.
+- El botón "Subir a borradores" dispara `.github/workflows/subir.yml` → `scripts/subir.js` → servidor MCP de Composio (`https://connect.composio.dev/mcp`, header `x-consumer-api-key`; la API REST no acepta la clave de cuenta `ck_...`). Requiere el secreto `COMPOSIO_API_KEY` del repo (probado OK desde Actions el 2026-11-12). Sin PC prendida. El token de GitHub de la app (fine-grained, Actions + Issues, vence 2027-02-10) vive solo en el teléfono.
 - La conexión TikTok de Composio usa la app de TikTok Developers en modo **Sandbox** ("pruebas"; la de Producción está rechazada desde 2026-09-14). Usuario objetivo: `mentalidaddeacero.arg` (solo admite uno). Conexión `sandbox`, id `tiktok_awn-callus`.
 - TikTok no permite elegir sonido por API: el video queda en borradores y el usuario pone el sonido en TikTok.
 - "Pedir" crea issues con la etiqueta `pedido` en el repo; todavía no hay quien los procese automáticamente.
