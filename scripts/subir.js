@@ -17,17 +17,26 @@ if (!KEY) fail('Falta el secreto COMPOSIO_API_KEY en el repositorio (Settings > 
 
 const encPath = (carpeta, f) => carpeta.split('/').map(encodeURIComponent).join('/') + '/' + encodeURIComponent(f);
 
+const HEADERS = ['x-user-api-key', 'x-consumer-api-key', 'x-api-key']; // Composio acepta solo uno por pedido
+let headerOk = null;
+
 async function composio(pathname, body) {
-  const r = await fetch(BASE + pathname, {
-    method: 'POST',
-    // La clave del panel "Sesiones y clave API" es de cuenta (consumer): se manda con los tres nombres de header posibles.
-    headers: { 'x-api-key': KEY, 'x-user-api-key': KEY, 'x-consumer-api-key': KEY, 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  const txt = await r.text();
-  let j; try { j = JSON.parse(txt); } catch { j = { raw: txt }; }
-  if (!r.ok) fail(`${pathname} -> HTTP ${r.status}: ${txt.slice(0, 600)}`);
-  return j;
+  const candidatos = headerOk ? [headerOk] : HEADERS;
+  let ultimo = '';
+  for (const h of candidatos) {
+    const r = await fetch(BASE + pathname, {
+      method: 'POST',
+      headers: { [h]: KEY, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+    const txt = await r.text();
+    if (r.status === 401) { ultimo = `${h}: ${txt.slice(0, 200)}`; continue; }
+    headerOk = h;
+    let j; try { j = JSON.parse(txt); } catch { j = { raw: txt }; }
+    if (!r.ok) fail(`${pathname} -> HTTP ${r.status}: ${txt.slice(0, 600)}`);
+    return j;
+  }
+  fail(`${pathname} -> la clave fue rechazada con todos los métodos. Último: ${ultimo}`);
 }
 
 async function ejecutar(tool, args) {
