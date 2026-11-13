@@ -64,9 +64,10 @@ async function llamarModelo(mensajes) {
 }
 
 function resumenBiblioteca(lib) {
-  const ult = lib.filter((p) => p.estado === 'SUBIDO').slice(-70);
-  const lineas = ult.map((p) => `#${p.id} "${p.titulo}" — ${p.frases[0] || p.caption}`);
-  return `Total publicados: ${lib.filter((p) => p.estado === 'SUBIDO').length}. Últimos ${ult.length}:\n${lineas.join('\n')}`;
+  const ult = lib.filter((p) => p.estado !== 'DESCARTADO').slice(-70);
+  const est = (p) => (p.estado === 'PENDIENTE' ? 'EN COLA, sin subir' : p.borrador ? 'en borradores de TikTok' : 'publicado');
+  const lineas = ult.map((p) => `#${p.id} [${est(p)}] "${p.titulo}" — ${p.frases[0] || p.caption}`);
+  return `Total: ${lib.length} posts (${lib.filter((p) => p.estado === 'PENDIENTE').length} en cola sin subir). Últimos ${ult.length}:\n${lineas.join('\n')}`;
 }
 
 function envolver(frase, max = 22) {
