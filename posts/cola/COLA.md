@@ -241,3 +241,9 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 130 | `posts/cola/130-no-podes` | Leelo otra vez | Incomodate un poco más. #mentalidad #disciplina #incomodidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-12 |
 | 131 | `posts/cola/131-cansancio` | El cansancio | Distinguí cansancio de pereza. Compartilo con el que siempre está cansado para empezar. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-12 |
 | 132 | `posts/cola/132-la-senal` | La señal | Es ahora. Compartilo con el que espera una señal. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-12 |
+
+## Lote 2026-11-12 (app del celular)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 133 | `posts/cola/133-la-excusa-elegida` | La excusa elegida | Cortá con eso. Compartilo con el que siempre tiene una razón para no empezar. #mentalidad #disciplina #motivacion #parati #fyp #sinexcusas | video | Experience - Ludovico Einaudi | PENDIENTE |

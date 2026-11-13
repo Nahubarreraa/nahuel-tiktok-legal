@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T00:34:48.621Z",
+ "generado": "2026-11-13T00:44:52.091Z",
  "posts": [
   {
    "id": 1,
@@ -4721,6 +4721,39 @@
    "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
    "frases": [
     "Dejá de esperar una señal. Esta es."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 133,
+   "carpeta": "posts/cola/133-la-excusa-elegida",
+   "titulo": "La excusa elegida",
+   "caption": "Cortá con eso. Compartilo con el que siempre tiene una razón para no empezar.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#motivacion",
+    "#parati",
+    "#fyp",
+    "#sinexcusas"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-12 (app del celular)",
+   "frases": [
+    "No te frenan las excusas: las usás para no comprobar de qué sos capaz."
    ],
    "archivos": [
     "tarjeta_1.jpg",
