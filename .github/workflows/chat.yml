@@ -36,8 +36,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Fuentes para las tarjetas
-        run: sudo apt-get install -y -qq fonts-noto-core >/dev/null
+      - name: Fuentes y ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-core ffmpeg >/dev/null
       - name: Procesar pedido
         id: crear
         env:
