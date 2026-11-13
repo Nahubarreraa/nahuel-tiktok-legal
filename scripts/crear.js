@@ -25,6 +25,8 @@ const slug = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().rep
 const norm = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
 const leerLib = () => JSON.parse(fs.readFileSync(path.join(ROOT, 'app/data/posts.json'), 'utf8')).posts;
 
+// Sube a borradores salvo que el usuario diga lo contrario (no confiamos en la decisión del modelo).
+const NO_SUBIR = /no (lo )?(subas|subir|publiques)|sin subir|solo arm[aá]|nom[aá]s arm[aá]|mostr[aá]me primero|NO subir a TikTok/i;
 const PLATA = /\b(plata|sueldo|salario|cobrar|cobr[aá]s|ahorr\w*|dinero|billete\w*|rico|ricos|riqueza|inversi\w+|aumento)\b/i;
 
 const SISTEMA = `Sos el editor de contenido de "Mentalidad de Acero" (@mentalidaddeacero.arg), una cuenta de TikTok argentina de fuerza mental. Hablás en español rioplatense (voseo).
@@ -190,7 +192,7 @@ const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('
     publicarCambios(`Post ${id} creado desde la app: ${p.titulo}`);
 
     let estadoSubida = 'Quedó guardado en la cola (no lo subí).';
-    if (plan.subir !== false) {
+    if (!NO_SUBIR.test(MENSAJE)) {
       const url = `${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/video.mp4`;
       console.log('Esperando que el sitio publique', url);
       if (!(await esperarSitio(url))) throw new Error('El video tardó demasiado en estar disponible en la web.');
@@ -200,12 +202,12 @@ const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('
       publicarCambios(`Post ${id} subido a borradores`);
       estadoSubida = '**Ya está en tus borradores de TikTok.** Abrí TikTok, ponele el sonido y publicalo.';
     }
-    responder(`${plan.respuesta || ''}\n\n**#${id} · ${p.titulo}**\n> ${p.frase}\n\n${p.caption} ${p.hashtags.join(' ')}\n\n♪ Sonido sugerido: ${p.sonido}\n\n${estadoSubida}\n\n![tarjeta](${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/tarjeta_1.jpg)`);
+    responder(`Listo, armé el post.\n\n**#${id} · ${p.titulo}**\n> ${p.frase}\n\n${p.caption} ${p.hashtags.join(' ')}\n\n♪ Sonido sugerido: ${p.sonido}\n\n${estadoSubida}\n\n![tarjeta](${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/tarjeta_1.jpg)`);
   } else if (plan.accion === 'resubir') {
     const post = lib.find((x) => x.id === Number(plan.resubir_id));
     if (!post) throw new Error('No encontré el post #' + plan.resubir_id);
     await subirABorradores(post, SITE);
-    responder(`${plan.respuesta || ''}\n\nVolví a subir **#${post.id} · ${post.titulo}** a tus borradores de TikTok.`);
+    responder(`Volví a subir **#${post.id} · ${post.titulo}** a tus borradores de TikTok. Abrí TikTok, ponele el sonido y publicalo.`);
   } else {
     responder(plan.respuesta || 'No entendí el pedido, ¿me lo decís de otra forma?');
   }
