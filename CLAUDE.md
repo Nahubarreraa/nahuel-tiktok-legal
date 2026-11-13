@@ -33,7 +33,10 @@ Sitio estático mínimo con los documentos legales (términos y política de pri
 - El botón "Subir a borradores" dispara `.github/workflows/subir.yml` → `scripts/subir.js` → servidor MCP de Composio (`https://connect.composio.dev/mcp`, header `x-consumer-api-key`; la API REST no acepta la clave de cuenta `ck_...`). Requiere el secreto `COMPOSIO_API_KEY` del repo (probado OK desde Actions el 2026-11-12). Sin PC prendida. El token de GitHub de la app (fine-grained, Actions + Issues, vence 2027-02-10) vive solo en el teléfono.
 - La conexión TikTok de Composio usa la app de TikTok Developers en modo **Sandbox** ("pruebas"; la de Producción está rechazada desde 2026-09-14). Usuario objetivo: `mentalidaddeacero.arg` (solo admite uno). Conexión `sandbox`, id `tiktok_awn-callus`.
 - TikTok no permite elegir sonido por API: el video queda en borradores y el usuario pone el sonido en TikTok.
-- "Pedir" crea issues con la etiqueta `pedido` en el repo; todavía no hay quien los procese automáticamente.
+- **Chat de la app** (pantalla principal; pestañas Chat / Biblioteca / Ajustes): cada mensaje crea un issue con etiqueta `pedido` → `.github/workflows/chat.yml` (solo corre si el autor es Nahubarreraa) → `scripts/crear.js`: el modelo gratuito de Composio (`invoke_llm` en su workbench, vía `scripts/subir.js#llm`) decide y escribe la frase, se renderiza la tarjeta con Chrome headless (`tools/tarjetas/card.html` + fondos de `fondos/`, ya versionados y en gris) y el video con ffmpeg, se agrega a `posts/cola/COLA.md` (lote "app del celular"), se commitea y sube a borradores. La respuesta vuelve como comentario del issue y la app la muestra. Sube a borradores salvo que el pedido diga "no lo subas / solo armalo". Los posts subidos así quedan `SUBIDO fecha (borrador)`; los que no se suben quedan `PENDIENTE` (los toma "subí" del chat de Code).
+- `models.github.ai` (GitHub Models) NO sirve: responde "OK" a todo. No volver a intentarlo.
+- La Biblioteca clasifica por tema (hashtags) y estilo (campo Formato de COLA.md) en `tools/build-library.js`.
+- No hay investigación de sonidos en tendencia: el sonido sugerido sale de una lista fija de piano calmo (lo que mejor rindió).
 
 ## Cola de posts listos (`posts/cola/`)
 
