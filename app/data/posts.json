@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T01:13:19.697Z",
+ "generado": "2026-11-13T01:14:39.762Z",
  "posts": [
   {
    "id": 1,
@@ -4950,9 +4950,9 @@
     "Frase directa"
    ],
    "tipo": "video",
-   "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "borrador": true,
+   "estado": "SUBIDO",
+   "subido": "2026-11-12",
    "lote": "Lote 2026-11-12 (app del celular)",
    "frases": [
     "Lo que abandonás a mitad de camino también te enseña a desconfiar de vos."
