@@ -208,6 +208,7 @@ const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('
     const post = lib.find((x) => x.id === Number(plan.resubir_id));
     if (!post) throw new Error('No encontré el post #' + plan.resubir_id);
     await subirABorradores(post, SITE);
+    if (post.estado === 'PENDIENTE') { marcarSubido(post.id); publicarCambios(`Post ${post.id} subido a borradores`); }
     responder(`Volví a subir **#${post.id} · ${post.titulo}** a tus borradores de TikTok. Abrí TikTok, ponele el sonido y publicalo.`);
   } else {
     responder(plan.respuesta || 'No entendí el pedido, ¿me lo decís de otra forma?');

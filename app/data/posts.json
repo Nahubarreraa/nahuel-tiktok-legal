@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T00:50:08.054Z",
+ "generado": "2026-11-13T00:54:17.986Z",
  "posts": [
   {
    "id": 1,
@@ -4915,9 +4915,9 @@
     "Frase directa"
    ],
    "tipo": "video",
-   "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "borrador": true,
+   "estado": "SUBIDO",
+   "subido": "2026-11-12",
    "lote": "Lote 2026-11-12 (app del celular)",
    "frases": [
     "La comodidad no te frena de golpe: te acostumbra a pedirle menos a tu propio carácter."

@@ -247,4 +247,4 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
 | 133 | `posts/cola/133-la-excusa-elegida` | La excusa elegida | Cortá con eso. Compartilo con el que siempre tiene una razón para no empezar. #mentalidad #disciplina #motivacion #parati #fyp #sinexcusas | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 134 | `posts/cola/134-bajar-la-vara` | Bajar la vara | Subí la vara. Compartilo con el que se está conformando. #mentalidad #disciplina #motivacion #parati #fyp #comodidad | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 134 | `posts/cola/134-bajar-la-vara` | Bajar la vara | Subí la vara. Compartilo con el que se está conformando. #mentalidad #disciplina #motivacion #parati #fyp #comodidad | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-12 (borrador) |
