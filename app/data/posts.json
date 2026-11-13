@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T00:46:21.789Z",
+ "generado": "2026-11-13T00:50:08.054Z",
  "posts": [
   {
    "id": 1,
@@ -4887,6 +4887,40 @@
    "lote": "Lote 2026-11-12 (app del celular)",
    "frases": [
     "No te frenan las excusas: las usás para no comprobar de qué sos capaz."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 134,
+   "carpeta": "posts/cola/134-bajar-la-vara",
+   "titulo": "Bajar la vara",
+   "caption": "Subí la vara. Compartilo con el que se está conformando.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#motivacion",
+    "#parati",
+    "#fyp",
+    "#comodidad"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-12 (app del celular)",
+   "frases": [
+    "La comodidad no te frena de golpe: te acostumbra a pedirle menos a tu propio carácter."
    ],
    "archivos": [
     "tarjeta_1.jpg",
