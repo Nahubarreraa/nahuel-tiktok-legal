@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T17:37:16.166Z",
+ "generado": "2026-11-13T17:58:06.158Z",
  "posts": [
   {
    "id": 1,
@@ -4882,8 +4882,8 @@
    ],
    "tipo": "video",
    "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-13",
    "lote": "Lote 2026-11-12 (app del celular)",
    "frases": [
     "No te frenan las excusas: las usás para no comprobar de qué sos capaz."
@@ -4950,8 +4950,8 @@
    ],
    "tipo": "video",
    "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-13",
    "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
    "frases": [
     "Nadie te va a exigir más de lo que vos te exigís."
@@ -4985,8 +4985,8 @@
    ],
    "tipo": "video",
    "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-13",
    "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
    "frases": [
     "Hay un cansancio que solo se cura haciendo lo que postergaste."
@@ -5018,8 +5018,8 @@
    ],
    "tipo": "video",
    "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-13",
    "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
    "frases": [
     "Si todo lo que hacés es seguro, nada de lo que hacés te hace crecer."
@@ -5053,8 +5053,8 @@
    ],
    "tipo": "video",
    "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-13",
    "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
    "frases": [
     "Si hoy no hiciste nada difícil, hoy no entrenaste."
@@ -5088,8 +5088,8 @@
    ],
    "tipo": "video",
    "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-13",
    "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
    "frases": [
     "Nadie recuerda al que lo pensó. Recuerdan al que lo hizo."
