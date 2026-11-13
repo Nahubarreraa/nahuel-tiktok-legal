@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T00:54:17.986Z",
+ "generado": "2026-11-13T01:13:19.697Z",
  "posts": [
   {
    "id": 1,
@@ -4921,6 +4921,41 @@
    "lote": "Lote 2026-11-12 (app del celular)",
    "frases": [
     "La comodidad no te frena de golpe: te acostumbra a pedirle menos a tu propio carácter."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 135,
+   "carpeta": "posts/cola/135-la-confianza-propia",
+   "titulo": "La confianza propia",
+   "caption": "Terminá lo que empezás. Compartilo con el que siempre deja todo a medias.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#motivacion",
+    "#parati",
+    "#fyp",
+    "#constancia"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-12 (app del celular)",
+   "frases": [
+    "Lo que abandonás a mitad de camino también te enseña a desconfiar de vos."
    ],
    "archivos": [
     "tarjeta_1.jpg",
