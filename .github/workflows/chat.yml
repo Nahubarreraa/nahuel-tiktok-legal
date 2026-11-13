@@ -1,0 +1,61 @@
+name: Chat de la app
+
+# Se dispara cuando el dueño crea un issue con la etiqueta "pedido" desde la app del celular.
+# Genera el post, lo guarda en el repo y (si corresponde) lo sube a borradores de TikTok.
+# Responde en un comentario del mismo issue, que la app muestra como respuesta del chat.
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+    inputs:
+      mensaje:
+        description: "Pedido (para probar a mano)"
+        required: true
+
+permissions:
+  contents: write
+  issues: write
+  models: read
+
+concurrency:
+  group: chat-acero
+  cancel-in-progress: false
+
+jobs:
+  chat:
+    # Solo el dueño puede disparar esto (el repo es público: cualquiera podría abrir un issue).
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.actor == 'Nahubarreraa' && contains(github.event.issue.labels.*.name, 'pedido'))
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fuentes para las tarjetas
+        run: sudo apt-get install -y -qq fonts-noto-core >/dev/null
+      - name: Procesar pedido
+        id: crear
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+          SITE: https://nahubarreraa.github.io/nahuel-tiktok-legal
+          MENSAJE: ${{ github.event.issue.body || inputs.mensaje }}
+          RESPUESTA_FILE: ${{ runner.temp }}/respuesta.md
+        run: node scripts/crear.js
+      - name: Responder en el chat
+        if: always() && github.event_name == 'issues'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RESP: ${{ runner.temp }}/respuesta.md
+        run: |
+          [ -f "$RESP" ] || echo "No pude completar el pedido (error inesperado)." > "$RESP"
+          gh issue comment "${{ github.event.issue.number }}" --body-file "$RESP"
+          gh issue close "${{ github.event.issue.number }}"
+      - name: Mostrar respuesta (prueba manual)
+        if: always() && github.event_name == 'workflow_dispatch'
+        run: cat "${{ runner.temp }}/respuesta.md" || true

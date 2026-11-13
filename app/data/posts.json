@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T00:29:32.589Z",
+ "generado": "2026-11-13T00:34:48.621Z",
  "posts": [
   {
    "id": 1,
@@ -16,6 +16,13 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -48,6 +55,10 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -80,6 +91,13 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Superación",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -112,6 +130,12 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Constancia"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -144,6 +168,12 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Dinero"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -176,6 +206,12 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Enfoque"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -208,6 +244,12 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -240,6 +282,13 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Disciplina",
+    "Superación"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -272,6 +321,13 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Superación",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -304,6 +360,13 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Constancia",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-29",
@@ -336,6 +399,13 @@
    ],
    "formato": "carrusel",
    "sonido": "",
+   "temas": [
+    "Disciplina",
+    "Postergar"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -368,6 +438,12 @@
    ],
    "formato": "carrusel 4",
    "sonido": "Beethoven's Silence",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -400,6 +476,12 @@
    ],
    "formato": "video",
    "sonido": "Time - Hans Zimmer",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -427,6 +509,12 @@
    ],
    "formato": "carrusel 3 sin cierre",
    "sonido": "Faded Glass Hours - Sean Miller",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -457,6 +545,10 @@
    ],
    "formato": "video",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -484,6 +576,12 @@
    ],
    "formato": "carrusel 4",
    "sonido": "Emotional Cinematic - AShamaluevMusic",
+   "temas": [
+    "Gratitud"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -516,6 +614,10 @@
    ],
    "formato": "lista 5",
    "sonido": "Magnolia - Claudio Constantini",
+   "temas": [],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -550,6 +652,12 @@
    ],
    "formato": "carrusel 4",
    "sonido": "Cinematic Inspiring Epic",
+   "temas": [
+    "Dinero"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -582,6 +690,12 @@
    ],
    "formato": "video",
    "sonido": "Interstellar Main Theme - Hans Zimmer",
+   "temas": [
+    "Paz y calma"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -609,6 +723,12 @@
    ],
    "formato": "lista 5",
    "sonido": "Clair de Lune - Debussy",
+   "temas": [
+    "Paz y calma"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -643,6 +763,12 @@
    ],
    "formato": "video",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Superación"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -670,6 +796,12 @@
    ],
    "formato": "carrusel 4",
    "sonido": "Cornfield Chase - Hans Zimmer",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -702,6 +834,13 @@
    ],
    "formato": "video",
    "sonido": "Gymnopedie No. 1 - Satie",
+   "temas": [
+    "Excusas",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -729,6 +868,12 @@
    ],
    "formato": "carrusel 4",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Paz y calma"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-30",
@@ -761,6 +906,12 @@
    ],
    "formato": "carrusel 5 con pregunta",
    "sonido": "Consuelo - Txmy",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -794,6 +945,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Every Word - Ivan Castro (o piano instrumental)",
+   "temas": [
+    "Familia"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -821,6 +978,14 @@
    ],
    "formato": "carrusel 4 pregunta/lista",
    "sonido": "Runaway - Piano Rendition",
+   "temas": [
+    "Dinero",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Lista",
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -853,6 +1018,12 @@
    ],
    "formato": "carrusel 5 pregunta",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Incomodidad"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -886,6 +1057,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Mad World - Gary Jules (piano)",
+   "temas": [
+    "Salud"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -913,6 +1090,13 @@
    ],
    "formato": "carrusel 4 caso",
    "sonido": "Una Mattina - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Postergar"
+   ],
+   "estilos": [
+    "Gancho / caso"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -945,6 +1129,13 @@
    ],
    "formato": "lista 5",
    "sonido": "Now We Are Free - Hans Zimmer",
+   "temas": [
+    "Constancia",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -978,6 +1169,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano instrumental",
+   "temas": [
+    "Confianza"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1005,6 +1202,12 @@
    ],
    "formato": "carrusel 3 sin cierre",
    "sonido": "Snowfall - Oneheart",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1035,6 +1238,12 @@
    ],
    "formato": "carrusel 4 gancho",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Gancho / caso"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1066,6 +1275,10 @@
    ],
    "formato": "video enigma",
    "sonido": "Time - Hans Zimmer (piano)",
+   "temas": [],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1093,6 +1306,13 @@
    ],
    "formato": "lista 5 preguntas",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Lista",
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1127,6 +1347,13 @@
    ],
    "formato": "carrusel 4 dinero",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Dinero"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1158,6 +1385,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Postergar",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1185,6 +1419,12 @@
    ],
    "formato": "carrusel 3 sin cierre",
    "sonido": "Gymnopédie No.1 - Satie",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-10-31",
@@ -1215,6 +1455,12 @@
    ],
    "formato": "carrusel 4 gancho",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Gancho / caso"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-02",
@@ -1246,6 +1492,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-02",
@@ -1273,6 +1525,12 @@
    ],
    "formato": "lista 6",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Paz y calma"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-02",
@@ -1309,6 +1567,12 @@
    ],
    "formato": "carrusel 3 sin cierre",
    "sonido": "Gymnopédie No.1 - Satie",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-02",
@@ -1338,6 +1602,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Valentía"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-02",
@@ -1365,6 +1635,12 @@
    ],
    "formato": "carrusel 4 pregunta",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Cambio"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-02",
@@ -1397,6 +1673,12 @@
    ],
    "formato": "lista mito/realidad 4",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-03",
@@ -1428,6 +1710,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Gymnopédie No.1 - Satie",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-03",
@@ -1455,6 +1743,12 @@
    ],
    "formato": "carrusel 3 pregunta",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-03",
@@ -1485,6 +1779,12 @@
    ],
    "formato": "carrusel 4",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-03",
@@ -1516,6 +1816,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Acción",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-03",
@@ -1543,6 +1850,10 @@
    ],
    "formato": "lista 5",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-03",
@@ -1577,6 +1888,12 @@
    ],
    "formato": "video dinero cta compartilo",
    "sonido": "Magnolia - Claudio Constantini",
+   "temas": [
+    "Dinero"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1603,6 +1920,12 @@
    ],
    "formato": "video enigma dinero",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Dinero"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1630,6 +1953,14 @@
    ],
    "formato": "video estoico cta compartilo",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Estoicismo",
+    "Resiliencia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Estoico"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1656,6 +1987,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Cambio"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1683,6 +2021,13 @@
    ],
    "formato": "carrusel 4 pregunta portada dinero",
    "sonido": "Magnolia - Claudio Constantini",
+   "temas": [
+    "Dinero",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1715,6 +2060,13 @@
    ],
    "formato": "carrusel 4 estoico",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Estoicismo",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Estoico"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1747,6 +2099,12 @@
    ],
    "formato": "carrusel 4 dinero",
    "sonido": "Magnolia - Claudio Constantini",
+   "temas": [
+    "Dinero"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1779,6 +2137,12 @@
    ],
    "formato": "video dinero cta compartilo",
    "sonido": "Magnolia - Claudio Constantini",
+   "temas": [
+    "Dinero"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1806,6 +2170,12 @@
    ],
    "formato": "carrusel 4 social",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1838,6 +2208,13 @@
    ],
    "formato": "video",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Postergar"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1865,6 +2242,14 @@
    ],
    "formato": "carrusel 4 winner angle",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Resiliencia",
+    "Superación",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Gancho / caso"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1897,6 +2282,14 @@
    ],
    "formato": "video estoico",
    "sonido": "Gymnopédie No.1 - Satie",
+   "temas": [
+    "Estoicismo",
+    "Paz y calma",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Estoico"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1924,6 +2317,13 @@
    ],
    "formato": "lista dinero 5",
    "sonido": "Magnolia - Claudio Constantini",
+   "temas": [
+    "Dinero",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "DESCARTADO",
    "subido": null,
@@ -1958,6 +2358,13 @@
    ],
    "formato": "video disciplina",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Enfoque"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -1985,6 +2392,13 @@
    ],
    "formato": "carrusel 4",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-04",
@@ -2016,6 +2430,12 @@
    ],
    "formato": "video enigma dinero",
    "sonido": "Magnolia - Claudio Constantini",
+   "temas": [
+    "Dinero"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "DESCARTADO",
    "subido": null,
@@ -2043,6 +2463,14 @@
    ],
    "formato": "video miedo",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Valentía",
+    "Miedo",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2070,6 +2498,13 @@
    ],
    "formato": "carrusel 4 levantarse",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Resiliencia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2101,6 +2536,13 @@
    ],
    "formato": "video enigma soledad",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Soledad",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2128,6 +2570,13 @@
    ],
    "formato": "lista 5",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Resiliencia",
+    "Fortaleza"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2162,6 +2611,13 @@
    ],
    "formato": "video disciplina sin cta",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2189,6 +2645,14 @@
    ],
    "formato": "carrusel 4 remate oscuro",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Fortaleza",
+    "Resiliencia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2220,6 +2684,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Fortaleza"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2247,6 +2718,12 @@
    ],
    "formato": "lista 6 remate oscuro",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2283,6 +2760,14 @@
    ],
    "formato": "video constancia sin cta",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Constancia",
+    "Resiliencia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-05",
@@ -2310,6 +2795,12 @@
    ],
    "formato": "video dos dolores",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2337,6 +2828,13 @@
    ],
    "formato": "carrusel 4 pregunta portada",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Miedo",
+    "Valentía"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2368,6 +2866,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2395,6 +2899,14 @@
    ],
    "formato": "lista 6 remate oscuro",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Miedo",
+    "Postergar"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2431,6 +2943,12 @@
    ],
    "formato": "video caracter",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2458,6 +2976,14 @@
    ],
    "formato": "carrusel 3 estoico",
    "sonido": "Gymnopédie No.1 - Satie",
+   "temas": [
+    "Estoicismo",
+    "Paz y calma",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Estoico"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2487,6 +3013,12 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Valentía"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2514,6 +3046,13 @@
    ],
    "formato": "carrusel 4",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Resiliencia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Carrusel de frases"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2546,6 +3085,13 @@
    ],
    "formato": "video constancia",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Constancia",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2573,6 +3119,13 @@
    ],
    "formato": "carrusel 4 pregunta portada",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Postergar"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-07",
@@ -2605,6 +3158,13 @@
    ],
    "formato": "video hartazgo",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Cambio"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2632,6 +3192,14 @@
    ],
    "formato": "video listo",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Valentía",
+    "Miedo",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2658,6 +3226,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2685,6 +3260,14 @@
    ],
    "formato": "lista 5",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Fortaleza",
+    "Resiliencia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2719,6 +3302,13 @@
    ],
    "formato": "video razones",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2746,6 +3336,13 @@
    ],
    "formato": "carrusel 4 pregunta portada",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Miedo",
+    "Valentía"
+   ],
+   "estilos": [
+    "Pregunta"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2778,6 +3375,12 @@
    ],
    "formato": "video comodidad",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2805,6 +3408,13 @@
    ],
    "formato": "lista 6 remate oscuro",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Lista"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2840,6 +3450,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2867,6 +3484,14 @@
    ],
    "formato": "carrusel 3 estoico",
    "sonido": "Gymnopédie No.1 - Satie",
+   "temas": [
+    "Estoicismo",
+    "Paz y calma",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Estoico"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-08",
@@ -2897,6 +3522,13 @@
    ],
    "formato": "video sin ganas",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -2923,6 +3555,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Constancia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -2950,6 +3589,13 @@
    ],
    "formato": "video constancia",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Constancia",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -2977,6 +3623,12 @@
    ],
    "formato": "video caracter",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3004,6 +3656,14 @@
    ],
    "formato": "carrusel 3 estoico",
    "sonido": "Gymnopédie No.1 - Satie",
+   "temas": [
+    "Estoicismo",
+    "Resiliencia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Estoico"
+   ],
    "tipo": "carrusel",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3034,6 +3694,12 @@
    ],
    "formato": "video",
    "sonido": "AURA - Ogryzek (viral phonk/sigma)",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3061,6 +3727,12 @@
    ],
    "formato": "video",
    "sonido": "Spectacular Moment - life motivation (en Para ti)",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3088,6 +3760,13 @@
    ],
    "formato": "video",
    "sonido": "mi único rival soy yo - Fito wpas (en Para ti)",
+   "temas": [
+    "Disciplina",
+    "Fortaleza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3115,6 +3794,13 @@
    ],
    "formato": "video",
    "sonido": "Firme en el Concreto - Rocío y los Martes",
+   "temas": [
+    "Resiliencia",
+    "Fortaleza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3142,6 +3828,12 @@
    ],
    "formato": "video",
    "sonido": "AURA - Ogryzek",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3169,6 +3861,13 @@
    ],
    "formato": "video",
    "sonido": "Epic Inspiration - AShamaluevMusic",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3196,6 +3895,13 @@
    ],
    "formato": "video",
    "sonido": "Spectacular Moment - life motivation",
+   "temas": [
+    "Fortaleza",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3223,6 +3929,13 @@
    ],
    "formato": "video",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Fuerza mental"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-10",
@@ -3250,6 +3963,13 @@
    ],
    "formato": "video",
    "sonido": "To Build A Home - The Cinematic Orchestra",
+   "temas": [
+    "Resiliencia",
+    "Fortaleza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-11",
@@ -3277,6 +3997,13 @@
    ],
    "formato": "video",
    "sonido": "MONTAGEM FEARLESS - Ultra Slowed",
+   "temas": [
+    "Fortaleza",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-11",
@@ -3304,6 +4031,13 @@
    ],
    "formato": "video",
    "sonido": "Cinematic Background - Ivan Luzan",
+   "temas": [
+    "Resiliencia",
+    "Fortaleza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-11",
@@ -3331,6 +4065,13 @@
    ],
    "formato": "video",
    "sonido": "Firme en el Concreto - Rocío y los Martes",
+   "temas": [
+    "Constancia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-11",
@@ -3358,6 +4099,12 @@
    ],
    "formato": "video",
    "sonido": "AURA - Ogryzek",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-11",
@@ -3385,6 +4132,13 @@
    ],
    "formato": "video",
    "sonido": "mi único rival soy yo - Fito wpas",
+   "temas": [
+    "Constancia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3412,6 +4166,13 @@
    ],
    "formato": "video",
    "sonido": "Deep Reflection - Morris Tapes",
+   "temas": [
+    "Resiliencia",
+    "Fortaleza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3439,6 +4200,13 @@
    ],
    "formato": "video",
    "sonido": "Dramatic Tension - Litne",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3466,6 +4234,13 @@
    ],
    "formato": "video",
    "sonido": "Motivation Guitar - eggTunes",
+   "temas": [
+    "Disciplina",
+    "Confianza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3493,6 +4268,13 @@
    ],
    "formato": "video",
    "sonido": "AURA - Ogryzek",
+   "temas": [
+    "Fuerza mental",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3520,6 +4302,13 @@
    ],
    "formato": "video",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Cambio"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3547,6 +4336,13 @@
    ],
    "formato": "video",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Postergar"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3573,6 +4369,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Honestidad"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3600,6 +4403,13 @@
    ],
    "formato": "video",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3627,6 +4437,13 @@
    ],
    "formato": "video",
    "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Incomodidad"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3654,6 +4471,13 @@
    ],
    "formato": "video",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Valentía"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3681,6 +4505,13 @@
    ],
    "formato": "video",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3708,6 +4539,13 @@
    ],
    "formato": "video",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Postergar"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3735,6 +4573,13 @@
    ],
    "formato": "video",
    "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3762,6 +4607,13 @@
    ],
    "formato": "video",
    "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Valentía",
+    "Cambio"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3788,6 +4640,13 @@
    ],
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Incomodidad"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3815,6 +4674,13 @@
    ],
    "formato": "video",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",
@@ -3842,6 +4708,13 @@
    ],
    "formato": "video",
    "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
    "tipo": "video",
    "estado": "SUBIDO",
    "subido": "2026-11-12",

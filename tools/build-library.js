@@ -10,6 +10,25 @@ const posts = [];
 let header = null;
 let lote = '';
 
+const GENERICOS = new Set(['#mentalidad','#motivacion','#parati','#fyp','#frases','#frasesmotivadoras','#reflexion','#crecimientopersonal']);
+const TEMA = {
+  disciplina: 'Disciplina', constancia: 'Constancia', resiliencia: 'Resiliencia', superacion: 'Superación', fracaso: 'Superación',
+  postergar: 'Postergar', excusas: 'Excusas', cambio: 'Cambio', valentia: 'Valentía', miedo: 'Miedo', fortaleza: 'Fortaleza',
+  fuerzamental: 'Fuerza mental', paz: 'Paz y calma', calma: 'Paz y calma', madurez: 'Paz y calma', atencion: 'Enfoque', enfoque: 'Enfoque',
+  estoicismo: 'Estoicismo', estoico: 'Estoicismo', confianza: 'Confianza', honestidad: 'Honestidad', soledad: 'Soledad',
+  dinero: 'Dinero', finanzas: 'Dinero', trabajo: 'Dinero', valor: 'Dinero', emprender: 'Dinero', ahorro: 'Dinero',
+  familia: 'Familia', salud: 'Salud', gratitud: 'Gratitud', incomodidad: 'Incomodidad', zonadeconfort: 'Incomodidad', accion: 'Acción',
+};
+const estilosDe = (formato) => {
+  const f = formato.toLowerCase(), e = [];
+  if (/enigma/.test(f)) e.push('Enigma (leelo otra vez)');
+  if (/lista/.test(f)) e.push('Lista');
+  if (/pregunta/.test(f)) e.push('Pregunta');
+  if (/estoic/.test(f)) e.push('Estoico');
+  if (/caso|gancho|winner/.test(f)) e.push('Gancho / caso');
+  if (!e.length) e.push(/^video/.test(f) ? 'Frase directa' : 'Carrusel de frases');
+  return e;
+};
 const clean = (s) => s.replace(/`/g, '').trim();
 
 for (const line of cola) {
@@ -64,6 +83,8 @@ for (const line of cola) {
     hashtags,
     formato: get('formato') || 'carrusel',
     sonido: get('sonido'),
+    temas: [...new Set(hashtags.filter((h) => !GENERICOS.has(h)).map((h) => TEMA[h.slice(1).toLowerCase()] || null).filter(Boolean))],
+    estilos: estilosDe(get('formato') || 'carrusel'),
     tipo: /^video/i.test(get('formato')) ? 'video' : 'carrusel',
     estado: subido ? 'SUBIDO' : /DESCARTADO/i.test(estado) ? 'DESCARTADO' : 'PENDIENTE',
     subido,

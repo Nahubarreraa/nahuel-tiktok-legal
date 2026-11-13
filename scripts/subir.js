@@ -6,10 +6,8 @@ const path = require('path');
 
 const MCP = 'https://connect.composio.dev/mcp';
 const KEY = process.env.COMPOSIO_API_KEY;
-const SITE = (process.env.SITE || '').replace(/\/$/, '');
 
-const fail = (m) => { console.error('ERROR: ' + m); process.exit(1); };
-if (!KEY) fail('Falta el secreto COMPOSIO_API_KEY en el repositorio.');
+const fail = (m) => { throw new Error(m); };
 
 let sid = null;
 let n = 0;
@@ -46,12 +44,10 @@ async function tool(name, args) {
   try { return JSON.parse(text); } catch { return { raw: text }; }
 }
 
-(async () => {
-  const lib = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'app/data/posts.json'), 'utf8')).posts;
-  const post = lib.find((p) => String(p.id) === String(process.env.POST_ID));
-  if (!post) fail('No existe el post ' + process.env.POST_ID);
+async function subirABorradores(post, site) {
+  if (!KEY) fail('Falta el secreto COMPOSIO_API_KEY en el repositorio.');
+  const SITE = site.replace(/\/$/, '');
   console.log(`Post #${post.id}: ${post.titulo} (${post.tipo})`);
-
   const enc = (f) => post.carpeta.split('/').map(encodeURIComponent).join('/') + '/' + encodeURIComponent(f);
   const job = { tipo: post.tipo };
   if (post.tipo === 'video') {
@@ -112,4 +108,14 @@ print("RESULT::" + json.dumps({"out": out, "err": str(e2) if e2 else None}))
   const inner = res.out && (res.out.data && res.out.data.data ? res.out.data.data : res.out.data || res.out);
   if (res.err || !inner || !inner.publish_id) fail('TikTok no confirmó la subida: ' + JSON.stringify(res).slice(0, 800));
   console.log('OK. Quedó en borradores. publish_id:', inner.publish_id);
-})().catch((e) => fail(e.stack || String(e)));
+  return inner.publish_id;
+}
+
+module.exports = { subirABorradores };
+
+if (require.main === module) {
+  const lib = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'app/data/posts.json'), 'utf8')).posts;
+  const post = lib.find((p) => String(p.id) === String(process.env.POST_ID));
+  if (!post) { console.error('ERROR: no existe el post ' + process.env.POST_ID); process.exit(1); }
+  subirABorradores(post, process.env.SITE || '').catch((e) => { console.error('ERROR: ' + e.message); process.exit(1); });
+}
