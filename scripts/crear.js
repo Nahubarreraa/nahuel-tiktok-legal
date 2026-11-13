@@ -48,21 +48,37 @@ FORMATO DE SALIDA (JSON, sin texto extra):
 {"accion":"crear|resubir|responder","respuesta":"mensaje corto para el usuario, 1-3 oraciones","subir":true,"resubir_id":null,"post":{"titulo":"","frase":"","tipo":"directa|enigma","caption":"","hashtags":["#mentalidad"],"sonido":""}}
 "post" solo si accion = crear.`;
 
+const ENDPOINTS = [
+  { url: 'https://models.github.ai/inference/chat/completions', model: MODELO },
+  { url: 'https://models.inference.ai.azure.com/chat/completions', model: 'gpt-4o' },
+  { url: 'https://models.inference.ai.azure.com/chat/completions', model: 'gpt-4o-mini' },
+];
+
 async function llamarModelo(mensajes) {
   const token = process.env.GITHUB_TOKEN;
   if (!token) throw new Error('Falta GITHUB_TOKEN');
-  const r = await fetch('https://models.github.ai/inference/chat/completions', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', Accept: 'application/json' },
-    body: JSON.stringify({ model: MODELO, messages: mensajes, temperature: 0.9, max_tokens: 700, response_format: { type: 'json_object' } }),
-  });
-  const txt = await r.text();
-  if (!r.ok) throw new Error(`El modelo gratuito respondió HTTP ${r.status}: ${txt.slice(0, 400)}`);
-  let content;
-  try { content = JSON.parse(txt).choices[0].message.content; }
-  catch { throw new Error('Respuesta rara del servicio de modelos (HTTP ' + r.status + '): ' + JSON.stringify(txt.slice(0, 300))); }
-  try { return JSON.parse(content); }
-  catch { throw new Error('El modelo no devolvió JSON: ' + JSON.stringify(String(content).slice(0, 300))); }
+  const errores = [];
+  for (const ep of ENDPOINTS) {
+    try {
+      const r = await fetch(ep.url, {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ model: ep.model, messages: mensajes, temperature: 0.9, max_tokens: 700, response_format: { type: 'json_object' } }),
+      });
+      const txt = await r.text();
+      if (!r.ok) throw new Error(`HTTP ${r.status}: ${txt.slice(0, 250)}`);
+      let content;
+      try { content = JSON.parse(txt).choices[0].message.content; }
+      catch { throw new Error('respuesta rara (HTTP ' + r.status + '): ' + JSON.stringify(txt.slice(0, 200))); }
+      const out = JSON.parse(content);
+      console.log('Modelo usado:', ep.model, '@', ep.url);
+      return out;
+    } catch (e) {
+      errores.push(`${ep.model}@${new URL(ep.url).host}: ${e.message}`);
+      console.log('Falló', errores[errores.length - 1]);
+    }
+  }
+  throw new Error('Ningún modelo gratuito respondió. ' + errores.join(' | ').slice(0, 700));
 }
 
 function resumenBiblioteca(lib) {
