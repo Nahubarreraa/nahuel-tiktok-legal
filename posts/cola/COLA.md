@@ -236,8 +236,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 128 | `posts/cola/128-en-silencio` | Lo que hacés en silencio | Nadie lo ve hoy. Todos lo ven después. Compartilo con el que trabaja sin aplausos. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 129 | `posts/cola/129-empezar-de-cero` | Empezar de cero | Empezá igual. Compartilo con el que tiene miedo a arrancar. #mentalidad #valentia #cambio #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 130 | `posts/cola/130-no-podes` | Leelo otra vez | Incomodate un poco más. #mentalidad #disciplina #incomodidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 131 | `posts/cola/131-cansancio` | El cansancio | Distinguí cansancio de pereza. Compartilo con el que siempre está cansado para empezar. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 132 | `posts/cola/132-la-senal` | La señal | Es ahora. Compartilo con el que espera una señal. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 128 | `posts/cola/128-en-silencio` | Lo que hacés en silencio | Nadie lo ve hoy. Todos lo ven después. Compartilo con el que trabaja sin aplausos. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-12 |
+| 129 | `posts/cola/129-empezar-de-cero` | Empezar de cero | Empezá igual. Compartilo con el que tiene miedo a arrancar. #mentalidad #valentia #cambio #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-12 |
+| 130 | `posts/cola/130-no-podes` | Leelo otra vez | Incomodate un poco más. #mentalidad #disciplina #incomodidad #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-12 |
+| 131 | `posts/cola/131-cansancio` | El cansancio | Distinguí cansancio de pereza. Compartilo con el que siempre está cansado para empezar. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-12 |
+| 132 | `posts/cola/132-la-senal` | La señal | Es ahora. Compartilo con el que espera una señal. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-12 |

@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T00:13:47.015Z",
+ "generado": "2026-11-13T00:29:32.589Z",
  "posts": [
   {
    "id": 1,
@@ -3736,8 +3736,8 @@
    "formato": "video",
    "sonido": "Experience - Ludovico Einaudi",
    "tipo": "video",
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-12",
    "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
    "frases": [
     "Lo que hagas esta semana en silencio es lo que vas a mostrar en cinco años."
@@ -3763,8 +3763,8 @@
    "formato": "video",
    "sonido": "Kiss the Rain - Yiruma",
    "tipo": "video",
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-12",
    "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
    "frases": [
     "Si te da vergüenza empezar de cero, te va a dar más quedarte igual."
@@ -3789,8 +3789,8 @@
    "formato": "video enigma",
    "sonido": "Hallelujah - piano",
    "tipo": "video",
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-12",
    "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
    "frases": [
     "No es que no puedas. Es que no querés incomodarte lo suficiente."
@@ -3816,8 +3816,8 @@
    "formato": "video",
    "sonido": "Comptine d'un autre été - Yann Tiersen",
    "tipo": "video",
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-12",
    "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
    "frases": [
     "El cansancio es una excusa que se disfraza de razón."
@@ -3843,8 +3843,8 @@
    "formato": "video",
    "sonido": "Nuvole Bianche - Einaudi",
    "tipo": "video",
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-12",
    "lote": "Lote 2026-11-13 tarde (128-132, piano + frases que interpelan)",
    "frases": [
     "Dejá de esperar una señal. Esta es."
