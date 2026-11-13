@@ -9,224 +9,290 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>Mentalidad de Acero</title>
 <style>
-:root{--bg:#14130f;--card:#1f1d17;--line:#33302600;--line2:#38342a;--tx:#f2eee4;--mut:#a39d8c;--ac:#d9b36a;--ok:#7bc47f;--bad:#e0806f}
+:root{--bg:#14130f;--card:#1f1d17;--line:#38342a;--tx:#f2eee4;--mut:#a39d8c;--ac:#d9b36a;--ok:#7bc47f;--bad:#e0806f;--nav:64px}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-body{padding:0 16px calc(84px + env(safe-area-inset-bottom))}
-header{padding:calc(14px + env(safe-area-inset-top)) 0 8px}
-h1{font-size:20px;margin:0}
-.sub{color:var(--mut);font-size:13px}
-nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:#0f0e0b;border-top:1px solid var(--line2);padding-bottom:env(safe-area-inset-bottom);z-index:5}
-nav button{flex:1;background:none;border:0;color:var(--mut);padding:12px 4px 10px;font-size:12px}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+body{display:flex;flex-direction:column}
+header{padding:calc(10px + env(safe-area-inset-top)) 16px 8px;border-bottom:1px solid var(--line);flex:none}
+h1{font-size:18px;margin:0}
+.sub{color:var(--mut);font-size:12px}
+main{flex:1;min-height:0;position:relative}
+.tab{display:none;position:absolute;inset:0;overflow-y:auto;padding:12px 16px 24px}
+.tab.on{display:block}
+#t-chat.on{display:flex;flex-direction:column;padding:0}
+nav{flex:none;display:flex;background:#0f0e0b;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav button{flex:1;background:none;border:0;color:var(--mut);padding:9px 4px 8px;font-size:12px}
 nav button b{display:block;font-size:20px;font-weight:400}
 nav button.on{color:var(--ac)}
-.tab{display:none}.tab.on{display:block}
-.card{background:var(--card);border:1px solid var(--line2);border-radius:14px;padding:14px;margin:12px 0}
+/* chat */
+#msgs{flex:1;overflow-y:auto;padding:14px 16px}
+.b{max-width:88%;padding:10px 13px;border-radius:16px;margin:8px 0;word-wrap:break-word;overflow-wrap:anywhere}
+.b.yo{background:var(--ac);color:#1a1608;margin-left:auto;border-bottom-right-radius:4px}
+.b.bot{background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px}
+.b blockquote{margin:8px 0;padding:6px 10px;border-left:3px solid var(--ac);background:#0f0e0b;border-radius:4px}
+.b img{display:block;max-width:100%;max-height:340px;border-radius:10px;margin-top:8px}
+.b p{margin:6px 0}
+.wait{color:var(--mut);font-size:14px}
+.dots::after{content:'';animation:d 1.4s steps(4) infinite}
+@keyframes d{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
+#bar{flex:none;border-top:1px solid var(--line);background:#0f0e0b;padding:8px 12px 10px}
+#chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}
+.chip{flex:none;background:#2b281f;border:1px solid var(--line);color:var(--tx);border-radius:18px;padding:6px 12px;font-size:13px;white-space:nowrap}
+.chip.on{background:var(--ac);color:#1a1608;border-color:var(--ac)}
+#form{display:flex;gap:8px;align-items:flex-end}
+textarea,input{width:100%;background:#0f0e0b;color:var(--tx);border:1px solid var(--line);border-radius:12px;padding:11px 12px;font:inherit}
+#txt{resize:none;max-height:120px;min-height:44px}
+#send{flex:none;width:46px;height:44px;border:0;border-radius:12px;background:var(--ac);color:#1a1608;font-size:20px;font-weight:700}
+#send:disabled{opacity:.4}
+/* biblioteca */
+.fila{display:flex;gap:6px;overflow-x:auto;margin:6px 0 2px;align-items:center}
+.fila small{flex:none;color:var(--mut);font-size:11px;width:44px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:10px 0}
 .row{display:flex;gap:12px;align-items:center}
 .thumb{width:54px;height:96px;border-radius:8px;object-fit:cover;background:#000;flex:none}
 .grow{flex:1;min-width:0}
 .t{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .m{color:var(--mut);font-size:13px}
-button.btn,a.btn{display:inline-block;background:var(--ac);color:#1a1608;border:0;border-radius:10px;padding:11px 16px;font-weight:700;font-size:15px;text-decoration:none}
-button.btn.sec{background:#2b281f;color:var(--tx);border:1px solid var(--line2)}
+.tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#2b281f;color:var(--ac);margin:3px 4px 0 0}
+.tag.ok{color:var(--ok)}
+button.btn{background:var(--ac);color:#1a1608;border:0;border-radius:10px;padding:11px 16px;font-weight:700;font-size:15px}
+button.btn.sec{background:#2b281f;color:var(--tx);border:1px solid var(--line)}
 button.btn:disabled{opacity:.5}
-input,textarea{width:100%;background:#0f0e0b;color:var(--tx);border:1px solid var(--line2);border-radius:10px;padding:12px;font:inherit}
-textarea{min-height:130px;resize:vertical}
-.chips{display:flex;gap:8px;margin:10px 0;overflow-x:auto}
-.chip{background:#2b281f;border:1px solid var(--line2);color:var(--mut);border-radius:20px;padding:6px 14px;font-size:14px;white-space:nowrap}
-.chip.on{background:var(--ac);color:#1a1608;border-color:var(--ac)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:10px 0}
-.stat{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:10px;text-align:center}
-.stat b{display:block;font-size:22px;color:var(--ac)}
-.stat span{font-size:12px;color:var(--mut)}
 .modal{position:fixed;inset:0;background:#000c;display:none;z-index:10;overflow:auto}
 .modal.on{display:block}
-.sheet{background:var(--bg);margin:calc(24px + env(safe-area-inset-top)) auto 24px;max-width:560px;border-radius:16px;padding:16px;border:1px solid var(--line2)}
-.imgs{display:flex;gap:8px;overflow-x:auto;margin:8px 0}
-.imgs img{height:220px;border-radius:8px}
+.sheet{background:var(--bg);margin:calc(20px + env(safe-area-inset-top)) auto 20px;max-width:560px;border-radius:16px;padding:16px;border:1px solid var(--line)}
+.imgs img{max-width:100%;max-height:420px;border-radius:8px;display:block;margin:8px auto}
 .q{background:#0f0e0b;border-left:3px solid var(--ac);padding:8px 12px;margin:8px 0;border-radius:6px}
-.toast{position:fixed;left:16px;right:16px;bottom:calc(90px + env(safe-area-inset-bottom));background:#000;border:1px solid var(--line2);border-radius:12px;padding:12px;z-index:20;display:none}
+.toast{position:fixed;left:16px;right:16px;bottom:calc(var(--nav) + 18px + env(safe-area-inset-bottom));background:#000;border:1px solid var(--line);border-radius:12px;padding:12px;z-index:20;display:none}
 .toast.on{display:block}
 .ok{color:var(--ok)}.bad{color:var(--bad)}
 label{display:block;margin:12px 0 6px;font-size:14px;color:var(--mut)}
+.sw{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.sw input{width:auto;transform:scale(1.4)}
 ol{padding-left:20px;color:var(--mut);font-size:14px}
 </style>
 </head>
 <body>
 <header><h1>Mentalidad de Acero</h1><div class="sub" id="sub">cargando…</div></header>
 
-<section class="tab on" id="t-subir">
-  <div class="stats" id="stats"></div>
-  <h3 style="margin:18px 0 0">Cola de posts</h3>
-  <div id="cola"></div>
-  <h3 style="margin:22px 0 0">Reusar uno ya publicado</h3>
-  <div class="m">Subí de nuevo a borradores cualquier post de la Biblioteca.</div>
-  <div style="margin-top:10px"><button class="btn sec" onclick="go('biblio')">Ir a la Biblioteca</button></div>
+<main>
+<section class="tab on" id="t-chat">
+  <div id="msgs"></div>
+  <div id="bar">
+    <div id="chips"></div>
+    <div id="form">
+      <textarea id="txt" rows="1" placeholder="Pedile un post o preguntá algo…"></textarea>
+      <button id="send" aria-label="Enviar">➤</button>
+    </div>
+  </div>
 </section>
 
 <section class="tab" id="t-biblio">
-  <input id="q" type="search" placeholder="Buscar frase, tema, sonido…" oninput="renderBiblio()">
-  <div class="chips" id="chips"></div>
-  <div class="m" id="count"></div>
+  <input id="q" type="search" placeholder="Buscar frase, tema, sonido…">
+  <div class="fila" id="f-tipo"><small>Tipo</small></div>
+  <div class="fila" id="f-tema"><small>Tema</small></div>
+  <div class="fila" id="f-estilo"><small>Estilo</small></div>
+  <div class="m" id="count" style="margin-top:8px"></div>
   <div id="lista"></div>
-</section>
-
-<section class="tab" id="t-pedir">
-  <div class="card">
-    <b>Pedirle algo a la cuenta</b>
-    <div class="m" style="margin:4px 0 10px">Escribí lo que querés: un tema, una frase, reusar un post, cambiar el estilo… Queda guardado como pedido en el repo.</div>
-    <textarea id="pedido" placeholder="Ej: quiero un video con la frase del post 127 pero con otro fondo y piano de Einaudi"></textarea>
-    <div style="margin-top:10px"><button class="btn" id="enviar" onclick="enviarPedido()">Enviar pedido</button></div>
-  </div>
-  <h3>Pedidos</h3>
-  <div id="pedidos" class="m">—</div>
 </section>
 
 <section class="tab" id="t-ajustes">
   <div class="card">
     <b>Conexión con GitHub</b>
-    <div class="m" style="margin:4px 0">Hace falta una sola vez, para que los botones puedan subir y guardar pedidos. Se guarda solo en este teléfono.</div>
+    <div class="m" id="conexion" style="margin:4px 0 10px">Sin token. Hace falta una sola vez para que el chat pueda trabajar.</div>
     <label>Token de GitHub</label>
     <input id="tok" type="password" placeholder="github_pat_…" autocomplete="off">
-    <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" onclick="guardarTok()">Guardar</button><button class="btn sec" onclick="probarTok()">Probar</button></div>
-    <div id="tokmsg" class="m" style="margin-top:8px"></div>
+    <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" id="b-guardar">Guardar y probar</button></div>
   </div>
   <div class="card">
-    <b>Cómo crear el token</b>
-    <ol>
-      <li>Entrá a github.com → Settings → Developer settings → <i>Fine-grained tokens</i> → Generate new token.</li>
-      <li>Repositorio: solo <i>nahuel-tiktok-legal</i>.</li>
-      <li>Permisos de repositorio: <i>Actions: Read and write</i> e <i>Issues: Read and write</i>.</li>
-      <li>Copiá el token y pegalo arriba.</li>
-    </ol>
+    <div class="sw"><div><b>Subir a borradores al crear</b><div class="m">Si lo apagás, el chat arma el post y lo deja en la cola sin subirlo.</div></div><input type="checkbox" id="auto"></div>
   </div>
+  <div class="card m" id="info"></div>
 </section>
+</main>
 
 <nav>
-  <button class="on" data-t="subir"><b>⬆</b>Subir</button>
+  <button class="on" data-t="chat"><b>💬</b>Chat</button>
   <button data-t="biblio"><b>▦</b>Biblioteca</button>
-  <button data-t="pedir"><b>✎</b>Pedir</button>
   <button data-t="ajustes"><b>⚙</b>Ajustes</button>
 </nav>
 
-<div class="modal" id="modal" onclick="if(event.target===this)cerrar()"><div class="sheet" id="sheet"></div></div>
+<div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
 const REPO='Nahubarreraa/nahuel-tiktok-legal';
 const API='https://api.github.com/repos/'+REPO;
-let POSTS=[], filtro='todos';
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const lsGet=k=>{try{return localStorage.getItem(k)||''}catch(e){return''}};
+const lsGet=(k,d='')=>{try{const v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}};
 const lsSet=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
 const url=(carpeta,f)=>'../'+carpeta.split('/').map(encodeURIComponent).join('/')+'/'+f;
 const portada=p=>p.archivos.find(f=>/\.jpe?g$|\.png$/i.test(f));
+let POSTS=[], F={tipo:'',tema:'',estilo:''}, conv=[], esperando=false, pollT=null;
 
 function toast(msg,cls){const t=$('toast');t.innerHTML='<span class="'+(cls||'')+'">'+msg+'</span>';t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),5000)}
-
 function go(t){document.querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.id==='t-'+t));
   document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
-  if(t==='pedir')cargarPedidos(); window.scrollTo(0,0)}
+  if(t==='chat'){cargarChat();setTimeout(()=>{$('msgs').scrollTop=1e9},50)} if(t==='ajustes')info()}
 document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));
 
-async function cargar(){
-  try{
-    const r=await fetch('data/posts.json?'+Date.now());POSTS=(await r.json()).posts;
-  }catch(e){$('sub').textContent='No se pudo cargar la biblioteca';return}
-  const subidos=POSTS.filter(p=>p.estado==='SUBIDO');
-  const ult=subidos.map(p=>p.subido).sort().pop();
-  $('sub').textContent=subidos.length+' posts publicados · último '+(ult||'—');
-  $('stats').innerHTML=[['Publicados',subidos.length],['Videos',POSTS.filter(p=>p.tipo==='video').length],['Carruseles',POSTS.filter(p=>p.tipo==='carrusel').length]]
-    .map(([k,v])=>'<div class="stat"><b>'+v+'</b><span>'+k+'</span></div>').join('');
-  renderCola();renderChips();renderBiblio();
-}
-
-function fila(p,accion){
-  const img=portada(p);
-  return '<div class="card"><div class="row">'+(img?'<img class="thumb" loading="lazy" src="'+url(p.carpeta,img)+'">':'<div class="thumb"></div>')+
-   '<div class="grow"><div class="t">#'+p.id+' · '+esc(p.titulo)+'</div><div class="m">'+esc(p.formato)+(p.subido?' · '+p.subido:'')+'</div>'+
-   (p.sonido?'<div class="m">♪ '+esc(p.sonido)+'</div>':'')+'</div></div>'+(accion||'')+'</div>';
-}
-
-function renderCola(){
-  const pend=POSTS.filter(p=>p.estado==='PENDIENTE');
-  $('cola').innerHTML=pend.length?pend.map(p=>fila(p,'<div style="margin-top:10px"><button class="btn" onclick="subir('+p.id+')">Subir a borradores</button></div>')).join('')
-   :'<div class="card m">La cola está vacía. Podés reusar un post de la Biblioteca o pedir uno nuevo en <b>Pedir</b>.</div>';
-}
-
-function renderChips(){
-  const op=[['todos','Todos'],['video','Videos'],['carrusel','Carruseles']];
-  $('chips').innerHTML=op.map(([k,l])=>'<button class="chip'+(filtro===k?' on':'')+'" onclick="filtro=\''+k+'\';renderChips();renderBiblio()">'+l+'</button>').join('');
-}
-
-function renderBiblio(){
-  const q=$('q').value.trim().toLowerCase();
-  const l=POSTS.filter(p=>p.estado!=='DESCARTADO'&&(filtro==='todos'||p.tipo===filtro)&&
-    (!q||[p.titulo,p.caption,p.sonido,p.formato,p.hashtags.join(' '),p.frases.join(' ')].join(' ').toLowerCase().includes(q))).reverse();
-  $('count').textContent=l.length+' posts';
-  $('lista').innerHTML=l.slice(0,60).map(p=>fila(p).replace('<div class="card">','<div class="card" onclick="abrir('+p.id+')">')).join('')+(l.length>60?'<div class="m">Mostrando 60. Afiná la búsqueda para ver más.</div>':'');
-}
-
-function abrir(id){
-  const p=POSTS.find(x=>x.id===id);
-  $('sheet').innerHTML='<div class="row"><div class="grow"><b>#'+p.id+' · '+esc(p.titulo)+'</b><div class="m">'+esc(p.formato)+(p.subido?' · '+p.subido:'')+(p.sonido?' · ♪ '+esc(p.sonido):'')+'</div></div><button class="btn sec" onclick="cerrar()">✕</button></div>'+
-   '<div class="imgs">'+p.archivos.filter(f=>/\.jpe?g$/i.test(f)).map(f=>'<img loading="lazy" src="'+url(p.carpeta,f)+'">').join('')+'</div>'+
-   p.frases.map(f=>'<div class="q">'+esc(f)+'</div>').join('')+
-   '<div class="m" style="margin:8px 0">'+esc(p.caption)+'<br>'+esc(p.hashtags.join(' '))+'</div>'+
-   '<div style="display:flex;gap:8px;flex-wrap:wrap">'+
-   '<button class="btn" onclick="subir('+p.id+')">Subir a borradores</button>'+
-   '<button class="btn sec" onclick="copiar('+p.id+',\'frase\')">Copiar frase</button>'+
-   '<button class="btn sec" onclick="copiar('+p.id+',\'caption\')">Copiar descripción</button>'+
-   '<button class="btn sec" onclick="variante('+p.id+')">Pedir variante</button></div>';
-  $('modal').classList.add('on');
-}
-function cerrar(){$('modal').classList.remove('on')}
-async function copiar(id,tipo){
-  const p=POSTS.find(x=>x.id===id);
-  const txt=tipo==='frase'?p.frases.join('\n\n'):p.caption+' '+p.hashtags.join(' ');
-  try{await navigator.clipboard.writeText(txt);toast('Copiado','ok')}catch(e){toast('No se pudo copiar','bad')}
-}
-function variante(id){const p=POSTS.find(x=>x.id===id);cerrar();go('pedir');
-  $('pedido').value='Quiero una variante del post #'+p.id+' ("'+p.titulo+'"): ';$('pedido').focus()}
-
 /* ---------- GitHub ---------- */
-function tok(){return lsGet('gh_token')}
+const tok=()=>lsGet('gh_token');
 async function gh(path,opt={}){
   const t=tok();if(!t)throw new Error('Falta el token: cargalo en Ajustes');
   const r=await fetch(API+path,{...opt,headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+t,'Content-Type':'application/json',...(opt.headers||{})}});
   if(!r.ok){let m=r.status;try{m=(await r.json()).message}catch(e){}throw new Error(r.status+' '+m)}
   return r.status===204?null:r.json();
 }
-async function subir(id){
+
+/* ---------- Chat ---------- */
+const SUGERENCIAS=[
+  'Creá un post nuevo y subilo',
+  'Hacé un post sobre dejar de poner excusas',
+  'Hacé uno sobre no abandonar cuando duele',
+  'Armá uno pero no lo subas todavía',
+  '¿Qué temas usamos menos?',
+  '¿Cuál fue el último que subimos?'
+];
+function md(s){
+  const t=esc(s).replace(/(?:^|\n)&gt; ?([^\n]*)/g,'\n\n@@Q@@$1\n\n');
+  return t.split(/\n{2,}/).filter(x=>x.trim()).map(par=>{
+    par=par.replace(/!\[[^\]]*\]\(([^)\s]+)\)/g,'<img loading="lazy" src="$1">')
+      .replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/`([^`]+)`/g,'<code>$1</code>');
+    if(par.startsWith('@@Q@@'))return '<blockquote>'+par.slice(5)+'</blockquote>';
+    return '<p>'+par.replace(/\n/g,'<br>')+'</p>';
+  }).join('');
+}
+function pinta(){
+  const m=$('msgs');
+  if(!tok()){m.innerHTML='<div class="card"><b>Primero conectá la app</b><div class="m" style="margin:6px 0 12px">Para que el chat pueda crear y subir posts hace falta cargar el token de GitHub una sola vez.</div><button class="btn" onclick="go(\'ajustes\')">Ir a Ajustes</button></div>';return}
+  if(!conv.length&&!esperando){m.innerHTML='<div class="b bot"><p>Hola. Decime qué post querés y lo armo: frase, tarjeta, video y descripción. Si querés, también lo dejo en tus borradores de TikTok.</p><p class="m">Ejemplos: "hacé uno sobre la comodidad", "volvé a subir el 131", "¿qué temas usamos más?".</p></div>';return}
+  m.innerHTML=conv.map(c=>
+    '<div class="b yo">'+esc(c.pedido).replace(/\n/g,'<br>')+'</div>'+
+    (c.respuesta?'<div class="b bot">'+md(c.respuesta)+'</div>':'<div class="b bot wait">Trabajando<span class="dots"></span> <small>(puede tardar 1 a 3 minutos)</small></div>')
+  ).join('');
+  m.scrollTop=m.scrollHeight;
+}
+async function cargarChat(){
+  if(!tok()){pinta();return}
+  try{
+    const issues=(await gh('/issues?labels=pedido&state=all&per_page=12&sort=created&direction=desc')).reverse();
+    conv=await Promise.all(issues.map(async i=>{
+      let r=null;
+      if(i.state==='closed'||i.comments>0){
+        const cs=await gh('/issues/'+i.number+'/comments?per_page=5');
+        if(cs.length)r=cs[cs.length-1].body;
+      }
+      return {n:i.number,pedido:i.body||i.title,respuesta:r,abierto:i.state==='open'&&!r};
+    }));
+    esperando=conv.some(c=>c.abierto);
+    pinta();
+    clearTimeout(pollT);
+    if(esperando)pollT=setTimeout(cargarChat,8000);
+  }catch(e){$('msgs').innerHTML='<div class="b bot bad">'+esc(e.message)+'</div>'}
+}
+async function enviar(){
+  const el=$('txt');let t=el.value.trim();if(!t)return;
+  if(!tok()){go('ajustes');toast('Cargá el token primero','bad');return}
+  $('send').disabled=true;
+  const auto=lsGet('auto','1')==='1';
+  const cuerpo=t+(auto?'':'\n\n(Opción de la app: NO subir a TikTok, solo armar el post.)');
+  try{
+    await gh('/issues',{method:'POST',body:JSON.stringify({title:t.slice(0,70),body:cuerpo,labels:['pedido']})});
+    el.value='';el.style.height='auto';
+    conv.push({pedido:cuerpo,respuesta:null,abierto:true});esperando=true;pinta();
+    clearTimeout(pollT);pollT=setTimeout(cargarChat,8000);
+  }catch(e){toast(esc(e.message),'bad')}
+  $('send').disabled=false;
+}
+$('send').onclick=enviar;
+$('txt').addEventListener('input',e=>{e.target.style.height='auto';e.target.style.height=Math.min(e.target.scrollHeight,120)+'px'});
+$('txt').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&matchMedia('(hover:hover)').matches){e.preventDefault();enviar()}});
+$('chips').innerHTML=SUGERENCIAS.map(s=>'<button class="chip">'+esc(s)+'</button>').join('');
+$('chips').onclick=e=>{if(e.target.classList.contains('chip')){$('txt').value=e.target.textContent;$('txt').focus()}};
+
+/* ---------- Biblioteca ---------- */
+function cuenta(campo){const c={};POSTS.forEach(p=>(Array.isArray(p[campo])?p[campo]:[p[campo]]).forEach(v=>{if(v)c[v]=(c[v]||0)+1}));return Object.entries(c).sort((a,b)=>b[1]-a[1])}
+function chips(id,campo,items){
+  const el=$(id),lab=el.firstElementChild.outerHTML;
+  el.innerHTML=lab+['Todos',...items].map(v=>{const n=v==='Todos'?'':v;return '<button class="chip'+(F[campo]===n?' on':'')+'" data-c="'+campo+'" data-v="'+esc(n)+'">'+esc(v==='Todos'?'Todos':v)+'</button>'}).join('');
+}
+function renderFiltros(){
+  chips('f-tipo','tipo',['video','carrusel']);
+  chips('f-tema','tema',cuenta('temas').filter(x=>x[1]>=3).map(x=>x[0]));
+  chips('f-estilo','estilo',cuenta('estilos').map(x=>x[0]));
+}
+['f-tipo','f-tema','f-estilo'].forEach(id=>$(id).onclick=e=>{const b=e.target.closest('.chip');if(!b)return;F[b.dataset.c]=b.dataset.v;renderFiltros();renderBiblio()});
+$('q').oninput=renderBiblio;
+function etiqueta(p){
+  if(p.estado==='PENDIENTE')return '<span class="tag">En cola</span>';
+  if(p.borrador)return '<span class="tag ok">En borradores</span>';
+  return '<span class="tag ok">Publicado '+p.subido+'</span>';
+}
+function renderBiblio(){
+  const q=$('q').value.trim().toLowerCase();
+  const l=POSTS.filter(p=>p.estado!=='DESCARTADO'&&(!F.tipo||p.tipo===F.tipo)&&(!F.tema||p.temas.includes(F.tema))&&(!F.estilo||p.estilos.includes(F.estilo))&&
+    (!q||[p.titulo,p.caption,p.sonido,p.formato,p.hashtags.join(' '),p.frases.join(' '),p.temas.join(' ')].join(' ').toLowerCase().includes(q))).reverse();
+  $('count').textContent=l.length+' posts';
+  $('lista').innerHTML=l.slice(0,50).map(p=>{const img=portada(p);
+    return '<div class="card" data-id="'+p.id+'"><div class="row">'+(img?'<img class="thumb" loading="lazy" src="'+url(p.carpeta,img)+'">':'<div class="thumb"></div>')+
+    '<div class="grow"><div class="t">#'+p.id+' · '+esc(p.titulo)+'</div><div class="m">'+esc(p.frases[0]||p.caption).slice(0,80)+'</div><div>'+etiqueta(p)+p.temas.slice(0,2).map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div></div></div></div>'}).join('')+
+    (l.length>50?'<div class="m">Mostrando 50. Afiná la búsqueda para ver más.</div>':'');
+}
+$('lista').onclick=e=>{const c=e.target.closest('.card');if(c)abrir(+c.dataset.id)};
+function abrir(id){
   const p=POSTS.find(x=>x.id===id);
-  if(!confirm('¿Subir "'+p.titulo+'" a tus borradores de TikTok?'))return;
-  try{
-    await gh('/actions/workflows/subir.yml/dispatches',{method:'POST',body:JSON.stringify({ref:'main',inputs:{post:String(id)}})});
-    toast('Listo: se está subiendo #'+id+'. En 1-2 minutos aparece en tus borradores de TikTok.','ok');cerrar();
-  }catch(e){toast(esc(e.message),'bad')}
+  $('sheet').innerHTML='<div class="row"><div class="grow"><b>#'+p.id+' · '+esc(p.titulo)+'</b><div class="m">'+esc(p.formato)+(p.sonido?' · ♪ '+esc(p.sonido):'')+'</div><div>'+etiqueta(p)+p.temas.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+p.estilos.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div></div><button class="btn sec" data-a="cerrar">✕</button></div>'+
+   '<div class="imgs">'+p.archivos.filter(f=>/\.jpe?g$/i.test(f)).map(f=>'<img loading="lazy" src="'+url(p.carpeta,f)+'">').join('')+'</div>'+
+   p.frases.map(f=>'<div class="q">'+esc(f)+'</div>').join('')+
+   '<div class="m" style="margin:8px 0">'+esc(p.caption)+'<br>'+esc(p.hashtags.join(' '))+'</div>'+
+   '<div style="display:flex;gap:8px;flex-wrap:wrap">'+
+   '<button class="btn" data-a="chat" data-id="'+p.id+'">Hacer variante en el chat</button>'+
+   '<button class="btn sec" data-a="resubir" data-id="'+p.id+'">'+(p.estado==='PENDIENTE'?'Subir a borradores':'Volver a subir')+'</button>'+
+   '<button class="btn sec" data-a="copiar" data-id="'+p.id+'">Copiar frase</button></div>';
+  $('modal').classList.add('on');
 }
-async function enviarPedido(){
-  const txt=$('pedido').value.trim();if(!txt)return;
-  $('enviar').disabled=true;
-  try{
-    await gh('/issues',{method:'POST',body:JSON.stringify({title:txt.slice(0,70),body:txt,labels:['pedido']})});
-    $('pedido').value='';toast('Pedido guardado','ok');cargarPedidos();
-  }catch(e){toast(esc(e.message),'bad')}
-  $('enviar').disabled=false;
+$('modal').onclick=async e=>{
+  if(e.target===$('modal')){$('modal').classList.remove('on');return}
+  const b=e.target.closest('button');if(!b)return;
+  const id=+b.dataset.id,p=POSTS.find(x=>x.id===id);
+  if(b.dataset.a==='cerrar')$('modal').classList.remove('on');
+  if(b.dataset.a==='chat'){$('modal').classList.remove('on');go('chat');$('txt').value='Hacé una variante del post #'+id+' ("'+p.titulo+'"): ';$('txt').focus()}
+  if(b.dataset.a==='copiar'){try{await navigator.clipboard.writeText(p.frases.join('\n\n'));toast('Copiado','ok')}catch(x){toast('No se pudo copiar','bad')}}
+  if(b.dataset.a==='resubir'){
+    if(!confirm('¿Subir "'+p.titulo+'" a tus borradores de TikTok?'))return;
+    try{await gh('/actions/workflows/subir.yml/dispatches',{method:'POST',body:JSON.stringify({ref:'main',inputs:{post:String(id)}})});toast('Subiendo #'+id+'. En 1-2 minutos aparece en tus borradores.','ok');$('modal').classList.remove('on')}catch(x){toast(esc(x.message),'bad')}
+  }
+};
+
+/* ---------- Ajustes ---------- */
+$('auto').checked=lsGet('auto','1')==='1';
+$('auto').onchange=e=>lsSet('auto',e.target.checked?'1':'0');
+$('b-guardar').onclick=async()=>{
+  const v=$('tok').value.trim();if(v)lsSet('gh_token',v);$('tok').value='';
+  await probar();
+};
+async function probar(){
+  if(!tok()){$('conexion').textContent='Sin token. Hace falta una sola vez para que el chat pueda trabajar.';return}
+  try{await gh('');$('conexion').innerHTML='<span class="ok">Conectado.</span> El chat ya puede crear y subir posts.';cargarChat()}
+  catch(e){$('conexion').innerHTML='<span class="bad">'+esc(e.message)+'</span>'}
 }
-async function cargarPedidos(){
-  if(!tok()){$('pedidos').textContent='Cargá el token en Ajustes para ver y enviar pedidos.';return}
-  try{
-    const l=await gh('/issues?labels=pedido&state=all&per_page=15');
-    $('pedidos').innerHTML=l.length?l.map(i=>'<div class="card"><div>'+esc(i.title)+'</div><div class="m">'+(i.state==='open'?'pendiente':'hecho')+' · '+i.created_at.slice(0,10)+'</div></div>').join(''):'Todavía no hay pedidos.';
-  }catch(e){$('pedidos').innerHTML='<span class="bad">'+esc(e.message)+'</span>'}
+function info(){
+  const pub=POSTS.filter(p=>p.estado==='SUBIDO').length;
+  $('info').innerHTML='Biblioteca: '+POSTS.length+' posts ('+pub+' subidos, '+POSTS.filter(p=>p.estado==='PENDIENTE').length+' en cola).<br>Las subidas van a <b>borradores</b>: el sonido y el "Publicar" los hacés vos en TikTok.';
+  probar();
 }
-function guardarTok(){lsSet('gh_token',$('tok').value.trim());$('tok').value='';$('tokmsg').textContent='Guardado en este teléfono.'}
-async function probarTok(){
-  try{await gh('');$('tokmsg').innerHTML='<span class="ok">Conectado al repositorio.</span>'}catch(e){$('tokmsg').innerHTML='<span class="bad">'+esc(e.message)+'</span>'}
+
+/* ---------- Inicio ---------- */
+async function cargar(){
+  try{POSTS=(await (await fetch('data/posts.json?'+Date.now())).json()).posts}
+  catch(e){$('sub').textContent='No se pudo cargar la biblioteca';return}
+  const sub=POSTS.filter(p=>p.estado==='SUBIDO');
+  const cola=POSTS.filter(p=>p.estado==='PENDIENTE').length;
+  $('sub').textContent=sub.length+' posts publicados · '+cola+' en cola · último '+(sub.map(p=>p.subido).sort().pop()||'—');
+  renderFiltros();renderBiblio();cargarChat();
 }
-if(tok())$('tokmsg').textContent='Ya hay un token guardado.';
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 cargar();
 </script>

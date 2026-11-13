@@ -86,6 +86,7 @@ for (const line of cola) {
     temas: [...new Set(hashtags.filter((h) => !GENERICOS.has(h)).map((h) => TEMA[h.slice(1).toLowerCase()] || null).filter(Boolean))],
     estilos: estilosDe(get('formato') || 'carrusel'),
     tipo: /^video/i.test(get('formato')) ? 'video' : 'carrusel',
+    borrador: /borrador/i.test(estado),
     estado: subido ? 'SUBIDO' : /DESCARTADO/i.test(estado) ? 'DESCARTADO' : 'PENDIENTE',
     subido,
     lote,
