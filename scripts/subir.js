@@ -44,6 +44,43 @@ async function tool(name, args) {
   try { return JSON.parse(text); } catch { return { raw: text }; }
 }
 
+let sesionId = null;
+// Abre la sesión MCP y una sesión de trabajo de Composio (una sola vez por ejecución).
+async function getSession(verificarTikTok) {
+  if (!KEY) fail('Falta el secreto COMPOSIO_API_KEY en el repositorio.');
+  if (!sesionId) {
+    await rpc('initialize', { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'acero-subir', version: '1.0' } });
+    await rpc('notifications/initialized', {}, true);
+    const s = await tool('COMPOSIO_SEARCH_TOOLS', {
+      queries: [{ use_case: 'upload a video to TikTok as draft', known_fields: 'toolkit:tiktok' }],
+      session: { generate_id: true },
+    });
+    sesionId = (s.data && s.data.session && s.data.session.id) || (s.session && s.session.id);
+    if (!sesionId) fail('No obtuve session id de Composio: ' + JSON.stringify(s).slice(0, 500));
+    const conn = ((s.data || s).toolkit_connection_statuses || []).find((t) => t.toolkit === 'tiktok');
+    if (verificarTikTok && conn && !conn.has_active_connection) fail('TikTok no tiene conexión activa en Composio: ' + conn.status_message);
+    console.log('Sesión Composio:', sesionId);
+  }
+  return sesionId;
+}
+
+// Modelo de lenguaje gratuito del entorno de Composio (invoke_llm). Devuelve el texto.
+async function llm(texto) {
+  const sessionId = await getSession(false);
+  const py = `
+import json
+r, err = invoke_llm(json.loads(${JSON.stringify(JSON.stringify(texto))}))
+print("RESULT::" + json.dumps({"r": r, "err": str(err) if err else None}))
+`;
+  const w = await tool('COMPOSIO_REMOTE_WORKBENCH', { code_to_execute: py, thought: 'Generar frase para el post', session_id: sessionId });
+  const stdout = (w.data && w.data.stdout) || w.stdout || '';
+  const m = stdout.match(/RESULT::(.*)/);
+  if (!m) fail('El modelo de Composio no devolvió resultado: ' + JSON.stringify(w).slice(0, 500));
+  const res = JSON.parse(m[1]);
+  if (res.err || !res.r) fail('El modelo de Composio falló: ' + (res.err || 'respuesta vacía'));
+  return res.r;
+}
+
 async function subirABorradores(post, site) {
   if (!KEY) fail('Falta el secreto COMPOSIO_API_KEY en el repositorio.');
   const SITE = site.replace(/\/$/, '');
@@ -61,19 +98,7 @@ async function subirABorradores(post, site) {
     job.descripcion = `${post.caption} ${post.hashtags.join(' ')}`.trim();
   }
 
-  await rpc('initialize', { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 'acero-subir', version: '1.0' } });
-  await rpc('notifications/initialized', {}, true);
-
-  // sesión de trabajo de Composio (también verifica la conexión de TikTok)
-  const s = await tool('COMPOSIO_SEARCH_TOOLS', {
-    queries: [{ use_case: 'upload a video to TikTok as draft', known_fields: 'toolkit:tiktok' }],
-    session: { generate_id: true },
-  });
-  const sessionId = (s.data && s.data.session && s.data.session.id) || (s.session && s.session.id);
-  if (!sessionId) fail('No obtuve session id de Composio: ' + JSON.stringify(s).slice(0, 500));
-  const conn = ((s.data || s).toolkit_connection_statuses || []).find((t) => t.toolkit === 'tiktok');
-  if (conn && !conn.has_active_connection) fail('TikTok no tiene conexión activa en Composio: ' + conn.status_message);
-  console.log('Sesión Composio:', sessionId);
+  const sessionId = await getSession(true);
 
   // El trabajo pesado (bajar el video y subirlo a TikTok) corre en el entorno de Composio.
   const py = `
@@ -111,7 +136,7 @@ print("RESULT::" + json.dumps({"out": out, "err": str(e2) if e2 else None}))
   return inner.publish_id;
 }
 
-module.exports = { subirABorradores };
+module.exports = { subirABorradores, llm };
 
 if (require.main === module) {
   const lib = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'app/data/posts.json'), 'utf8')).posts;
