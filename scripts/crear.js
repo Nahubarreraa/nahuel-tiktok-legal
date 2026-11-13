@@ -16,7 +16,10 @@ const SONIDOS = [
   'Hallelujah - piano', 'River Flows in You - Yiruma', 'Nuvole Bianche - Einaudi', 'Una Mattina - Einaudi',
 ];
 
-const sh = (cmd, opts = {}) => cp.execSync(cmd, { cwd: ROOT, stdio: 'pipe', encoding: 'utf8', ...opts });
+const sh = (cmd, opts = {}) => {
+  try { return cp.execSync(cmd, { cwd: ROOT, stdio: 'pipe', encoding: 'utf8', ...opts }); }
+  catch (e) { throw new Error(`${String(e.message).slice(0, 160)} :: ${String(e.stderr || '').slice(0, 500)}`); }
+};
 const hoy = () => new Date().toLocaleDateString('en-CA', { timeZone: 'America/Argentina/Buenos_Aires' });
 const slug = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 30);
 const norm = (s) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
@@ -100,6 +103,7 @@ function renderizar(dir, tipoEnigma) {
   const png = path.join(abs, '_t0.png');
   sh(`${chrome()} --headless=new --no-sandbox --disable-gpu --hide-scrollbars --allow-file-access-from-files --window-size=1080,1920 --virtual-time-budget=4000 --screenshot="${png}" "file://${path.join(abs, '_card.html')}#0"`, { timeout: 90000 });
   if (!fs.existsSync(png)) throw new Error('Chrome no generó la tarjeta');
+  console.log('PNG', fs.statSync(png).size, 'bytes');
   sh(`ffmpeg -v error -y -i "${png}" -q:v 2 "${path.join(abs, 'tarjeta_1.jpg')}"`);
   sh(`ffmpeg -v error -y -loop 1 -framerate 30 -i "${path.join(abs, 'tarjeta_1.jpg')}" -vf "scale=1080:1920,format=yuv420p" -t 9 -c:v libx264 -tune stillimage -crf 18 -movflags +faststart -an "${path.join(abs, 'video.mp4')}"`, { timeout: 120000 });
   fs.rmSync(png); fs.rmSync(path.join(abs, '_card.html'));
