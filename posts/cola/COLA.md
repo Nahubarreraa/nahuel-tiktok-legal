@@ -248,3 +248,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 |---|---|---|---|---|---|---|
 | 133 | `posts/cola/133-la-excusa-elegida` | La excusa elegida | Cortá con eso. Compartilo con el que siempre tiene una razón para no empezar. #mentalidad #disciplina #motivacion #parati #fyp #sinexcusas | video | Experience - Ludovico Einaudi | PENDIENTE |
 | 134 | `posts/cola/134-bajar-la-vara` | Bajar la vara | Subí la vara. Compartilo con el que se está conformando. #mentalidad #disciplina #motivacion #parati #fyp #comodidad | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-12 (borrador) |
+
+## Lote 2026-11-13 noche (135-139, piano + frases que interpelan)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 135 | `posts/cola/135-te-exigis` | Lo que te exigís | Subí la vara. Compartilo con el que se conforma. #mentalidad #disciplina #exigencia #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 136 | `posts/cola/136-cansancio-postergado` | El cansancio de postergar | Hacelo y vas a sentir alivio. Compartilo con el que lleva días evitando algo. #mentalidad #disciplina #postergar #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 137 | `posts/cola/137-todo-seguro` | Leelo otra vez | Hacé algo que te incomode. #mentalidad #crecimiento #valentia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 138 | `posts/cola/138-no-entrenaste` | Hoy no entrenaste | Todavía estás a tiempo. Compartilo con el que hoy no hizo nada. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 139 | `posts/cola/139-lo-hizo` | Al que lo hizo | Dejá de pensarlo. Compartilo con el que tiene una idea guardada. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | River Flows in You - Yiruma | PENDIENTE |

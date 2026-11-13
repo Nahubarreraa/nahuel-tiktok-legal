@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T00:54:17.986Z",
+ "generado": "2026-11-13T17:37:16.166Z",
  "posts": [
   {
    "id": 1,
@@ -4921,6 +4921,178 @@
    "lote": "Lote 2026-11-12 (app del celular)",
    "frases": [
     "La comodidad no te frena de golpe: te acostumbra a pedirle menos a tu propio carácter."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 135,
+   "carpeta": "posts/cola/135-te-exigis",
+   "titulo": "Lo que te exigís",
+   "caption": "Subí la vara. Compartilo con el que se conforma.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#exigencia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
+   "frases": [
+    "Nadie te va a exigir más de lo que vos te exigís."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 136,
+   "carpeta": "posts/cola/136-cansancio-postergado",
+   "titulo": "El cansancio de postergar",
+   "caption": "Hacelo y vas a sentir alivio. Compartilo con el que lleva días evitando algo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#postergar",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Postergar"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
+   "frases": [
+    "Hay un cansancio que solo se cura haciendo lo que postergaste."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 137,
+   "carpeta": "posts/cola/137-todo-seguro",
+   "titulo": "Leelo otra vez",
+   "caption": "Hacé algo que te incomode.",
+   "hashtags": [
+    "#mentalidad",
+    "#crecimiento",
+    "#valentia",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Valentía"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
+   "frases": [
+    "Si todo lo que hacés es seguro, nada de lo que hacés te hace crecer."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 138,
+   "carpeta": "posts/cola/138-no-entrenaste",
+   "titulo": "Hoy no entrenaste",
+   "caption": "Todavía estás a tiempo. Compartilo con el que hoy no hizo nada.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
+   "frases": [
+    "Si hoy no hiciste nada difícil, hoy no entrenaste."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 139,
+   "carpeta": "posts/cola/139-lo-hizo",
+   "titulo": "Al que lo hizo",
+   "caption": "Dejá de pensarlo. Compartilo con el que tiene una idea guardada.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#accion",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
+   "frases": [
+    "Nadie recuerda al que lo pensó. Recuerdan al que lo hizo."
    ],
    "archivos": [
     "tarjeta_1.jpg",
