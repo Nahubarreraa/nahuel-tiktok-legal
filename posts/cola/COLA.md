@@ -258,3 +258,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 137 | `posts/cola/137-todo-seguro` | Leelo otra vez | Hacé algo que te incomode. #mentalidad #crecimiento #valentia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-13 |
 | 138 | `posts/cola/138-no-entrenaste` | Hoy no entrenaste | Todavía estás a tiempo. Compartilo con el que hoy no hizo nada. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-13 |
 | 139 | `posts/cola/139-lo-hizo` | Al que lo hizo | Dejá de pensarlo. Compartilo con el que tiene una idea guardada. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | River Flows in You - Yiruma | SUBIDO 2026-11-13 |
+
+## Lote 2026-11-14 (140-144, piano + frases que interpelan)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 140 | `posts/cola/140-resultados` | Mostrales resultados | Hablá menos, hacé más. Compartilo con el que cuenta todo y no avanza. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 141 | `posts/cola/141-la-forma` | La forma o la excusa | Elegí cuál buscás. Compartilo con el que siempre tiene una excusa. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 142 | `posts/cola/142-dias-de-abandonar` | Leelo otra vez | No abandones hoy. #mentalidad #constancia #disciplina #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 143 | `posts/cola/143-quedarse-atras` | Cansarte de quedarte atrás | Ese cansancio sirve. Compartilo con el que está harto de lo mismo. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 144 | `posts/cola/144-el-miedo-importa` | El miedo importa | Andá igual. Compartilo con el que tiene miedo. #mentalidad #valentia #miedo #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |

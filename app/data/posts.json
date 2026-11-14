@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-13T17:58:06.158Z",
+ "generado": "2026-11-14T04:27:44.291Z",
  "posts": [
   {
    "id": 1,
@@ -5093,6 +5093,180 @@
    "lote": "Lote 2026-11-13 noche (135-139, piano + frases que interpelan)",
    "frases": [
     "Nadie recuerda al que lo pensó. Recuerdan al que lo hizo."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 140,
+   "carpeta": "posts/cola/140-resultados",
+   "titulo": "Mostrales resultados",
+   "caption": "Hablá menos, hacé más. Compartilo con el que cuenta todo y no avanza.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#accion",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 (140-144, piano + frases que interpelan)",
+   "frases": [
+    "Dejá de contarle tus planes a todos. Mostrales resultados."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 141,
+   "carpeta": "posts/cola/141-la-forma",
+   "titulo": "La forma o la excusa",
+   "caption": "Elegí cuál buscás. Compartilo con el que siempre tiene una excusa.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#excusas",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 (140-144, piano + frases que interpelan)",
+   "frases": [
+    "El que quiere encuentra la forma. El que no, la excusa."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 142,
+   "carpeta": "posts/cola/142-dias-de-abandonar",
+   "titulo": "Leelo otra vez",
+   "caption": "No abandones hoy.",
+   "hashtags": [
+    "#mentalidad",
+    "#constancia",
+    "#disciplina",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Constancia",
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 (140-144, piano + frases que interpelan)",
+   "frases": [
+    "Tu futuro se construye en los días en que querés abandonar."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 143,
+   "carpeta": "posts/cola/143-quedarse-atras",
+   "titulo": "Cansarte de quedarte atrás",
+   "caption": "Ese cansancio sirve. Compartilo con el que está harto de lo mismo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#cambio",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Cambio"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 (140-144, piano + frases que interpelan)",
+   "frases": [
+    "Cuando te cansás de quedarte atrás, empezás a correr."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 144,
+   "carpeta": "posts/cola/144-el-miedo-importa",
+   "titulo": "El miedo importa",
+   "caption": "Andá igual. Compartilo con el que tiene miedo.",
+   "hashtags": [
+    "#mentalidad",
+    "#valentia",
+    "#miedo",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Valentía",
+    "Miedo"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 (140-144, piano + frases que interpelan)",
+   "frases": [
+    "El miedo que sentís no es una señal para parar. Es una señal de que importa."
    ],
    "archivos": [
     "tarjeta_1.jpg",
