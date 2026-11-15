@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T00:04:53.541Z",
+ "generado": "2026-11-15T00:05:36.495Z",
  "posts": [
   {
    "id": 1,
@@ -5158,8 +5158,8 @@
    ],
    "tipo": "video",
    "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "estado": "SUBIDO",
+   "subido": "2026-11-14",
    "lote": "Lote 2026-11-14 (140-144, piano + frases que interpelan)",
    "frases": [
     "El que quiere encuentra la forma. El que no, la excusa."

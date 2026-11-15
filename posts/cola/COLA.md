@@ -264,7 +264,7 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
 | 140 | `posts/cola/140-resultados` | Mostrales resultados | Hablá menos, hacé más. Compartilo con el que cuenta todo y no avanza. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-14 |
-| 141 | `posts/cola/141-la-forma` | La forma o la excusa | Elegí cuál buscás. Compartilo con el que siempre tiene una excusa. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 141 | `posts/cola/141-la-forma` | La forma o la excusa | Elegí cuál buscás. Compartilo con el que siempre tiene una excusa. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-14 |
 | 142 | `posts/cola/142-dias-de-abandonar` | Leelo otra vez | No abandones hoy. #mentalidad #constancia #disciplina #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-14 |
 | 143 | `posts/cola/143-quedarse-atras` | Cansarte de quedarte atrás | Ese cansancio sirve. Compartilo con el que está harto de lo mismo. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-14 |
 | 144 | `posts/cola/144-el-miedo-importa` | El miedo importa | Andá igual. Compartilo con el que tiene miedo. #mentalidad #valentia #miedo #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-14 |
