@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-14T04:44:14.228Z",
+ "generado": "2026-11-15T00:04:53.541Z",
  "posts": [
   {
    "id": 1,
@@ -5267,6 +5267,178 @@
    "lote": "Lote 2026-11-14 (140-144, piano + frases que interpelan)",
    "frases": [
     "El miedo que sentís no es una señal para parar. Es una señal de que importa."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 145,
+   "carpeta": "posts/cola/145-ya-sabes",
+   "titulo": "Ya sabés qué hacer",
+   "caption": "Dejá de darle vueltas. Compartilo con el que lo está pensando.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#accion",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 tarde (145-149, piano + frases que interpelan)",
+   "frases": [
+    "Si lo pensás tanto, es porque ya sabés qué tenés que hacer."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 146,
+   "carpeta": "posts/cola/146-nadie-te-salva",
+   "titulo": "Nadie te va a salvar",
+   "caption": "Todo depende de vos. Compartilo con el que espera que cambie solo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#responsabilidad",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 tarde (145-149, piano + frases que interpelan)",
+   "frases": [
+    "Nadie va a venir a salvarte. Y esa es la mejor noticia: todo depende de vos."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 147,
+   "carpeta": "posts/cola/147-ganas-despues",
+   "titulo": "Leelo otra vez",
+   "caption": "Empezá sin ganas.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#motivacion",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 tarde (145-149, piano + frases que interpelan)",
+   "frases": [
+    "Primero se empieza. Después aparecen las ganas."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 148,
+   "carpeta": "posts/cola/148-tiempo-incomodidad",
+   "titulo": "No te falta tiempo",
+   "caption": "Incomodate un poco. Compartilo con el que siempre dice que no tiene tiempo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#excusas",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 tarde (145-149, piano + frases que interpelan)",
+   "frases": [
+    "No te falta tiempo. Te falta incomodidad."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 149,
+   "carpeta": "posts/cola/149-promesa",
+   "titulo": "Cumplite una promesa",
+   "caption": "Una sola, hoy. Compartilo con el que se falló esta semana.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#confianza",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Confianza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 tarde (145-149, piano + frases que interpelan)",
+   "frases": [
+    "Cumplite una promesa hoy. Una sola. Así se vuelve a confiar en uno mismo."
    ],
    "archivos": [
     "tarjeta_1.jpg",
