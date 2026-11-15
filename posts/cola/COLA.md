@@ -283,8 +283,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 150 | `posts/cola/150-tu-dia` | Ni una hora | Cambiá una hora hoy. Compartilo con el que se queja y no se mueve. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 151 | `posts/cola/151-yo-futuro` | Tu yo del futuro | Hacelo por él. Compartilo con el que quiere ser otro en un año. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 152 | `posts/cola/152-tambien-no-queria` | Leelo otra vez | Hacelo igual. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 153 | `posts/cola/153-lo-que-toleras` | Lo que tolerás | Subí tu estándar. Compartilo con el que se acostumbró a menos. #mentalidad #disciplina #exigencia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 154 | `posts/cola/154-momento-perfecto` | El momento perfecto | Empezá ahora. Compartilo con el que espera el momento justo. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 150 | `posts/cola/150-tu-dia` | Ni una hora | Cambiá una hora hoy. Compartilo con el que se queja y no se mueve. #mentalidad #disciplina #cambio #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-14 |
+| 151 | `posts/cola/151-yo-futuro` | Tu yo del futuro | Hacelo por él. Compartilo con el que quiere ser otro en un año. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-14 |
+| 152 | `posts/cola/152-tambien-no-queria` | Leelo otra vez | Hacelo igual. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-14 |
+| 153 | `posts/cola/153-lo-que-toleras` | Lo que tolerás | Subí tu estándar. Compartilo con el que se acostumbró a menos. #mentalidad #disciplina #exigencia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-14 |
+| 154 | `posts/cola/154-momento-perfecto` | El momento perfecto | Empezá ahora. Compartilo con el que espera el momento justo. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-14 |
