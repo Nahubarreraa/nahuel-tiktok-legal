@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T00:26:08.734Z",
+ "generado": "2026-11-15T01:04:41.303Z",
  "posts": [
   {
    "id": 1,
@@ -5439,6 +5439,178 @@
    "lote": "Lote 2026-11-14 tarde (145-149, piano + frases que interpelan)",
    "frases": [
     "Cumplite una promesa hoy. Una sola. Así se vuelve a confiar en uno mismo."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 150,
+   "carpeta": "posts/cola/150-tu-dia",
+   "titulo": "Ni una hora",
+   "caption": "Cambiá una hora hoy. Compartilo con el que se queja y no se mueve.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#cambio",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Cambio"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 noche (150-154, piano + frases que interpelan)",
+   "frases": [
+    "Te quejás de tu vida y no cambiás ni una hora de tu día."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 151,
+   "carpeta": "posts/cola/151-yo-futuro",
+   "titulo": "Tu yo del futuro",
+   "caption": "Hacelo por él. Compartilo con el que quiere ser otro en un año.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#futuro",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 noche (150-154, piano + frases que interpelan)",
+   "frases": [
+    "Tu yo de dentro de un año te está mirando. ¿Qué le mostrás hoy?"
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 152,
+   "carpeta": "posts/cola/152-tambien-no-queria",
+   "titulo": "Leelo otra vez",
+   "caption": "Hacelo igual.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 noche (150-154, piano + frases que interpelan)",
+   "frases": [
+    "El que hoy te inspira también tuvo días en que no quiso."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 153,
+   "carpeta": "posts/cola/153-lo-que-toleras",
+   "titulo": "Lo que tolerás",
+   "caption": "Subí tu estándar. Compartilo con el que se acostumbró a menos.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#exigencia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 noche (150-154, piano + frases que interpelan)",
+   "frases": [
+    "Lo que tolerás se vuelve tu estándar."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 154,
+   "carpeta": "posts/cola/154-momento-perfecto",
+   "titulo": "El momento perfecto",
+   "caption": "Empezá ahora. Compartilo con el que espera el momento justo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#excusas",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-14 noche (150-154, piano + frases que interpelan)",
+   "frases": [
+    "El momento perfecto no existe. Es una excusa con buena prensa."
    ],
    "archivos": [
     "tarjeta_1.jpg",
