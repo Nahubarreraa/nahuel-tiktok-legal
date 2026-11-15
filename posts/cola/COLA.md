@@ -293,8 +293,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 155 | `posts/cola/155-cansado` | Cuando estás cansado | Seguí un poco más. Compartilo con el que hoy no tiene fuerzas. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 156 | `posts/cola/156-ser-el-que-aparece` | Sé el que aparece | Aparecé igual. Compartilo con el que espera motivación. #mentalidad #disciplina #motivacion #constancia #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 157 | `posts/cola/157-casi-lo-hizo` | Leelo otra vez | Terminalo. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 158 | `posts/cola/158-no-queres` | No es que no puedas | Incomodate. Compartilo con el que dice que no puede. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 159 | `posts/cola/159-una-accion` | Una sola acción | Hacé esa acción. Compartilo con el que quiere cambiar. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 155 | `posts/cola/155-cansado` | Cuando estás cansado | Seguí un poco más. Compartilo con el que hoy no tiene fuerzas. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-15 |
+| 156 | `posts/cola/156-ser-el-que-aparece` | Sé el que aparece | Aparecé igual. Compartilo con el que espera motivación. #mentalidad #disciplina #motivacion #constancia #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-15 |
+| 157 | `posts/cola/157-casi-lo-hizo` | Leelo otra vez | Terminalo. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-15 |
+| 158 | `posts/cola/158-no-queres` | No es que no puedas | Incomodate. Compartilo con el que dice que no puede. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-15 |
+| 159 | `posts/cola/159-una-accion` | Una sola acción | Hacé esa acción. Compartilo con el que quiere cambiar. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-15 |
