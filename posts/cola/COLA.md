@@ -303,8 +303,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 160 | `posts/cola/160-si-nadie-mira` | Si nadie te mira | Esa es la respuesta. Compartilo con el que solo actúa cuando lo ven. #mentalidad #disciplina #caracter #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 161 | `posts/cola/161-promesas-vacias` | Dejá de prometerte | Prometé menos, cumplí más. Compartilo con el que se promete mucho. #mentalidad #disciplina #palabra #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 162 | `posts/cola/162-orgullo-manana` | Leelo otra vez | Aguantá hoy. #mentalidad #disciplina #esfuerzo #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 163 | `posts/cola/163-no-perdido` | No estás perdido | Ya sabés cuál es. Compartilo con el que dice que no sabe qué hacer. #mentalidad #disciplina #claridad #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 164 | `posts/cola/164-tu-rutina` | Tu rutina | Mirá tu día. Compartilo con el que quiere cambiar. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 160 | `posts/cola/160-si-nadie-mira` | Si nadie te mira | Esa es la respuesta. Compartilo con el que solo actúa cuando lo ven. #mentalidad #disciplina #caracter #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-15 |
+| 161 | `posts/cola/161-promesas-vacias` | Dejá de prometerte | Prometé menos, cumplí más. Compartilo con el que se promete mucho. #mentalidad #disciplina #palabra #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-15 |
+| 162 | `posts/cola/162-orgullo-manana` | Leelo otra vez | Aguantá hoy. #mentalidad #disciplina #esfuerzo #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-15 |
+| 163 | `posts/cola/163-no-perdido` | No estás perdido | Ya sabés cuál es. Compartilo con el que dice que no sabe qué hacer. #mentalidad #disciplina #claridad #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-15 |
+| 164 | `posts/cola/164-tu-rutina` | Tu rutina | Mirá tu día. Compartilo con el que quiere cambiar. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-15 |
