@@ -273,8 +273,8 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 145 | `posts/cola/145-ya-sabes` | Ya sabés qué hacer | Dejá de darle vueltas. Compartilo con el que lo está pensando. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 146 | `posts/cola/146-nadie-te-salva` | Nadie te va a salvar | Todo depende de vos. Compartilo con el que espera que cambie solo. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 147 | `posts/cola/147-ganas-despues` | Leelo otra vez | Empezá sin ganas. #mentalidad #disciplina #motivacion #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 148 | `posts/cola/148-tiempo-incomodidad` | No te falta tiempo | Incomodate un poco. Compartilo con el que siempre dice que no tiene tiempo. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 149 | `posts/cola/149-promesa` | Cumplite una promesa | Una sola, hoy. Compartilo con el que se falló esta semana. #mentalidad #disciplina #confianza #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 145 | `posts/cola/145-ya-sabes` | Ya sabés qué hacer | Dejá de darle vueltas. Compartilo con el que lo está pensando. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-14 |
+| 146 | `posts/cola/146-nadie-te-salva` | Nadie te va a salvar | Todo depende de vos. Compartilo con el que espera que cambie solo. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-14 |
+| 147 | `posts/cola/147-ganas-despues` | Leelo otra vez | Empezá sin ganas. #mentalidad #disciplina #motivacion #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-14 |
+| 148 | `posts/cola/148-tiempo-incomodidad` | No te falta tiempo | Incomodate un poco. Compartilo con el que siempre dice que no tiene tiempo. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-14 |
+| 149 | `posts/cola/149-promesa` | Cumplite una promesa | Una sola, hoy. Compartilo con el que se falló esta semana. #mentalidad #disciplina #confianza #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-14 |
