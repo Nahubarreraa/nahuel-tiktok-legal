@@ -288,3 +288,13 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 152 | `posts/cola/152-tambien-no-queria` | Leelo otra vez | Hacelo igual. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-14 |
 | 153 | `posts/cola/153-lo-que-toleras` | Lo que tolerás | Subí tu estándar. Compartilo con el que se acostumbró a menos. #mentalidad #disciplina #exigencia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-14 |
 | 154 | `posts/cola/154-momento-perfecto` | El momento perfecto | Empezá ahora. Compartilo con el que espera el momento justo. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-14 |
+
+## Lote 2026-11-15 (155-159, piano + frases que interpelan)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 155 | `posts/cola/155-cansado` | Cuando estás cansado | Seguí un poco más. Compartilo con el que hoy no tiene fuerzas. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 156 | `posts/cola/156-ser-el-que-aparece` | Sé el que aparece | Aparecé igual. Compartilo con el que espera motivación. #mentalidad #disciplina #motivacion #constancia #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 157 | `posts/cola/157-casi-lo-hizo` | Leelo otra vez | Terminalo. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 158 | `posts/cola/158-no-queres` | No es que no puedas | Incomodate. Compartilo con el que dice que no puede. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 159 | `posts/cola/159-una-accion` | Una sola acción | Hacé esa acción. Compartilo con el que quiere cambiar. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |

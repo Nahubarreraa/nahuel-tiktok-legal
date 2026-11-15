@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T01:35:12.548Z",
+ "generado": "2026-11-15T18:32:01.864Z",
  "posts": [
   {
    "id": 1,
@@ -5611,6 +5611,179 @@
    "lote": "Lote 2026-11-14 noche (150-154, piano + frases que interpelan)",
    "frases": [
     "El momento perfecto no existe. Es una excusa con buena prensa."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 155,
+   "carpeta": "posts/cola/155-cansado",
+   "titulo": "Cuando estás cansado",
+   "caption": "Seguí un poco más. Compartilo con el que hoy no tiene fuerzas.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 (155-159, piano + frases que interpelan)",
+   "frases": [
+    "Lo que hacés cuando estás cansado define quién sos."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 156,
+   "carpeta": "posts/cola/156-ser-el-que-aparece",
+   "titulo": "Sé el que aparece",
+   "caption": "Aparecé igual. Compartilo con el que espera motivación.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#motivacion",
+    "#constancia",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 (155-159, piano + frases que interpelan)",
+   "frases": [
+    "Dejá de buscar quien te motive. Sé el que aparece igual."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 157,
+   "carpeta": "posts/cola/157-casi-lo-hizo",
+   "titulo": "Leelo otra vez",
+   "caption": "Terminalo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 (155-159, piano + frases que interpelan)",
+   "frases": [
+    "Nadie recuerda al que casi lo hizo."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 158,
+   "carpeta": "posts/cola/158-no-queres",
+   "titulo": "No es que no puedas",
+   "caption": "Incomodate. Compartilo con el que dice que no puede.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#incomodidad",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Incomodidad"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 (155-159, piano + frases que interpelan)",
+   "frases": [
+    "No es que no puedas. Es que no querés incomodarte."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 159,
+   "carpeta": "posts/cola/159-una-accion",
+   "titulo": "Una sola acción",
+   "caption": "Hacé esa acción. Compartilo con el que quiere cambiar.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#habitos",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 (155-159, piano + frases que interpelan)",
+   "frases": [
+    "Hoy decidís quién sos con una sola acción pequeña."
    ],
    "archivos": [
     "tarjeta_1.jpg",
