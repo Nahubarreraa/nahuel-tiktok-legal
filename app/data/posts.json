@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T18:55:51.515Z",
+ "generado": "2026-11-15T23:09:29.700Z",
  "posts": [
   {
    "id": 1,
@@ -5784,6 +5784,175 @@
    "lote": "Lote 2026-11-15 (155-159, piano + frases que interpelan)",
    "frases": [
     "Hoy decidís quién sos con una sola acción pequeña."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 160,
+   "carpeta": "posts/cola/160-si-nadie-mira",
+   "titulo": "Si nadie te mira",
+   "caption": "Esa es la respuesta. Compartilo con el que solo actúa cuando lo ven.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#caracter",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 tarde (160-164, piano + frases que interpelan)",
+   "frases": [
+    "Si nadie te mira, ¿igual lo hacés?"
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 161,
+   "carpeta": "posts/cola/161-promesas-vacias",
+   "titulo": "Dejá de prometerte",
+   "caption": "Prometé menos, cumplí más. Compartilo con el que se promete mucho.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#palabra",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 tarde (160-164, piano + frases que interpelan)",
+   "frases": [
+    "Dejá de prometerte cosas que no vas a cumplir."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 162,
+   "carpeta": "posts/cola/162-orgullo-manana",
+   "titulo": "Leelo otra vez",
+   "caption": "Aguantá hoy.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#esfuerzo",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 tarde (160-164, piano + frases que interpelan)",
+   "frases": [
+    "Lo difícil de hoy es el orgullo de mañana."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 163,
+   "carpeta": "posts/cola/163-no-perdido",
+   "titulo": "No estás perdido",
+   "caption": "Ya sabés cuál es. Compartilo con el que dice que no sabe qué hacer.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#claridad",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 tarde (160-164, piano + frases que interpelan)",
+   "frases": [
+    "No estás perdido. Estás evitando el camino que ya conocés."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 164,
+   "carpeta": "posts/cola/164-tu-rutina",
+   "titulo": "Tu rutina",
+   "caption": "Mirá tu día. Compartilo con el que quiere cambiar.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#habitos",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-15 tarde (160-164, piano + frases que interpelan)",
+   "frases": [
+    "Tu rutina es tu respuesta a quién querés ser."
    ],
    "archivos": [
     "tarjeta_1.jpg",
