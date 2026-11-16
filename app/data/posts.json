@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-15T23:32:42.256Z",
+ "generado": "2026-11-16T22:16:59.134Z",
  "posts": [
   {
    "id": 1,
@@ -5953,6 +5953,351 @@
    "lote": "Lote 2026-11-15 tarde (160-164, piano + frases que interpelan)",
    "frases": [
     "Tu rutina es tu respuesta a quién querés ser."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 165,
+   "carpeta": "posts/cola/165-mas-cerca",
+   "titulo": "Estás más cerca",
+   "caption": "Seguí. Compartilo con el que está por rendirse.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "Estás más cerca de lo que creés. Por eso te cuesta tanto."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 166,
+   "carpeta": "posts/cola/166-nadie-te-debe",
+   "titulo": "Nadie te debe nada",
+   "caption": "Construila vos. Compartilo con el que espera que cambie solo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#responsabilidad",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "Nadie te debe una vida mejor. Construila."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 167,
+   "carpeta": "posts/cola/167-por-pasar",
+   "titulo": "Leelo otra vez",
+   "caption": "No te rindas hoy.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "El que se rinde hoy nunca sabe qué estaba por pasar."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 168,
+   "carpeta": "posts/cola/168-excusa-arrepentimiento",
+   "titulo": "La excusa de hoy",
+   "caption": "Cortá con la excusa. Compartilo con el que siempre tiene una.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#excusas",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "La excusa de hoy es el arrepentimiento de mañana."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 169,
+   "carpeta": "posts/cola/169-nadie-estuvo-listo",
+   "titulo": "Nadie estuvo listo",
+   "caption": "Empezá igual. Compartilo con el que espera estar listo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#valentia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Valentía"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "No esperes a estar listo. Nadie lo estuvo."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 170,
+   "carpeta": "posts/cola/170-mente-pide-parar",
+   "titulo": "Tu mente pide parar",
+   "caption": "No le hagas caso. Compartilo con el que abandona temprano.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#fuerzamental",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Fuerza mental"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "Tu mente te va a pedir parar mucho antes que tu cuerpo."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 171,
+   "carpeta": "posts/cola/171-con-o-sin-ganas",
+   "titulo": "Con ganas o sin ganas",
+   "caption": "Hacelo igual. Compartilo con el que espera tener ganas.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "Con ganas o sin ganas. Esa es la diferencia."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 172,
+   "carpeta": "posts/cola/172-habitos-hablan",
+   "titulo": "Leelo otra vez",
+   "caption": "Mirá tus hábitos.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#habitos",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "Tus hábitos hablan más fuerte que tus planes."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 173,
+   "carpeta": "posts/cola/173-elegir-facil",
+   "titulo": "Lo fácil y lo difícil",
+   "caption": "Elegí lo difícil hoy. Compartilo con el que viene postergando.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#incomodidad",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Incomodidad"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "Cada vez que elegís lo fácil, lo difícil se hace más grande."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 174,
+   "carpeta": "posts/cola/174-yo-cansado",
+   "titulo": "Para tu yo de mañana",
+   "caption": "Hacelo por él. Compartilo con el que lo deja para después.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#futuro",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (165-174, piano + frases que interpelan)",
+   "frases": [
+    "Hacé hoy lo que tu yo cansado de mañana te va a agradecer."
    ],
    "archivos": [
     "tarjeta_1.jpg",

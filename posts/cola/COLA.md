@@ -308,3 +308,18 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 162 | `posts/cola/162-orgullo-manana` | Leelo otra vez | Aguantá hoy. #mentalidad #disciplina #esfuerzo #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-15 |
 | 163 | `posts/cola/163-no-perdido` | No estás perdido | Ya sabés cuál es. Compartilo con el que dice que no sabe qué hacer. #mentalidad #disciplina #claridad #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-15 |
 | 164 | `posts/cola/164-tu-rutina` | Tu rutina | Mirá tu día. Compartilo con el que quiere cambiar. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-15 |
+
+## Lote 2026-11-16 (165-174, piano + frases que interpelan)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 165 | `posts/cola/165-mas-cerca` | Estás más cerca | Seguí. Compartilo con el que está por rendirse. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 166 | `posts/cola/166-nadie-te-debe` | Nadie te debe nada | Construila vos. Compartilo con el que espera que cambie solo. #mentalidad #disciplina #responsabilidad #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 167 | `posts/cola/167-por-pasar` | Leelo otra vez | No te rindas hoy. #mentalidad #disciplina #constancia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 168 | `posts/cola/168-excusa-arrepentimiento` | La excusa de hoy | Cortá con la excusa. Compartilo con el que siempre tiene una. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
+| 169 | `posts/cola/169-nadie-estuvo-listo` | Nadie estuvo listo | Empezá igual. Compartilo con el que espera estar listo. #mentalidad #disciplina #valentia #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 170 | `posts/cola/170-mente-pide-parar` | Tu mente pide parar | No le hagas caso. Compartilo con el que abandona temprano. #mentalidad #disciplina #fuerzamental #motivacion #parati #fyp | video | River Flows in You - Yiruma | PENDIENTE |
+| 171 | `posts/cola/171-con-o-sin-ganas` | Con ganas o sin ganas | Hacelo igual. Compartilo con el que espera tener ganas. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
+| 172 | `posts/cola/172-habitos-hablan` | Leelo otra vez | Mirá tus hábitos. #mentalidad #disciplina #habitos #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
+| 173 | `posts/cola/173-elegir-facil` | Lo fácil y lo difícil | Elegí lo difícil hoy. Compartilo con el que viene postergando. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
+| 174 | `posts/cola/174-yo-cansado` | Para tu yo de mañana | Hacelo por él. Compartilo con el que lo deja para después. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
