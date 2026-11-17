@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-17T21:10:16.738Z",
+ "generado": "2026-11-17T21:11:22.048Z",
  "posts": [
   {
    "id": 1,
@@ -6574,6 +6574,213 @@
    "lote": "Lote 2026-11-17 (177-181, piano + frases que interpelan)",
    "frases": [
     "Si cada tarea tiene que convencerte, tu comodidad ya está tomando las decisiones."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 183,
+   "carpeta": "posts/cola/183-contar-dias",
+   "titulo": "Hacé que cuenten",
+   "caption": "Que cada día cuente. Compartilo con el que espera que pase el tiempo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)",
+   "frases": [
+    "Dejá de contar los días que faltan. Hacé que cuenten."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 184,
+   "carpeta": "posts/cola/184-inconstante",
+   "titulo": "Eso se entrena",
+   "caption": "Entrenalo todos los días. Compartilo con el que dice que así es él.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)",
+   "frases": [
+    "No sos tímido ni vago. Sos inconstante. Y eso se entrena."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 185,
+   "carpeta": "posts/cola/185-prioridad",
+   "titulo": "Leelo otra vez",
+   "caption": "Poné tus prioridades en orden.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#prioridades",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)",
+   "frases": [
+    "Nadie está tan ocupado. Es cuestión de prioridad."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 186,
+   "carpeta": "posts/cola/186-excusa-version",
+   "titulo": "Cada excusa cuesta",
+   "caption": "Dejá de creértelas. Compartilo con el que siempre tiene una.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#excusas",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)",
+   "frases": [
+    "Cada excusa que te creés te cuesta una versión mejor de vos."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 187,
+   "carpeta": "posts/cola/187-disciplina-cuidado",
+   "titulo": "La disciplina es cariño",
+   "caption": "Cuidá a tu futuro. Compartilo con el que lo está descuidando.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#futuro",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)",
+   "frases": [
+    "La disciplina es el cariño más real que le podés dar a tu futuro."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 188,
+   "carpeta": "posts/cola/188-volver",
+   "titulo": "Volver mañana",
+   "caption": "Volvé mañana también. Compartilo con el que empezó mil veces.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)",
+   "frases": [
+    "Lo difícil no es empezar. Es volver al día siguiente."
    ],
    "archivos": [
     "tarjeta_1.jpg",
