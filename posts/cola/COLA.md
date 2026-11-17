@@ -335,11 +335,11 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 177 | `posts/cola/177-lo-comodo` | Lo cómodo pesa | Elegí distinto hoy. Compartilo con el que vive en la comodidad. #mentalidad #disciplina #comodidad #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 178 | `posts/cola/178-empezar-antes` | Empezar antes | Empezá hoy. Compartilo con el que sigue esperando. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 179 | `posts/cola/179-lo-que-evitas-persigue` | Leelo otra vez | Enfrentalo hoy. #mentalidad #disciplina #valentia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 180 | `posts/cola/180-lo-que-repetis` | Sos lo que repetís | Mirá qué repetís. Compartilo con el que dice mucho y hace poco. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 181 | `posts/cola/181-esfuerzo-invisible` | El esfuerzo invisible | Seguí aunque nadie vea. Compartilo con el que trabaja en silencio. #mentalidad #disciplina #esfuerzo #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 177 | `posts/cola/177-lo-comodo` | Lo cómodo pesa | Elegí distinto hoy. Compartilo con el que vive en la comodidad. #mentalidad #disciplina #comodidad #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-16 |
+| 178 | `posts/cola/178-empezar-antes` | Empezar antes | Empezá hoy. Compartilo con el que sigue esperando. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-17 |
+| 179 | `posts/cola/179-lo-que-evitas-persigue` | Leelo otra vez | Enfrentalo hoy. #mentalidad #disciplina #valentia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-17 |
+| 180 | `posts/cola/180-lo-que-repetis` | Sos lo que repetís | Mirá qué repetís. Compartilo con el que dice mucho y hace poco. #mentalidad #disciplina #habitos #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-17 |
+| 181 | `posts/cola/181-esfuerzo-invisible` | El esfuerzo invisible | Seguí aunque nadie vea. Compartilo con el que trabaja en silencio. #mentalidad #disciplina #esfuerzo #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-17 |
 | 182 | `posts/cola/182-sin-debate` | Sin debate | Hacelo sin debate. Compartilo con el que siempre necesita convencerse. #mentalidad #disciplina #motivacion #parati #fyp #constancia | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-16 (borrador) |
 
 ## Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)
