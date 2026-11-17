@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-17T01:42:55.538Z",
+ "generado": "2026-11-17T01:44:26.818Z",
  "posts": [
   {
    "id": 1,
@@ -6397,9 +6397,9 @@
     "Frase directa"
    ],
    "tipo": "video",
-   "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "borrador": true,
+   "estado": "SUBIDO",
+   "subido": "2026-11-16",
    "lote": "Lote 2026-11-16 (app del celular)",
    "frases": [
     "Si cada tarea tiene que convencerte, tu comodidad ya está tomando las decisiones."
