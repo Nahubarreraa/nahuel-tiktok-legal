@@ -78,6 +78,10 @@ input:focus,textarea:focus{border-color:var(--ac)}
 .act small{color:var(--mut);font-size:12px;line-height:1.25}
 .act.main{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(135deg,#3a2d12,#1e1c15);border-color:#6b5426;min-height:96px}
 .act.main .ic{font-size:38px}
+.cta{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;padding:26px 16px;border:0;border-radius:24px;font-size:22px;font-weight:800;color:#1a1405;background:linear-gradient(135deg,var(--ac2),var(--ac));animation:pulse 2.4s infinite}
+.cta span{font-size:30px}
+.link{display:block;margin:14px auto 0;background:none;border:0;color:var(--ac);font-size:14px;text-decoration:underline;text-underline-offset:4px;padding:8px}
+.hero{padding:26px 0 8px}
 .act:hover{border-color:var(--ac)}
 .act.main b,.act.main small{display:block}
 .act.main small{margin-top:3px}
@@ -171,19 +175,11 @@ input:focus,textarea:focus{border-color:var(--ac)}
   <!-- ============ CREAR ============ -->
   <section class="tab on" id="t-crear">
     <div id="aviso"></div>
-    <div class="hero in"><svg class="shield" viewBox="0 0 512 512"><path d="M256 70l150 60v130c0 100-65 170-150 210-85-40-150-110-150-210V130z" fill="#1e1c15" stroke="#e0b86a" stroke-width="22" stroke-linejoin="round"/><path d="M190 255l50 50 95-105" fill="none" stroke="#e0b86a" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h2>¿Qué post querés hoy?</h2><div class="m">Elegí una opción y yo hago el resto.</div></div>
-
-    <div class="card sw in" style="--i:1"><div><b>Mandarlo a TikTok al terminar</b><div class="m" id="swtx">Apagalo si solo querés armarlo</div></div>
-      <label class="tg"><input type="checkbox" id="auto"><span></span></label></div>
-
-    <div class="acts">
-      <button class="act main in" style="--i:2" id="a-sorp"><span class="ic">⚡</span><div><b>Sorprendeme</b><small>Invento una frase nueva y armo todo el post</small></div></button>
-      <button class="act in" style="--i:3" id="a-tema"><span class="ic">🎯</span><b>Elegir un tema</b><small>Excusas, miedo, constancia…</small></button>
-      <button class="act in" style="--i:4" id="a-idea"><span class="ic">✍️</span><b>Tengo una idea</b><small>Contame qué querés decir</small></button>
+    <div class="hero in">
+      <button class="cta" id="a-sorp"><span>✨</span> Crear un post</button>
+      <div class="m" style="margin-top:14px">Armo la frase, la tarjeta y el video, y lo mando a TikTok.</div>
+      <button class="link" id="a-idea">¿Querés algo en particular? Pedilo acá</button>
     </div>
-
-    <h3>TUS PEDIDOS</h3>
     <div id="reqs"></div>
   </section>
 
@@ -213,7 +209,9 @@ input:focus,textarea:focus{border-color:var(--ac)}
       </ol></div>
       <div class="m" style="margin-top:8px">No aparece en "Borradores" de tu perfil ni en TikTok Studio de la computadora: llega como aviso en la app.</div>
     </div>
-    <div class="card in" style="--i:2;margin-top:12px;font-size:13px;color:var(--mut)" id="info"></div>
+    <div class="card sw in" style="--i:2;margin-top:12px"><div><b>Mandar a TikTok al terminar</b><div class="m" id="swtx">Apagalo si solo querés armar el post</div></div>
+      <label class="tg"><input type="checkbox" id="auto"><span></span></label></div>
+    <div class="card in" style="--i:3;margin-top:12px;font-size:13px;color:var(--mut)" id="info"></div>
   </section>
   <div id="indwrap"></div>
 </main>
@@ -281,12 +279,9 @@ function cerrarHoja(){$('modal').classList.remove('on')}
 $('modal').onclick=e=>{if(e.target===$('modal'))cerrarHoja()};
 
 $('a-sorp').onclick=e=>{if(!conectado)return go('ajustes');pedir('Creá un post nuevo',e)};
-$('a-tema').onclick=()=>{if(!conectado)return go('ajustes');
-  hoja('<h2 style="margin-top:4px">Elegí un tema</h2><div class="m">Toco uno y armo el post.</div><div class="topics">'+TEMAS.map((t,i)=>'<button class="chip" style="--i:'+i+'" data-t="'+esc(t)+'">'+esc(t)+'</button>').join('')+'</div>');
-  document.querySelectorAll('.topics .chip').forEach(b=>b.onclick=e=>{cerrarHoja();pedir('Creá un post nuevo sobre '+b.dataset.t.toLowerCase(),e)})};
 $('a-idea').onclick=()=>{if(!conectado)return go('ajustes');
-  hoja('<h2 style="margin-top:4px">Contame tu idea</h2><div class="m" style="margin-bottom:10px">Por ejemplo: "una frase para el que siempre se rinde al tercer día".</div><textarea id="idea" rows="4" placeholder="Escribí acá…"></textarea><button class="btn big" id="idea-ok" style="margin-top:12px">Crear mi post</button>');
-  setTimeout(()=>$('idea').focus(),350);
+  hoja('<h2 style="margin-top:4px">¿Sobre qué?</h2><div class="m">Tocá un tema o escribí lo que quieras.</div><div class="topics">'+TEMAS.map((t,k)=>'<button class="chip" style="--i:'+k+'" data-t="'+esc(t)+'">'+esc(t)+'</button>').join('')+'</div><textarea id="idea" rows="3" placeholder="O contame tu idea…"></textarea><button class="btn big" id="idea-ok" style="margin-top:12px">Crear mi post</button>');
+  document.querySelectorAll('.topics .chip').forEach(b=>b.onclick=e=>{cerrarHoja();pedir('Creá un post nuevo sobre '+b.dataset.t.toLowerCase(),e)});
   $('idea-ok').onclick=e=>{const t=$('idea').value.trim();if(!t)return;cerrarHoja();pedir(t,e)}};
 
 async function pedir(texto,ev){
@@ -326,8 +321,7 @@ function tarjeta(i,idx){
     h+='<div class="how err" style="border-color:#6b3a31;background:#25140f"><b style="color:var(--bad)">No pude terminarlo</b><div class="m">'+esc(a.texto.replace(/^No pude completar el pedido\.?/,'').replace(/`/g,'')).slice(0,220)+'</div></div><div class="rowb"><button class="btn" data-a="otra" data-n="'+i.number+'">Reintentar</button></div>';
   }else if(a.res){
     const r=a.res;
-    h+='<div class="res">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">“'+esc(r.frase)+'”</div><div class="chips"><span class="tag">#'+r.id+' '+esc(r.titulo)+'</span>'+(r.sonido?'<span class="tag">♪ '+esc(r.sonido)+'</span>':'')+'</div>'+
-       '<div class="rowb"><button class="btn sec" data-a="cf" data-n="'+i.number+'">Copiar frase</button></div></div></div>';
+    h+='<div class="res">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">“'+esc(r.frase)+'”</div></div></div>';
     if(r.subido)h+='<div class="how"><b>✓ TikTok ya lo recibió. Te faltan 3 toques:</b><ol>'+
       '<li><div>Copiá la descripción<div class="rowb"><button class="btn sec" data-a="cc" data-n="'+i.number+'">📋 Copiar descripción</button></div></div></li>'+
       '<li><div>Abrí TikTok → <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> ✉️ → tocá el aviso de tu video<div class="rowb"><a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">Abrir TikTok</a></div></div></li>'+
@@ -341,11 +335,11 @@ function tarjeta(i,idx){
 function pintaPedidos(){
   const el=$('reqs');
   if(!conectado){el.innerHTML='<div class="empty">Cuando conectes la app, tus pedidos aparecen acá.</div>';return}
-  if(!ISSUES.length){el.innerHTML='<div class="empty in">Todavía no pediste nada.<br>Tocá <b>Sorprendeme</b> para probar ✨</div>';return}
+  if(!ISSUES.length){el.innerHTML='<div class="empty in">Todavía no pediste nada.<br>Tocá <b>Crear un post</b> ✨</div>';return}
   const raw=ISSUES.slice(0,8).map(tarjeta).join('');
   const norm=raw.replace(/ in"/g,'"').replace(/(\d+:\d\d)<\/span>/g,'0:00</span>').replace(/width:[\d.]+%/g,'');
   ISSUES.slice(0,8).forEach(i=>SEEN.add(i.number));
-  if(norm!==pintaPedidos.last){pintaPedidos.last=norm;el.innerHTML=raw}
+  if(norm!==pintaPedidos.last){pintaPedidos.last=norm;el.innerHTML='<h3>TUS PEDIDOS</h3>'+raw}
   const prev=window.__hecho||{};ISSUES.forEach(i=>{const h=analiza(i).hecho;if(h&&prev[i.number]===false){const c=document.querySelector('[data-n="'+i.number+'"]');if(c){const b=c.getBoundingClientRect();confeti(b.left+b.width/2,b.top+40)}}prev[i.number]=h});window.__hecho=prev;
 }
 $('reqs').onclick=async e=>{
