@@ -327,8 +327,11 @@ function tarjeta(i,idx){
   }else if(a.res){
     const r=a.res;
     h+='<div class="res">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">“'+esc(r.frase)+'”</div><div class="chips"><span class="tag">#'+r.id+' '+esc(r.titulo)+'</span>'+(r.sonido?'<span class="tag">♪ '+esc(r.sonido)+'</span>':'')+'</div>'+
-       '<div class="rowb"><button class="btn sec" data-a="cf" data-n="'+i.number+'">Copiar frase</button><button class="btn sec" data-a="cc" data-n="'+i.number+'">Copiar texto</button></div></div></div>';
-    if(r.subido)h+='<div class="how"><b>✓ TikTok ya lo recibió. Ahora vos:</b><ol><li>Abrí la app de TikTok (cuenta @mentalidaddeacero.arg).</li><li>Tocá <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> y el aviso de tu video.</li><li>Ponele el sonido y publicalo.</li></ol><div class="rowb"><a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">Abrir TikTok</a></div></div>';
+       '<div class="rowb"><button class="btn sec" data-a="cf" data-n="'+i.number+'">Copiar frase</button></div></div></div>';
+    if(r.subido)h+='<div class="how"><b>✓ TikTok ya lo recibió. Te faltan 3 toques:</b><ol>'+
+      '<li><div>Copiá la descripción<div class="rowb"><button class="btn sec" data-a="cc" data-n="'+i.number+'">📋 Copiar descripción</button></div></div></li>'+
+      '<li><div>Abrí TikTok → <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> ✉️ → tocá el aviso de tu video<div class="rowb"><a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">Abrir TikTok</a></div></div></li>'+
+      '<li><div>Pegá la descripción, ponele el sonido y publicá'+(r.sonido?'<div class="rowb"><button class="btn sec" data-a="cs" data-n="'+i.number+'">♪ Copiar nombre del sonido</button></div><div class="m" style="margin-top:4px">Sugerido: '+esc(r.sonido)+'</div>':'')+'</div></li></ol></div>';
     else h+='<div class="rowb"><button class="btn" data-a="subir" data-n="'+i.number+'" data-id="'+r.id+'">Mandarlo a TikTok</button></div>';
   }else{
     h+='<div class="ans">'+esc(a.texto).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')+'</div>';
@@ -349,7 +352,8 @@ $('reqs').onclick=async e=>{
   const b=e.target.closest('button');if(!b)return;
   const i=ISSUES.find(x=>x.number==b.dataset.n),a=i&&analiza(i);
   if(b.dataset.a==='cf')copiar(a.res.frase,'Frase copiada');
-  if(b.dataset.a==='cc')copiar(a.res.caption+' '+a.res.hashtags.join(' '),'Texto copiado');
+  if(b.dataset.a==='cc')copiar(a.res.caption+' '+a.res.hashtags.join(' '),'Descripción copiada');
+  if(b.dataset.a==='cs')copiar(a.res.sonido,'Sonido copiado: buscalo en TikTok');
   if(b.dataset.a==='subir')pedir('Subí el post '+b.dataset.id,e);
   if(b.dataset.a==='otra')pedir(pedidoLimpio(i.body),e);
 };
