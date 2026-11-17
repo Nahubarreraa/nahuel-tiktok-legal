@@ -324,3 +324,9 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 | 172 | `posts/cola/172-habitos-hablan` | Leelo otra vez | Mirá tus hábitos. #mentalidad #disciplina #habitos #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-16 |
 | 173 | `posts/cola/173-elegir-facil` | Lo fácil y lo difícil | Elegí lo difícil hoy. Compartilo con el que viene postergando. #mentalidad #disciplina #incomodidad #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-16 |
 | 174 | `posts/cola/174-yo-cansado` | Para tu yo de mañana | Hacelo por él. Compartilo con el que lo deja para después. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-16 |
+
+## Lote 2026-11-16 (app del celular)
+
+| # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
+|---|---|---|---|---|---|---|
+| 176 | `posts/cola/176-el-permiso-facil` | El permiso fácil | Hacete cargo hoy. Compartilo con el que convierte un mal día en una semana perdida. #mentalidad #disciplina #motivacion #parati #fyp #constancia | video | Nuvole Bianche - Einaudi | PENDIENTE |
