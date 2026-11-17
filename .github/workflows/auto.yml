@@ -1,0 +1,61 @@
+name: Piloto automático
+
+# Cada hora revisa la configuración de la app (issue con etiqueta "config").
+# Si el piloto está encendido y es una de las horas elegidas, crea un post y lo manda a TikTok.
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Crear un post ahora sin mirar la hora (prueba)"
+        required: false
+        default: "no"
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: chat-acero
+  cancel-in-progress: false
+
+jobs:
+  auto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Decidir si toca publicar
+        id: decidir
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORZAR: ${{ inputs.forzar }}
+        run: |
+          CONF=$(gh issue list --repo "${{ github.repository }}" --label config --state open --json body --jq '.[0].body // "{}"')
+          ACTIVO=$(echo "$CONF" | jq -r '.activo // false')
+          POR_DIA=$(echo "$CONF" | jq -r '.porDia // 2')
+          HORA=$(TZ=America/Argentina/Buenos_Aires date +%-H)
+          case "$POR_DIA" in 1) HORAS="20";; 3) HORAS="9 14 20";; *) HORAS="13 20";; esac
+          echo "activo=$ACTIVO porDia=$POR_DIA hora=$HORA horas=[$HORAS] forzar=$FORZAR"
+          TOCA=no
+          if [ "$FORZAR" = "si" ]; then TOCA=si; fi
+          if [ "$ACTIVO" = "true" ]; then for h in $HORAS; do [ "$h" = "$HORA" ] && TOCA=si; done; fi
+          echo "toca=$TOCA" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        if: steps.decidir.outputs.toca == 'si'
+      - uses: actions/setup-node@v4
+        if: steps.decidir.outputs.toca == 'si'
+        with:
+          node-version: 22
+      - name: Fuentes y ffmpeg
+        if: steps.decidir.outputs.toca == 'si'
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-core ffmpeg >/dev/null
+      - name: Crear y mandar un post
+        if: steps.decidir.outputs.toca == 'si'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          COMPOSIO_API_KEY: ${{ secrets.COMPOSIO_API_KEY }}
+          SITE: https://nahubarreraa.github.io/nahuel-tiktok-legal
+          MENSAJE: Creá un post nuevo
+          RESPUESTA_FILE: ${{ runner.temp }}/respuesta.md
+        run: node scripts/crear.js

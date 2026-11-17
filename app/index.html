@@ -6,12 +6,17 @@
 <meta name="theme-color" content="#14130f">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Acero">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
 <title>Mentalidad de Acero</title>
 <style>
 :root{--bg:#100f0b;--bg2:#17150f;--card:#1e1c15;--card2:#26231a;--line:#3a3629;--tx:#f4f0e6;--mut:#a8a290;--ac:#e0b86a;--ac2:#f3d08d;--ok:#7bd389;--bad:#ef8a78;--nav:66px;--r:18px}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html,body{margin:0;height:100%;height:100dvh;overscroll-behavior:none;-webkit-text-size-adjust:100%;background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 body{display:flex;flex-direction:column;overflow:hidden}
 button{font:inherit;color:inherit;cursor:pointer}
 button:active{transform:scale(.96)}
@@ -37,6 +42,16 @@ header{flex:none;display:flex;align-items:center;gap:10px;padding:calc(10px + en
 .logo{width:34px;height:34px;border-radius:10px;flex:none}
 header h1{font-size:17px;margin:0;line-height:1.1}
 header .sub{font-size:12px;color:var(--mut)}
+.pil{display:flex;gap:8px;margin-top:12px}
+.pil .chip{flex:1;text-align:center;padding:10px 4px}
+.bot{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--ac);background:var(--card2);border:1px solid var(--line);border-radius:20px;padding:5px 11px;margin:8px 0 0}
+.inst{border-color:#6b5426;background:linear-gradient(135deg,#2a2110,#1e1c15);margin:8px 0 4px;position:relative}
+.inst b{font-size:16px}
+.inst ol{margin:10px 0 0;padding:0;list-style:none}
+.inst li{display:flex;gap:10px;align-items:center;margin:9px 0;font-size:14px}
+.inst li i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--ac);color:#1a1405;font-style:normal;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.inst .share{display:inline-block;font-size:20px;vertical-align:-3px;animation:float 1.6s ease-in-out infinite}
+.inst .x{position:absolute;top:8px;right:10px;background:none;border:0;color:var(--mut);font-size:22px;padding:4px 8px}
 .pill{margin-left:auto;font-size:12px;padding:5px 10px;border-radius:20px;background:var(--card2);border:1px solid var(--line);display:flex;align-items:center;gap:6px;white-space:nowrap}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--bad)}
 .pill.on .dot{background:var(--ok);animation:pulse 2s infinite}
@@ -174,7 +189,9 @@ input:focus,textarea:focus{border-color:var(--ac)}
 <main>
   <!-- ============ CREAR ============ -->
   <section class="tab on" id="t-crear">
+    <div id="instalar"></div>
     <div id="aviso"></div>
+    <div id="conBot" style="text-align:center"></div>
     <div class="hero in">
       <button class="cta" id="a-sorp"><span>✨</span> Crear un post</button>
       <div class="m" style="margin-top:14px">Armo la frase, la tarjeta y el video, y lo mando a TikTok.</div>
@@ -199,16 +216,18 @@ input:focus,textarea:focus{border-color:var(--ac)}
   <!-- ============ AJUSTES ============ -->
   <section class="tab" id="t-ajustes">
     <h2>Ajustes</h2>
+    <div id="instalar2"></div>
     <div class="card in" id="conn"></div>
     <div class="card in" style="--i:1;margin-top:12px">
       <b>Dónde aparece el video en TikTok</b>
       <div class="how" style="margin-top:10px;border-color:var(--line);background:var(--card2)"><ol>
-        <li>Abrí la app de TikTok en el celular, con la cuenta @mentalidaddeacero.arg.</li>
-        <li>Entrá a <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> y tocá el aviso de tu video.</li>
-        <li>Ponele el sonido y publicalo.</li>
+        <li><div>Abrí la app de TikTok en el celular, con la cuenta @mentalidaddeacero.arg.</div></li>
+        <li><div>Entrá a <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> y tocá el aviso de tu video.</div></li>
+        <li><div>Ponele el sonido y publicalo.</div></li>
       </ol></div>
       <div class="m" style="margin-top:8px">No aparece en "Borradores" de tu perfil ni en TikTok Studio de la computadora: llega como aviso en la app.</div>
     </div>
+    <div id="piloto"></div>
     <div class="card sw in" style="--i:2;margin-top:12px"><div><b>Mandar a TikTok al terminar</b><div class="m" id="swtx">Apagalo si solo querés armar el post</div></div>
       <label class="tg"><input type="checkbox" id="auto"><span></span></label></div>
     <div class="card in" style="--i:3;margin-top:12px;font-size:13px;color:var(--mut)" id="info"></div>
@@ -248,6 +267,30 @@ async function gh(path,opt={}){
   const r=await fetch(API+path,{...opt,headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+t,'Content-Type':'application/json',...(opt.headers||{})}});
   if(!r.ok){let m=r.status;try{m=(await r.json()).message}catch(e){}throw new Error(r.status+' '+m)}
   return r.status===204?null:r.json();
+}
+
+
+/* ---------- instalación (iPhone) ---------- */
+const esIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const instalada=navigator.standalone===true||matchMedia('(display-mode:standalone)').matches;
+function guiaInstalar(cerrable){
+  return '<div class="card inst in">'+(cerrable?'<button class="x" data-a="x" aria-label="Cerrar">×</button>':'')+
+   '<b>📲 Instalala como app en tu iPhone</b><ol>'+
+   '<li><i>1</i><div>Abrí esta página en <b>Safari</b> y tocá el botón <b>Compartir</b> <span class="share">⬆️</span> (el cuadrado con la flecha, abajo en el medio).</div></li>'+
+   '<li><i>2</i><div>Bajá y tocá <b>"Agregar a inicio"</b>.</div></li>'+
+   '<li><i>3</i><div>Tocá <b>Agregar</b>. Listo: queda el ícono en tu pantalla de inicio y se abre a pantalla completa.</div></li></ol>'+
+   '<div class="m" style="margin-top:10px">Ojo: la app instalada y Safari no comparten datos. Abrí la app desde el ícono y pegá el token otra vez en <b>Ajustes</b>.</div></div>';
+}
+function pintaInstalar(){
+  const ocultar=lsGet('inst_off')==='1';
+  $('instalar').innerHTML=(esIOS&&!instalada&&!ocultar)?guiaInstalar(true):'';
+  $('instalar2').innerHTML=instalada?'':(esIOS?guiaInstalar(false):'<div class="card inst in"><b>📲 Instalala como app</b><div class="m" style="margin-top:6px">Abrí el menú del navegador y tocá <b>Instalar app</b> o <b>Agregar a la pantalla de inicio</b>.</div></div>');
+}
+$('instalar').onclick=e=>{if(e.target.dataset.a==='x'){lsSet('inst_off','1');pintaInstalar()}};
+function abrirTikTok(e){
+  e.preventDefault();
+  location.href='snssdk1233://';
+  setTimeout(()=>{if(!document.hidden)window.open('https://www.tiktok.com/','_blank')},1600);
 }
 
 /* ---------- navegación ---------- */
@@ -321,10 +364,10 @@ function tarjeta(i,idx){
     h+='<div class="how err" style="border-color:#6b3a31;background:#25140f"><b style="color:var(--bad)">No pude terminarlo</b><div class="m">'+esc(a.texto.replace(/^No pude completar el pedido\.?/,'').replace(/`/g,'')).slice(0,220)+'</div></div><div class="rowb"><button class="btn" data-a="otra" data-n="'+i.number+'">Reintentar</button></div>';
   }else if(a.res){
     const r=a.res;
-    h+='<div class="res">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">“'+esc(r.frase)+'”</div></div></div>';
+    h+='<div class="res">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">“'+esc(r.frase)+'”</div><div class="rowb"><button class="btn sec" data-a="otra" data-n="'+i.number+'">↻ Otra frase</button></div></div></div>';
     if(r.subido)h+='<div class="how"><b>✓ TikTok ya lo recibió. Te faltan 3 toques:</b><ol>'+
       '<li><div>Copiá la descripción<div class="rowb"><button class="btn sec" data-a="cc" data-n="'+i.number+'">📋 Copiar descripción</button></div></div></li>'+
-      '<li><div>Abrí TikTok → <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> ✉️ → tocá el aviso de tu video<div class="rowb"><a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">Abrir TikTok</a></div></div></li>'+
+      '<li><div>Abrí TikTok → <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> ✉️ → tocá el aviso de tu video<div class="rowb"><a class="btn" href="https://www.tiktok.com/" data-a="tt">Abrir TikTok</a></div></div></li>'+
       '<li><div>Pegá la descripción, ponele el sonido y publicá'+(r.sonido?'<div class="rowb"><button class="btn sec" data-a="cs" data-n="'+i.number+'">♪ Copiar nombre del sonido</button></div><div class="m" style="margin-top:4px">Sugerido: '+esc(r.sonido)+'</div>':'')+'</div></li></ol></div>';
     else h+='<div class="rowb"><button class="btn" data-a="subir" data-n="'+i.number+'" data-id="'+r.id+'">Mandarlo a TikTok</button></div>';
   }else{
@@ -343,6 +386,7 @@ function pintaPedidos(){
   const prev=window.__hecho||{};ISSUES.forEach(i=>{const h=analiza(i).hecho;if(h&&prev[i.number]===false){const c=document.querySelector('[data-n="'+i.number+'"]');if(c){const b=c.getBoundingClientRect();confeti(b.left+b.width/2,b.top+40)}}prev[i.number]=h});window.__hecho=prev;
 }
 $('reqs').onclick=async e=>{
+  if(e.target.closest('[data-a="tt"]')){abrirTikTok(e);return}
   const b=e.target.closest('button');if(!b)return;
   const i=ISSUES.find(x=>x.number==b.dataset.n),a=i&&analiza(i);
   if(b.dataset.a==='cf')copiar(a.res.frase,'Frase copiada');
@@ -355,7 +399,7 @@ async function cargarPedidos(){
   if(!tok()){estadoConexion(false);pintaPedidos();return}
   try{
     ISSUES=await gh('/issues?labels=pedido&state=all&per_page=5&sort=created&direction=desc');
-    estadoConexion(true);
+    estadoConexion(true);cargarConf();
     await Promise.all(ISSUES.map(async i=>{
       const a=CACHE[i.number];
       if(a&&analiza(i).hecho)return;
@@ -412,6 +456,38 @@ $('sheet').onclick=async e=>{
   if(b.dataset.a==='cop')copiar(p.frases.join('\n\n'),'Frase copiada');
 };
 
+
+/* ---------- piloto automático ---------- */
+let CONF={activo:false,porDia:2,num:null};
+const HORAS={1:'20 h',2:'13 h y 20 h',3:'9 h, 14 h y 20 h'};
+async function cargarConf(){
+  if(!tok()||CONF.cargado)return;
+  try{const l=await gh('/issues?labels=config&state=open&per_page=1');
+    if(l.length){let b={};try{b=JSON.parse(l[0].body||'{}')}catch(e){}CONF={activo:!!b.activo,porDia:b.porDia||2,num:l[0].number}}
+    CONF.cargado=true;
+  }catch(e){}
+  pintaPiloto();
+}
+async function guardarConf(){
+  const body=JSON.stringify({activo:CONF.activo,porDia:CONF.porDia});
+  try{
+    if(CONF.num)await gh('/issues/'+CONF.num,{method:'PATCH',body:JSON.stringify({body})});
+    else{const i=await gh('/issues',{method:'POST',body:JSON.stringify({title:'Configuración del piloto automático',body,labels:['config']})});CONF.num=i.number}
+    toast(CONF.activo?'✓ Piloto automático encendido':'Piloto automático apagado','ok');
+  }catch(e){toast(esc(e.message),'bad')}
+  pintaPiloto();
+}
+function pintaPiloto(){
+  const el=$('piloto');if(!el)return;
+  el.innerHTML='<div class="card in" style="--i:1;margin-top:12px"><div class="sw" style="margin:0;padding:0"><div><b>🤖 Piloto automático</b><div class="m">Armo posts solos y los mando a TikTok. Solo tenés que publicarlos.</div></div><label class="tg"><input type="checkbox" id="pa" '+(CONF.activo?'checked':'')+'><span></span></label></div>'+
+    (CONF.activo?'<div class="pil">'+[1,2,3].map(n=>'<button class="chip'+(CONF.porDia===n?' on':'')+'" data-n="'+n+'">'+n+' por día</button>').join('')+'</div><div class="m" style="margin-top:10px">Se mandan a las <b>'+HORAS[CONF.porDia]+'</b> (hora de Argentina). TikTok te avisa cuando llega cada uno.</div>':'')+'</div>';
+  const b=$('conBot');if(b)b.innerHTML=CONF.activo?'<span class="bot">🤖 Piloto automático: '+CONF.porDia+' por día</span>':'';
+}
+$('piloto').onclick=e=>{
+  if(e.target.id==='pa'){CONF.activo=e.target.checked;guardarConf()}
+  const c=e.target.closest('.pil .chip');if(c){CONF.porDia=+c.dataset.n;guardarConf()}
+};
+
 /* ---------- ajustes ---------- */
 function pintaAjustes(){
   $('conn').innerHTML=conectado
@@ -432,6 +508,7 @@ async function iniciar(){
   filtros();grilla();cargarPedidos();
 }
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+pintaInstalar();
 iniciar();
 </script>
 </body>
