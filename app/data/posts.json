@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-17T00:43:27.047Z",
+ "generado": "2026-11-17T01:42:55.538Z",
  "posts": [
   {
    "id": 1,
@@ -6368,6 +6368,41 @@
    "lote": "Lote 2026-11-16 (app del celular)",
    "frases": [
     "Un mal día no te obliga a fallar; sos vos quien lo usa para volver a tus viejas excusas."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 177,
+   "carpeta": "posts/cola/177-sin-debate",
+   "titulo": "Sin debate",
+   "caption": "Hacelo sin debate. Compartilo con el que siempre necesita convencerse.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#motivacion",
+    "#parati",
+    "#fyp",
+    "#constancia"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-16 (app del celular)",
+   "frases": [
+    "Si cada tarea tiene que convencerte, tu comodidad ya está tomando las decisiones."
    ],
    "archivos": [
     "tarjeta_1.jpg",
