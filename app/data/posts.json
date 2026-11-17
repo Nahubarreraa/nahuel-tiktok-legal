@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-17T01:44:26.818Z",
+ "generado": "2026-11-17T21:10:16.738Z",
  "posts": [
   {
    "id": 1,
@@ -6376,7 +6376,178 @@
   },
   {
    "id": 177,
-   "carpeta": "posts/cola/177-sin-debate",
+   "carpeta": "posts/cola/177-lo-comodo",
+   "titulo": "Lo cómodo pesa",
+   "caption": "Elegí distinto hoy. Compartilo con el que vive en la comodidad.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#comodidad",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 (177-181, piano + frases que interpelan)",
+   "frases": [
+    "Lo cómodo de hoy es lo que más te pesa mañana."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 178,
+   "carpeta": "posts/cola/178-empezar-antes",
+   "titulo": "Empezar antes",
+   "caption": "Empezá hoy. Compartilo con el que sigue esperando.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#accion",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 (177-181, piano + frases que interpelan)",
+   "frases": [
+    "Nadie se arrepiente de haber empezado antes."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 179,
+   "carpeta": "posts/cola/179-lo-que-evitas-persigue",
+   "titulo": "Leelo otra vez",
+   "caption": "Enfrentalo hoy.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#valentia",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Valentía"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 (177-181, piano + frases que interpelan)",
+   "frases": [
+    "Lo que evitás hoy te persigue mañana."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 180,
+   "carpeta": "posts/cola/180-lo-que-repetis",
+   "titulo": "Sos lo que repetís",
+   "caption": "Mirá qué repetís. Compartilo con el que dice mucho y hace poco.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#habitos",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 (177-181, piano + frases que interpelan)",
+   "frases": [
+    "Sos lo que repetís, no lo que decís."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 181,
+   "carpeta": "posts/cola/181-esfuerzo-invisible",
+   "titulo": "El esfuerzo invisible",
+   "caption": "Seguí aunque nadie vea. Compartilo con el que trabaja en silencio.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#esfuerzo",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-17 (177-181, piano + frases que interpelan)",
+   "frases": [
+    "El esfuerzo que nadie ve es el que más te cambia."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 182,
+   "carpeta": "posts/cola/182-sin-debate",
    "titulo": "Sin debate",
    "caption": "Hacelo sin debate. Compartilo con el que siempre necesita convencerse.",
    "hashtags": [
@@ -6400,7 +6571,7 @@
    "borrador": true,
    "estado": "SUBIDO",
    "subido": "2026-11-16",
-   "lote": "Lote 2026-11-16 (app del celular)",
+   "lote": "Lote 2026-11-17 (177-181, piano + frases que interpelan)",
    "frases": [
     "Si cada tarea tiene que convencerte, tu comodidad ya está tomando las decisiones."
    ],
