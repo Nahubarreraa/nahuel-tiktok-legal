@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-17T00:41:57.058Z",
+ "generado": "2026-11-17T00:43:27.047Z",
  "posts": [
   {
    "id": 1,
@@ -6362,9 +6362,9 @@
     "Frase directa"
    ],
    "tipo": "video",
-   "borrador": false,
-   "estado": "PENDIENTE",
-   "subido": null,
+   "borrador": true,
+   "estado": "SUBIDO",
+   "subido": "2026-11-16",
    "lote": "Lote 2026-11-16 (app del celular)",
    "frases": [
     "Un mal día no te obliga a fallar; sos vos quien lo usa para volver a tus viejas excusas."

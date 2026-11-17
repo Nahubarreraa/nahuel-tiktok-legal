@@ -329,4 +329,4 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 176 | `posts/cola/176-el-permiso-facil` | El permiso fácil | Hacete cargo hoy. Compartilo con el que convierte un mal día en una semana perdida. #mentalidad #disciplina #motivacion #parati #fyp #constancia | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 176 | `posts/cola/176-el-permiso-facil` | El permiso fácil | Hacete cargo hoy. Compartilo con el que convierte un mal día en una semana perdida. #mentalidad #disciplina #motivacion #parati #fyp #constancia | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-16 (borrador) |
