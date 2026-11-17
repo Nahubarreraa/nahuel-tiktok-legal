@@ -1,5 +1,5 @@
 // Cachea solo la "cáscara" de la app; los datos y las imágenes siempre van a la red.
-const C = 'acero-v5';
+const C = 'acero-v6';
 const SHELL = ['./', 'manifest.webmanifest', 'icon.svg', 'icon-192.png'];
 self.addEventListener('install', (e) => e.waitUntil(caches.open(C).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting())));
 self.addEventListener('activate', (e) => e.waitUntil(

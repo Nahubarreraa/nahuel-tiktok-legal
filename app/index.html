@@ -336,9 +336,9 @@ function pintaPedidos(){
   const el=$('reqs');
   if(!conectado){el.innerHTML='<div class="empty">Cuando conectes la app, tus pedidos aparecen acá.</div>';return}
   if(!ISSUES.length){el.innerHTML='<div class="empty in">Todavía no pediste nada.<br>Tocá <b>Crear un post</b> ✨</div>';return}
-  const raw=ISSUES.slice(0,8).map(tarjeta).join('');
+  const raw=ISSUES.slice(0,3).map(tarjeta).join('');
   const norm=raw.replace(/ in"/g,'"').replace(/(\d+:\d\d)<\/span>/g,'0:00</span>').replace(/width:[\d.]+%/g,'');
-  ISSUES.slice(0,8).forEach(i=>SEEN.add(i.number));
+  ISSUES.slice(0,3).forEach(i=>SEEN.add(i.number));
   if(norm!==pintaPedidos.last){pintaPedidos.last=norm;el.innerHTML='<h3>TUS PEDIDOS</h3>'+raw}
   const prev=window.__hecho||{};ISSUES.forEach(i=>{const h=analiza(i).hecho;if(h&&prev[i.number]===false){const c=document.querySelector('[data-n="'+i.number+'"]');if(c){const b=c.getBoundingClientRect();confeti(b.left+b.width/2,b.top+40)}}prev[i.number]=h});window.__hecho=prev;
 }
@@ -354,7 +354,7 @@ $('reqs').onclick=async e=>{
 async function cargarPedidos(){
   if(!tok()){estadoConexion(false);pintaPedidos();return}
   try{
-    ISSUES=await gh('/issues?labels=pedido&state=all&per_page=8&sort=created&direction=desc');
+    ISSUES=await gh('/issues?labels=pedido&state=all&per_page=5&sort=created&direction=desc');
     estadoConexion(true);
     await Promise.all(ISSUES.map(async i=>{
       const a=CACHE[i.number];
