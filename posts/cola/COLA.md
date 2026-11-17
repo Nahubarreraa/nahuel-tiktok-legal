@@ -346,9 +346,9 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 183 | `posts/cola/183-contar-dias` | Hacé que cuenten | Que cada día cuente. Compartilo con el que espera que pase el tiempo. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 184 | `posts/cola/184-inconstante` | Eso se entrena | Entrenalo todos los días. Compartilo con el que dice que así es él. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 185 | `posts/cola/185-prioridad` | Leelo otra vez | Poné tus prioridades en orden. #mentalidad #disciplina #prioridades #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 186 | `posts/cola/186-excusa-version` | Cada excusa cuesta | Dejá de creértelas. Compartilo con el que siempre tiene una. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 187 | `posts/cola/187-disciplina-cuidado` | La disciplina es cariño | Cuidá a tu futuro. Compartilo con el que lo está descuidando. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
-| 188 | `posts/cola/188-volver` | Volver mañana | Volvé mañana también. Compartilo con el que empezó mil veces. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | River Flows in You - Yiruma | PENDIENTE |
+| 183 | `posts/cola/183-contar-dias` | Hacé que cuenten | Que cada día cuente. Compartilo con el que espera que pase el tiempo. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-17 |
+| 184 | `posts/cola/184-inconstante` | Eso se entrena | Entrenalo todos los días. Compartilo con el que dice que así es él. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-17 |
+| 185 | `posts/cola/185-prioridad` | Leelo otra vez | Poné tus prioridades en orden. #mentalidad #disciplina #prioridades #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-17 |
+| 186 | `posts/cola/186-excusa-version` | Cada excusa cuesta | Dejá de creértelas. Compartilo con el que siempre tiene una. #mentalidad #disciplina #excusas #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-17 |
+| 187 | `posts/cola/187-disciplina-cuidado` | La disciplina es cariño | Cuidá a tu futuro. Compartilo con el que lo está descuidando. #mentalidad #disciplina #futuro #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-17 |
+| 188 | `posts/cola/188-volver` | Volver mañana | Volvé mañana también. Compartilo con el que empezó mil veces. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | River Flows in You - Yiruma | SUBIDO 2026-11-17 |
