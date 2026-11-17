@@ -150,6 +150,22 @@ async function esperarSitio(url) {
 
 const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('\n--- RESPUESTA ---\n' + texto); };
 
+// Avisos de progreso: comentarios "[[paso:N]] texto" en el issue; la app los muestra como barra de pasos.
+const REPO = process.env.GITHUB_REPOSITORY || 'Nahubarreraa/nahuel-tiktok-legal';
+const ISSUE = process.env.ISSUE_NUMBER;
+async function progreso(paso, texto) {
+  console.log(`[paso ${paso}] ${texto}`);
+  if (!ISSUE || !process.env.GITHUB_TOKEN) return;
+  try {
+    await fetch(`https://api.github.com/repos/${REPO}/issues/${ISSUE}/comments`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${process.env.GITHUB_TOKEN}`, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ body: `[[paso:${paso}]] ${texto}` }),
+    });
+  } catch {}
+}
+const COMO_ABRIR = '**TikTok ya lo tiene.** Abrí la app de TikTok (con la cuenta @mentalidaddeacero.arg) → Bandeja de entrada → tocá el aviso de tu video. Ahí le ponés el sonido y lo publicás.';
+
 (async () => {
   if (!MENSAJE) throw new Error('Mensaje vacío');
   const lib = leerLib();
@@ -158,6 +174,7 @@ const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('
     { role: 'user', content: `BIBLIOTECA ACTUAL\n${resumenBiblioteca(lib)}\n\nPEDIDO DEL USUARIO:\n${MENSAJE}` },
   ];
 
+  await progreso(1, 'Pensando la frase');
   let plan = await llamarModelo(mensajes);
   console.log('Plan:', JSON.stringify(plan).slice(0, 600));
 
@@ -188,12 +205,16 @@ const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('
     const q = envolver(p.frase.replace(/"/g, '\\"'));
     fs.writeFileSync(path.join(ROOT, dir, 'cards.js'),
       `window.CARDS=[\n{q:"${q}",${p.tipo === 'enigma' ? 'cta:"Leelo otra vez.",' : ''}a:"Mentalidad de Acero",bg:"../../../fondos/${fondo}"}\n];\n`);
+    await progreso(2, 'Armando la tarjeta y el video');
     renderizar(dir);
     guardarCola(id, dir, p, 'PENDIENTE');
+    await progreso(3, 'Guardando el post');
     publicarCambios(`Post ${id} creado desde la app: ${p.titulo}`);
 
-    let estadoSubida = 'Quedó guardado en la cola (no lo subí).';
+    let estadoSubida = 'Quedó guardado en la cola (no lo subí a TikTok). Cuando quieras, decime "subí el ' + id + '".';
+    let subido = false;
     if (!NO_SUBIR.test(MENSAJE)) {
+      await progreso(4, 'Enviando a TikTok');
       const url = `${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/video.mp4`;
       console.log('Esperando que el sitio publique', url);
       if (!(await esperarSitio(url))) throw new Error('El video tardó demasiado en estar disponible en la web.');
@@ -201,15 +222,22 @@ const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('
       await subirABorradores(post, SITE);
       marcarSubido(id);
       publicarCambios(`Post ${id} subido a borradores`);
-      estadoSubida = '**Ya está en tus borradores de TikTok.** Abrí TikTok, ponele el sonido y publicalo.';
+      estadoSubida = COMO_ABRIR;
+      subido = true;
     }
-    responder(`Listo, armé el post.\n\n**#${id} · ${p.titulo}**\n> ${p.frase}\n\n${p.caption} ${p.hashtags.join(' ')}\n\n♪ Sonido sugerido: ${p.sonido}\n\n${estadoSubida}\n\n![tarjeta](${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/tarjeta_1.jpg)`);
+    const img = `${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/tarjeta_1.jpg`;
+    const resultado = { id, titulo: p.titulo, frase: p.frase, caption: p.caption, hashtags: p.hashtags, sonido: p.sonido, subido, img };
+    responder(`Listo, armé el post.\n\n**#${id} · ${p.titulo}**\n> ${p.frase}\n\n${p.caption} ${p.hashtags.join(' ')}\n\n♪ Sonido sugerido: ${p.sonido}\n\n${estadoSubida}\n\n![tarjeta](${img})\n\n<!--RESULT ${JSON.stringify(resultado)}-->`);
   } else if (plan.accion === 'resubir') {
     const post = lib.find((x) => x.id === Number(plan.resubir_id));
     if (!post) throw new Error('No encontré el post #' + plan.resubir_id);
+    await progreso(4, 'Enviando a TikTok');
     await subirABorradores(post, SITE);
     if (post.estado === 'PENDIENTE') { marcarSubido(post.id); publicarCambios(`Post ${post.id} subido a borradores`); }
-    responder(`Volví a subir **#${post.id} · ${post.titulo}** a tus borradores de TikTok. Abrí TikTok, ponele el sonido y publicalo.`);
+    const portada = post.archivos.find((f) => /\.jpe?g$/i.test(f));
+    const img = portada ? `${SITE}/${post.carpeta.split('/').map(encodeURIComponent).join('/')}/${portada}` : '';
+    const resultado = { id: post.id, titulo: post.titulo, frase: post.frases[0] || '', caption: post.caption, hashtags: post.hashtags, sonido: post.sonido, subido: true, img };
+    responder(`Volví a enviar **#${post.id} · ${post.titulo}** a TikTok.\n\n${COMO_ABRIR}\n\n<!--RESULT ${JSON.stringify(resultado)}-->`);
   } else {
     responder(plan.respuesta || 'No entendí el pedido, ¿me lo decís de otra forma?');
   }

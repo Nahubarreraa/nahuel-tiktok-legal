@@ -9,292 +9,432 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <title>Mentalidad de Acero</title>
 <style>
-:root{--bg:#14130f;--card:#1f1d17;--line:#38342a;--tx:#f2eee4;--mut:#a39d8c;--ac:#d9b36a;--ok:#7bc47f;--bad:#e0806f;--nav:64px}
+:root{--bg:#100f0b;--bg2:#17150f;--card:#1e1c15;--card2:#26231a;--line:#3a3629;--tx:#f4f0e6;--mut:#a8a290;--ac:#e0b86a;--ac2:#f3d08d;--ok:#7bd389;--bad:#ef8a78;--nav:66px;--r:18px}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html,body{margin:0;height:100%;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-body{display:flex;flex-direction:column}
-header{padding:calc(10px + env(safe-area-inset-top)) 16px 8px;border-bottom:1px solid var(--line);flex:none}
-h1{font-size:18px;margin:0}
-.sub{color:var(--mut);font-size:12px}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--tx);font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+body{display:flex;flex-direction:column;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+button:active{transform:scale(.96)}
+button,.card,.chip{transition:transform .15s ease,background .2s,border-color .2s,opacity .2s}
+
+/* ---------- animaciones ---------- */
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes sheet{from{transform:translateY(100%)}to{transform:none}}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #e0b86a66}50%{box-shadow:0 0 0 9px #e0b86a00}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+@keyframes stripes{from{background-position:0 0}to{background-position:40px 0}}
+@keyframes shimmer{0%{background-position:-300px 0}100%{background-position:300px 0}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes shake{0%,100%{transform:none}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+@keyframes fly{to{transform:translate(var(--x),var(--y)) rotate(var(--rot));opacity:0}}
+.in{animation:up .45s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--i,0)*45ms)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- estructura ---------- */
+header{flex:none;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top)) 16px 10px;background:linear-gradient(var(--bg2),var(--bg))}
+.logo{width:34px;height:34px;border-radius:10px;flex:none}
+header h1{font-size:17px;margin:0;line-height:1.1}
+header .sub{font-size:12px;color:var(--mut)}
+.pill{margin-left:auto;font-size:12px;padding:5px 10px;border-radius:20px;background:var(--card2);border:1px solid var(--line);display:flex;align-items:center;gap:6px;white-space:nowrap}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--bad)}
+.pill.on .dot{background:var(--ok);animation:pulse 2s infinite}
 main{flex:1;min-height:0;position:relative}
-.tab{display:none;position:absolute;inset:0;overflow-y:auto;padding:12px 16px 24px}
-.tab.on{display:block}
-#t-chat.on{display:flex;flex-direction:column;padding:0}
-nav{flex:none;display:flex;background:#0f0e0b;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
-nav button{flex:1;background:none;border:0;color:var(--mut);padding:9px 4px 8px;font-size:12px}
-nav button b{display:block;font-size:20px;font-weight:400}
+.tab{position:absolute;inset:0;overflow-y:auto;padding:6px 16px 28px;display:none}
+.tab.on{display:block;animation:fade .3s both}
+nav{flex:none;position:relative;display:grid;grid-template-columns:repeat(3,1fr);background:#0b0a07;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav button{background:none;border:0;color:var(--mut);padding:9px 4px 8px;font-size:12px;position:relative;z-index:1}
+nav button b{display:block;font-size:22px;font-weight:400;transition:transform .25s}
 nav button.on{color:var(--ac)}
-/* chat */
-#msgs{flex:1;overflow-y:auto;padding:14px 16px}
-.b{max-width:88%;padding:10px 13px;border-radius:16px;margin:8px 0;word-wrap:break-word;overflow-wrap:anywhere}
-.b.yo{background:var(--ac);color:#1a1608;margin-left:auto;border-bottom-right-radius:4px}
-.b.bot{background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px}
-.b blockquote{margin:8px 0;padding:6px 10px;border-left:3px solid var(--ac);background:#0f0e0b;border-radius:4px}
-.b img{display:block;max-width:100%;max-height:340px;border-radius:10px;margin-top:8px}
-.b p{margin:6px 0}
-.wait{color:var(--mut);font-size:14px}
-.dots::after{content:'';animation:d 1.4s steps(4) infinite}
-@keyframes d{0%{content:''}25%{content:'.'}50%{content:'..'}75%{content:'...'}}
-#bar{flex:none;border-top:1px solid var(--line);background:#0f0e0b;padding:8px 12px 10px}
-#chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:8px}
-.chip{flex:none;background:#2b281f;border:1px solid var(--line);color:var(--tx);border-radius:18px;padding:6px 12px;font-size:13px;white-space:nowrap}
-.chip.on{background:var(--ac);color:#1a1608;border-color:var(--ac)}
-#form{display:flex;gap:8px;align-items:flex-end}
-textarea,input{width:100%;background:#0f0e0b;color:var(--tx);border:1px solid var(--line);border-radius:12px;padding:11px 12px;font:inherit}
-#txt{resize:none;max-height:120px;min-height:44px}
-#send{flex:none;width:46px;height:44px;border:0;border-radius:12px;background:var(--ac);color:#1a1608;font-size:20px;font-weight:700}
-#send:disabled{opacity:.4}
-/* biblioteca */
-.fila{display:flex;gap:6px;overflow-x:auto;margin:6px 0 2px;align-items:center}
-.fila small{flex:none;color:var(--mut);font-size:11px;width:44px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;margin:10px 0}
-.row{display:flex;gap:12px;align-items:center}
-.thumb{width:54px;height:96px;border-radius:8px;object-fit:cover;background:#000;flex:none}
-.grow{flex:1;min-width:0}
-.t{font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+nav button.on b{transform:translateY(-2px) scale(1.12)}
+#ind{position:absolute;top:0;left:0;width:33.333%;height:3px;background:var(--ac);border-radius:0 0 4px 4px;transition:transform .3s cubic-bezier(.3,.9,.3,1)}
+h2{font-size:22px;margin:14px 0 4px}
+h3{font-size:15px;margin:22px 0 8px;color:var(--mut);font-weight:600;letter-spacing:.02em}
 .m{color:var(--mut);font-size:13px}
-.tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;background:#2b281f;color:var(--ac);margin:3px 4px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ac);color:#1a1405;border:0;border-radius:14px;padding:13px 18px;font-weight:700;font-size:15px}
+.btn.sec{background:var(--card2);color:var(--tx);border:1px solid var(--line)}
+.btn.big{width:100%;padding:16px;font-size:17px}
+.btn:disabled{opacity:.5}
+input,textarea{width:100%;background:#0b0a07;color:var(--tx);border:1px solid var(--line);border-radius:14px;padding:13px 14px;font:inherit;outline:none}
+input:focus,textarea:focus{border-color:var(--ac)}
+
+/* ---------- crear ---------- */
+.hero{text-align:center;padding:10px 0 4px}
+.hero .shield{width:74px;height:74px;animation:float 3.6s ease-in-out infinite}
+.sw{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 4px;padding:12px 14px}
+.sw b{font-size:15px}
+.tg{position:relative;width:52px;height:30px;flex:none}
+.tg input{opacity:0;position:absolute;inset:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:2}
+.tg span{position:absolute;inset:0;background:#4a4636;border-radius:20px;transition:.25s}
+.tg span::after{content:'';position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:.25s}
+.tg input:checked+span{background:var(--ac)}
+.tg input:checked+span::after{transform:translateX(22px)}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.act{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px 12px;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:118px;position:relative;overflow:hidden}
+.act .ic{font-size:30px;line-height:1}
+.act b{font-size:16px}
+.act small{color:var(--mut);font-size:12px;line-height:1.25}
+.act.main{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px;background:linear-gradient(135deg,#3a2d12,#1e1c15);border-color:#6b5426;min-height:96px}
+.act.main .ic{font-size:38px}
+.act:hover{border-color:var(--ac)}
+.act.main b,.act.main small{display:block}
+.act.main small{margin-top:3px}
+
+/* tarjetas de pedido */
+.req{margin:12px 0;overflow:hidden}
+.req .top{display:flex;gap:10px;align-items:flex-start}
+.req .top b{flex:1;font-size:15px;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.badge{font-size:11px;padding:3px 9px;border-radius:10px;background:var(--card2);color:var(--ac);white-space:nowrap}
+.badge.ok{color:var(--ok)}.badge.bad{color:var(--bad)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:16px 0 8px;position:relative}
+.step{text-align:center;font-size:11px;color:var(--mut);position:relative}
+.step i{display:flex;align-items:center;justify-content:center;width:30px;height:30px;margin:0 auto 6px;border-radius:50%;background:var(--card2);border:2px solid var(--line);font-style:normal;font-size:13px;transition:.3s}
+.step.cur{color:var(--tx)}
+.step.cur i{border-color:var(--ac);animation:pulse 1.6s infinite}
+.step.cur i::after{content:'';width:14px;height:14px;border:2px solid var(--ac);border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+.step.done{color:var(--ok)}
+.step.done i{background:var(--ok);border-color:var(--ok);color:#06210c;animation:pop .35s both}
+.bar{height:6px;border-radius:6px;background:var(--card2);overflow:hidden}
+.bar div{height:100%;width:8%;border-radius:6px;background:repeating-linear-gradient(115deg,var(--ac) 0 12px,var(--ac2) 12px 24px);background-size:40px 100%;animation:stripes .8s linear infinite;transition:width .8s ease}
+.est{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;color:var(--mut)}
+.res{display:flex;gap:12px;margin-top:12px}
+.res img{width:96px;height:171px;object-fit:cover;border-radius:12px;flex:none;background:#000;animation:fade .6s both}
+.res .tx{flex:1;min-width:0}
+.res .q{font-size:15px;line-height:1.35;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.tag{display:inline-block;font-size:11px;padding:3px 9px;border-radius:10px;background:var(--card2);color:var(--ac)}
 .tag.ok{color:var(--ok)}
-button.btn{background:var(--ac);color:#1a1608;border:0;border-radius:10px;padding:11px 16px;font-weight:700;font-size:15px}
-button.btn.sec{background:#2b281f;color:var(--tx);border:1px solid var(--line)}
-button.btn:disabled{opacity:.5}
-.modal{position:fixed;inset:0;background:#000c;display:none;z-index:10;overflow:auto}
-.modal.on{display:block}
-.sheet{background:var(--bg);margin:calc(20px + env(safe-area-inset-top)) auto 20px;max-width:560px;border-radius:16px;padding:16px;border:1px solid var(--line)}
-.imgs img{max-width:100%;max-height:420px;border-radius:8px;display:block;margin:8px auto}
-.q{background:#0f0e0b;border-left:3px solid var(--ac);padding:8px 12px;margin:8px 0;border-radius:6px}
-.toast{position:fixed;left:16px;right:16px;bottom:calc(var(--nav) + 18px + env(safe-area-inset-bottom));background:#000;border:1px solid var(--line);border-radius:12px;padding:12px;z-index:20;display:none}
-.toast.on{display:block}
+.how{margin-top:12px;border:1px solid #2f5a36;background:#12231a;border-radius:14px;padding:12px 14px;animation:up .5s both}
+.how b{color:var(--ok);display:block;margin-bottom:8px}
+.how ol{margin:0;padding:0;list-style:none;counter-reset:s}
+.how li{counter-increment:s;display:flex;gap:10px;align-items:flex-start;margin:7px 0;font-size:14px}
+.how li::before{content:counter(s);flex:none;width:22px;height:22px;border-radius:50%;background:var(--ok);color:#06210c;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.rowb{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.rowb .btn{padding:10px 14px;font-size:14px}
+.err{border-color:#6b3a31;background:#25140f}
+.ans{font-size:15px;line-height:1.5;margin-top:10px}
+.empty{text-align:center;padding:26px 10px;color:var(--mut)}
+
+/* ---------- biblioteca ---------- */
+.search{position:relative;margin-top:8px}
+.search input{padding-left:42px}
+.search::before{content:'🔍';position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.7}
+.fl{display:flex;gap:8px;margin:12px 0 0;overflow-x:auto;padding-bottom:4px}
+.chip{flex:none;background:var(--card2);border:1px solid var(--line);color:var(--tx);border-radius:20px;padding:8px 14px;font-size:14px;white-space:nowrap}
+.chip.on{background:var(--ac);color:#1a1405;border-color:var(--ac);font-weight:600}
+.panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
+.panel.on{grid-template-rows:1fr}
+.panel>div{overflow:hidden}
+.glab{font-size:12px;color:var(--mut);margin:12px 0 6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.po{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--card);border:1px solid var(--line);padding:0;text-align:left}
+.po img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.po:active img{transform:scale(1.05)}
+.po .ov{position:absolute;inset:auto 0 0 0;padding:34px 10px 10px;background:linear-gradient(transparent,#000d)}
+.po .ov b{display:block;font-size:13px;line-height:1.2}
+.po .ov small{color:#ccc;font-size:11px}
+.po .st{position:absolute;top:8px;left:8px;font-size:10px;padding:3px 8px;border-radius:10px;background:#000a;color:var(--ok);backdrop-filter:blur(4px)}
+.po .st.q{color:var(--ac)}
+.sk{aspect-ratio:9/16;border-radius:16px;background:linear-gradient(90deg,var(--card) 0,var(--card2) 150px,var(--card) 300px);background-size:600px 100%;animation:shimmer 1.3s infinite linear}
+
+/* sheet */
+.modal{position:fixed;inset:0;z-index:30;display:none;background:#000b;animation:fade .25s both}
+.modal.on{display:flex;align-items:flex-end;justify-content:center}
+.sheet{width:100%;max-width:560px;max-height:92%;overflow-y:auto;background:var(--bg2);border:1px solid var(--line);border-bottom:0;border-radius:24px 24px 0 0;padding:10px 16px calc(20px + env(safe-area-inset-bottom));animation:sheet .35s cubic-bezier(.2,.9,.25,1) both}
+.grab{width:42px;height:5px;border-radius:5px;background:var(--line);margin:0 auto 12px}
+.sheet .big-img{display:block;max-height:46vh;max-width:100%;margin:6px auto 12px;border-radius:14px}
+.quote{background:#0b0a07;border-left:3px solid var(--ac);padding:10px 12px;border-radius:8px;margin:8px 0;font-size:15px}
+.topics{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.topics .chip{padding:11px 16px;font-size:15px;animation:up .4s both;animation-delay:calc(var(--i)*35ms)}
+
+/* ajustes */
+.stat{display:flex;gap:12px;align-items:center}
+.stat .ic{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;background:var(--card2);flex:none}
+.stat.ok .ic{background:var(--ok);color:#06210c;animation:pop .45s both}
+.stat.no .ic{animation:shake .6s both}
+.toast{position:fixed;left:16px;right:16px;bottom:calc(var(--nav) + 16px + env(safe-area-inset-bottom));z-index:60;background:#000;border:1px solid var(--line);border-radius:14px;padding:13px 16px;opacity:0;transform:translateY(16px);pointer-events:none;transition:.3s}
+.toast.on{opacity:1;transform:none}
+.cf{position:fixed;width:9px;height:14px;border-radius:2px;z-index:70;pointer-events:none;animation:fly 1.1s ease-out forwards}
 .ok{color:var(--ok)}.bad{color:var(--bad)}
-label{display:block;margin:12px 0 6px;font-size:14px;color:var(--mut)}
-.sw{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.sw input{width:auto;transform:scale(1.4)}
-ol{padding-left:20px;color:var(--mut);font-size:14px}
 </style>
 </head>
 <body>
-<header><h1>Mentalidad de Acero</h1><div class="sub" id="sub">cargando…</div></header>
+<header>
+  <img class="logo" src="icon-192.png" alt="">
+  <div><h1>Mentalidad de Acero</h1><div class="sub" id="sub">cargando…</div></div>
+  <div class="pill" id="pill"><span class="dot"></span><span id="pilltx">Sin conectar</span></div>
+</header>
 
 <main>
-<section class="tab on" id="t-chat">
-  <div id="msgs"></div>
-  <div id="bar">
-    <div id="chips"></div>
-    <div id="form">
-      <textarea id="txt" rows="1" placeholder="Pedile un post o preguntá algo…"></textarea>
-      <button id="send" aria-label="Enviar">➤</button>
+  <!-- ============ CREAR ============ -->
+  <section class="tab on" id="t-crear">
+    <div id="aviso"></div>
+    <div class="hero in"><svg class="shield" viewBox="0 0 512 512"><path d="M256 70l150 60v130c0 100-65 170-150 210-85-40-150-110-150-210V130z" fill="#1e1c15" stroke="#e0b86a" stroke-width="22" stroke-linejoin="round"/><path d="M190 255l50 50 95-105" fill="none" stroke="#e0b86a" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2>¿Qué post querés hoy?</h2><div class="m">Elegí una opción y yo hago el resto.</div></div>
+
+    <div class="card sw in" style="--i:1"><div><b>Mandarlo a TikTok al terminar</b><div class="m" id="swtx">Apagalo si solo querés armarlo</div></div>
+      <label class="tg"><input type="checkbox" id="auto"><span></span></label></div>
+
+    <div class="acts">
+      <button class="act main in" style="--i:2" id="a-sorp"><span class="ic">⚡</span><div><b>Sorprendeme</b><small>Invento una frase nueva y armo todo el post</small></div></button>
+      <button class="act in" style="--i:3" id="a-tema"><span class="ic">🎯</span><b>Elegir un tema</b><small>Excusas, miedo, constancia…</small></button>
+      <button class="act in" style="--i:4" id="a-idea"><span class="ic">✍️</span><b>Tengo una idea</b><small>Contame qué querés decir</small></button>
     </div>
-  </div>
-</section>
 
-<section class="tab" id="t-biblio">
-  <input id="q" type="search" placeholder="Buscar frase, tema, sonido…">
-  <div class="fila" id="f-tipo"><small>Tipo</small></div>
-  <div class="fila" id="f-tema"><small>Tema</small></div>
-  <div class="fila" id="f-estilo"><small>Estilo</small></div>
-  <div class="m" id="count" style="margin-top:8px"></div>
-  <div id="lista"></div>
-</section>
+    <h3>TUS PEDIDOS</h3>
+    <div id="reqs"></div>
+  </section>
 
-<section class="tab" id="t-ajustes">
-  <div class="card">
-    <b>Conexión con GitHub</b>
-    <div class="m" id="conexion" style="margin:4px 0 10px">Sin token. Hace falta una sola vez para que el chat pueda trabajar.</div>
-    <label>Token de GitHub</label>
-    <input id="tok" type="password" placeholder="github_pat_…" autocomplete="off">
-    <div style="margin-top:10px;display:flex;gap:8px"><button class="btn" id="b-guardar">Guardar y probar</button></div>
-  </div>
-  <div class="card">
-    <div class="sw"><div><b>Subir a borradores al crear</b><div class="m">Si lo apagás, el chat arma el post y lo deja en la cola sin subirlo.</div></div><input type="checkbox" id="auto"></div>
-  </div>
-  <div class="card m" id="info"></div>
-</section>
+  <!-- ============ BIBLIOTECA ============ -->
+  <section class="tab" id="t-biblio">
+    <div class="search"><input id="q" type="search" placeholder="Buscar una frase o un tema"></div>
+    <div class="fl" id="fl"></div>
+    <div class="panel" id="panel"><div>
+      <div class="glab">TEMA</div><div class="fl" id="f-tema"></div>
+      <div class="glab">ESTILO</div><div class="fl" id="f-estilo"></div>
+    </div></div>
+    <div class="m" id="count" style="margin-top:12px"></div>
+    <div class="grid" id="grid"></div>
+    <div style="text-align:center;margin:16px 0" id="mas"></div>
+  </section>
+
+  <!-- ============ AJUSTES ============ -->
+  <section class="tab" id="t-ajustes">
+    <h2>Ajustes</h2>
+    <div class="card in" id="conn"></div>
+    <div class="card in" style="--i:1;margin-top:12px">
+      <b>Dónde aparece el video en TikTok</b>
+      <div class="how" style="margin-top:10px;border-color:var(--line);background:var(--card2)"><ol>
+        <li>Abrí la app de TikTok en el celular, con la cuenta @mentalidaddeacero.arg.</li>
+        <li>Entrá a <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> y tocá el aviso de tu video.</li>
+        <li>Ponele el sonido y publicalo.</li>
+      </ol></div>
+      <div class="m" style="margin-top:8px">No aparece en "Borradores" de tu perfil ni en TikTok Studio de la computadora: llega como aviso en la app.</div>
+    </div>
+    <div class="card in" style="--i:2;margin-top:12px;font-size:13px;color:var(--mut)" id="info"></div>
+  </section>
+  <div id="indwrap"></div>
 </main>
 
 <nav>
-  <button class="on" data-t="chat"><b>💬</b>Chat</button>
-  <button data-t="biblio"><b>▦</b>Biblioteca</button>
-  <button data-t="ajustes"><b>⚙</b>Ajustes</button>
+  <div id="ind"></div>
+  <button class="on" data-t="crear"><b>✨</b>Crear</button>
+  <button data-t="biblio"><b>🗂️</b>Biblioteca</button>
+  <button data-t="ajustes"><b>⚙️</b>Ajustes</button>
 </nav>
 
 <div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
 <div class="toast" id="toast"></div>
 
 <script>
-const REPO='Nahubarreraa/nahuel-tiktok-legal';
-const API='https://api.github.com/repos/'+REPO;
+const REPO='Nahubarreraa/nahuel-tiktok-legal', API='https://api.github.com/repos/'+REPO;
 const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const lsGet=(k,d='')=>{try{const v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}};
 const lsSet=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
-const url=(carpeta,f)=>'../'+carpeta.split('/').map(encodeURIComponent).join('/')+'/'+f;
+const url=(c,f)=>'../'+c.split('/').map(encodeURIComponent).join('/')+'/'+f;
 const portada=p=>p.archivos.find(f=>/\.jpe?g$|\.png$/i.test(f));
-let POSTS=[], F={tipo:'',tema:'',estilo:''}, conv=[], esperando=false, pollT=null;
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const SEEN=new Set();
+let POSTS=[],ISSUES=[],CACHE={},F={tipo:'',tema:'',estilo:''},SHOW=24,pollT=null,tickT=null,conectado=false;
 
-function toast(msg,cls){const t=$('toast');t.innerHTML='<span class="'+(cls||'')+'">'+msg+'</span>';t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),5000)}
-function go(t){document.querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.id==='t-'+t));
-  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
-  if(t==='chat'){cargarChat();setTimeout(()=>{$('msgs').scrollTop=1e9},50)} if(t==='ajustes')info()}
-document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));
-
-/* ---------- GitHub ---------- */
+/* ---------- utilidades ---------- */
+function toast(msg,cls){const t=$('toast');t.innerHTML='<span class="'+(cls||'')+'">'+msg+'</span>';t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),4500)}
+function confeti(x,y){if(reduce)return;const col=['#e0b86a','#f3d08d','#7bd389','#fff'];for(let i=0;i<26;i++){const e=document.createElement('i');e.className='cf';const a=Math.random()*6.28,d=60+Math.random()*130;e.style.cssText=`left:${x}px;top:${y}px;background:${col[i%4]};--x:${Math.cos(a)*d}px;--y:${Math.sin(a)*d+60}px;--rot:${Math.random()*720}deg`;document.body.appendChild(e);setTimeout(()=>e.remove(),1200)}}
+async function copiar(t,msg){try{await navigator.clipboard.writeText(t);toast('✓ '+msg,'ok')}catch(e){toast('No se pudo copiar','bad')}}
 const tok=()=>lsGet('gh_token');
 async function gh(path,opt={}){
-  const t=tok();if(!t)throw new Error('Falta el token: cargalo en Ajustes');
+  const t=tok();if(!t)throw new Error('Falta conectar la app (Ajustes)');
   const r=await fetch(API+path,{...opt,headers:{Accept:'application/vnd.github+json',Authorization:'Bearer '+t,'Content-Type':'application/json',...(opt.headers||{})}});
   if(!r.ok){let m=r.status;try{m=(await r.json()).message}catch(e){}throw new Error(r.status+' '+m)}
   return r.status===204?null:r.json();
 }
 
-/* ---------- Chat ---------- */
-const SUGERENCIAS=[
-  'Creá un post nuevo y subilo',
-  'Hacé un post sobre dejar de poner excusas',
-  'Hacé uno sobre no abandonar cuando duele',
-  'Armá uno pero no lo subas todavía',
-  '¿Qué temas usamos menos?',
-  '¿Cuál fue el último que subimos?'
-];
-function md(s){
-  const t=esc(s).replace(/(?:^|\n)&gt; ?([^\n]*)/g,'\n\n@@Q@@$1\n\n');
-  return t.split(/\n{2,}/).filter(x=>x.trim()).map(par=>{
-    par=par.replace(/!\[[^\]]*\]\(([^)\s]+)\)/g,'<img loading="lazy" src="$1">')
-      .replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/`([^`]+)`/g,'<code>$1</code>');
-    if(par.startsWith('@@Q@@'))return '<blockquote>'+par.slice(5)+'</blockquote>';
-    return '<p>'+par.replace(/\n/g,'<br>')+'</p>';
-  }).join('');
+/* ---------- navegación ---------- */
+const TABS=['crear','biblio','ajustes'];
+function go(t){
+  document.querySelectorAll('.tab').forEach(e=>e.classList.toggle('on',e.id==='t-'+t));
+  document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));
+  $('ind').style.transform='translateX('+TABS.indexOf(t)*100+'%)';
+  if(t==='ajustes')pintaAjustes();
+  if(t==='crear')cargarPedidos();
 }
-function pinta(){
-  const m=$('msgs');
-  if(!tok()){m.innerHTML='<div class="card"><b>Primero conectá la app</b><div class="m" style="margin:6px 0 12px">Para que el chat pueda crear y subir posts hace falta cargar el token de GitHub una sola vez.</div><button class="btn" onclick="go(\'ajustes\')">Ir a Ajustes</button></div>';return}
-  if(!conv.length&&!esperando){m.innerHTML='<div class="b bot"><p>Hola. Decime qué post querés y lo armo: frase, tarjeta, video y descripción. Si querés, también lo dejo en tus borradores de TikTok.</p><p class="m">Ejemplos: "hacé uno sobre la comodidad", "volvé a subir el 131", "¿qué temas usamos más?".</p></div>';return}
-  m.innerHTML=conv.map(c=>
-    '<div class="b yo">'+esc(c.pedido).replace(/\n/g,'<br>')+'</div>'+
-    (c.respuesta?'<div class="b bot">'+md(c.respuesta)+'</div>':'<div class="b bot wait">Trabajando<span class="dots"></span> <small>(puede tardar 1 a 3 minutos)</small></div>')
-  ).join('');
-  m.scrollTop=m.scrollHeight;
-}
-async function cargarChat(){
-  if(!tok()){pinta();return}
-  try{
-    const issues=(await gh('/issues?labels=pedido&state=all&per_page=12&sort=created&direction=desc')).reverse();
-    conv=await Promise.all(issues.map(async i=>{
-      let r=null;
-      if(i.state==='closed'||i.comments>0){
-        const cs=await gh('/issues/'+i.number+'/comments?per_page=5');
-        if(cs.length)r=cs[cs.length-1].body;
-      }
-      return {n:i.number,pedido:i.body||i.title,respuesta:r,abierto:i.state==='open'&&!r};
-    }));
-    esperando=conv.some(c=>c.abierto);
-    pinta();
-    clearTimeout(pollT);
-    if(esperando)pollT=setTimeout(cargarChat,8000);
-  }catch(e){$('msgs').innerHTML='<div class="b bot bad">'+esc(e.message)+'</div>'}
-}
-async function enviar(){
-  const el=$('txt');let t=el.value.trim();if(!t)return;
-  if(!tok()){go('ajustes');toast('Cargá el token primero','bad');return}
-  $('send').disabled=true;
-  const auto=lsGet('auto','1')==='1';
-  const cuerpo=t+(auto?'':'\n\n(Opción de la app: NO subir a TikTok, solo armar el post.)');
-  try{
-    await gh('/issues',{method:'POST',body:JSON.stringify({title:t.slice(0,70),body:cuerpo,labels:['pedido']})});
-    el.value='';el.style.height='auto';
-    conv.push({pedido:cuerpo,respuesta:null,abierto:true});esperando=true;pinta();
-    clearTimeout(pollT);pollT=setTimeout(cargarChat,8000);
-  }catch(e){toast(esc(e.message),'bad')}
-  $('send').disabled=false;
-}
-$('send').onclick=enviar;
-$('txt').addEventListener('input',e=>{e.target.style.height='auto';e.target.style.height=Math.min(e.target.scrollHeight,120)+'px'});
-$('txt').addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey&&matchMedia('(hover:hover)').matches){e.preventDefault();enviar()}});
-$('chips').innerHTML=SUGERENCIAS.map(s=>'<button class="chip">'+esc(s)+'</button>').join('');
-$('chips').onclick=e=>{if(e.target.classList.contains('chip')){$('txt').value=e.target.textContent;$('txt').focus()}};
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>go(b.dataset.t));
 
-/* ---------- Biblioteca ---------- */
-function cuenta(campo){const c={};POSTS.forEach(p=>(Array.isArray(p[campo])?p[campo]:[p[campo]]).forEach(v=>{if(v)c[v]=(c[v]||0)+1}));return Object.entries(c).sort((a,b)=>b[1]-a[1])}
-function chips(id,campo,items){
-  const el=$(id),lab=el.firstElementChild.outerHTML;
-  el.innerHTML=lab+['Todos',...items].map(v=>{const n=v==='Todos'?'':v;return '<button class="chip'+(F[campo]===n?' on':'')+'" data-c="'+campo+'" data-v="'+esc(n)+'">'+esc(v==='Todos'?'Todos':v)+'</button>'}).join('');
+function estadoConexion(ok){
+  conectado=ok;$('pill').classList.toggle('on',ok);$('pilltx').textContent=ok?'Conectado':'Sin conectar';
+  $('aviso').innerHTML=ok?'':'<div class="card in" style="border-color:#6b5426;background:#2a2110;margin:6px 0"><b>Falta un paso (una sola vez)</b><div class="m" style="margin:4px 0 12px">Conectá la app para poder crear posts desde acá.</div><button class="btn" onclick="go(\'ajustes\')">Conectar ahora</button></div>';
 }
-function renderFiltros(){
-  chips('f-tipo','tipo',['video','carrusel']);
-  chips('f-tema','tema',cuenta('temas').filter(x=>x[1]>=3).map(x=>x[0]));
-  chips('f-estilo','estilo',cuenta('estilos').map(x=>x[0]));
+
+/* ---------- crear ---------- */
+const NO_SUBIR_TXT='\n\n(Opción de la app: NO subir a TikTok, solo armar el post.)';
+const auto=()=>lsGet('auto','1')==='1';
+$('auto').checked=auto();
+$('auto').onchange=e=>{lsSet('auto',e.target.checked?'1':'0');$('swtx').textContent=e.target.checked?'Apagalo si solo querés armarlo':'Solo lo armo y lo dejo en tu cola'};
+$('swtx').textContent=auto()?'Apagalo si solo querés armarlo':'Solo lo armo y lo dejo en tu cola';
+const TEMAS=['Excusas','Miedo','Constancia','Comodidad','Postergar','Soledad','Volver a levantarse','Carácter','No abandonar','Dolor que construye','Hacerlo hoy','Disciplina'];
+
+function hoja(html){$('sheet').innerHTML='<div class="grab"></div>'+html;$('modal').classList.add('on')}
+function cerrarHoja(){$('modal').classList.remove('on')}
+$('modal').onclick=e=>{if(e.target===$('modal'))cerrarHoja()};
+
+$('a-sorp').onclick=e=>{if(!conectado)return go('ajustes');pedir('Creá un post nuevo',e)};
+$('a-tema').onclick=()=>{if(!conectado)return go('ajustes');
+  hoja('<h2 style="margin-top:4px">Elegí un tema</h2><div class="m">Toco uno y armo el post.</div><div class="topics">'+TEMAS.map((t,i)=>'<button class="chip" style="--i:'+i+'" data-t="'+esc(t)+'">'+esc(t)+'</button>').join('')+'</div>');
+  document.querySelectorAll('.topics .chip').forEach(b=>b.onclick=e=>{cerrarHoja();pedir('Creá un post nuevo sobre '+b.dataset.t.toLowerCase(),e)})};
+$('a-idea').onclick=()=>{if(!conectado)return go('ajustes');
+  hoja('<h2 style="margin-top:4px">Contame tu idea</h2><div class="m" style="margin-bottom:10px">Por ejemplo: "una frase para el que siempre se rinde al tercer día".</div><textarea id="idea" rows="4" placeholder="Escribí acá…"></textarea><button class="btn big" id="idea-ok" style="margin-top:12px">Crear mi post</button>');
+  setTimeout(()=>$('idea').focus(),350);
+  $('idea-ok').onclick=e=>{const t=$('idea').value.trim();if(!t)return;cerrarHoja();pedir(t,e)}};
+
+async function pedir(texto,ev){
+  if(ev&&ev.clientX)confeti(ev.clientX,ev.clientY);
+  const cuerpo=texto+(auto()?'':NO_SUBIR_TXT);
+  try{
+    const i=await gh('/issues',{method:'POST',body:JSON.stringify({title:texto.slice(0,70),body:cuerpo,labels:['pedido']})});
+    ISSUES.unshift({number:i.number,body:cuerpo,title:texto,state:'open',created_at:i.created_at,comments:0});
+    pintaPedidos();iniciarPoll();
+    $('t-crear').scrollTo({top:$('reqs').offsetTop-90,behavior:reduce?'auto':'smooth'});
+  }catch(e){toast(esc(e.message),'bad')}
 }
-['f-tipo','f-tema','f-estilo'].forEach(id=>$(id).onclick=e=>{const b=e.target.closest('.chip');if(!b)return;F[b.dataset.c]=b.dataset.v;renderFiltros();renderBiblio()});
-$('q').oninput=renderBiblio;
-function etiqueta(p){
-  if(p.estado==='PENDIENTE')return '<span class="tag">En cola</span>';
-  if(p.borrador)return '<span class="tag ok">En borradores</span>';
-  return '<span class="tag ok">Publicado '+p.subido+'</span>';
+
+function analiza(i){
+  const cs=CACHE[i.number]||[];
+  let paso=0,fin=null;
+  for(const c of cs){const m=/^\[\[paso:(\d)\]\]/.exec(c.body);if(m)paso=Math.max(paso,+m[1]);else fin=c.body}
+  const r=fin&&/<!--RESULT (.*?)-->/s.exec(fin);let res=null;
+  if(r){try{res=JSON.parse(r[1])}catch(e){}}
+  const texto=fin?fin.replace(/<!--RESULT.*?-->/s,'').trim():'';
+  return {paso,fin,res,texto,error:!!(fin&&/^No pude completar/.test(fin)),hecho:!!fin};
 }
-function renderBiblio(){
+const pedidoLimpio=b=>(b||'').replace(NO_SUBIR_TXT.trim(),'').replace(/\(Opción de la app[^)]*\)/,'').trim();
+const mmss=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
+
+function tarjeta(i,idx){
+  const a=analiza(i),t=pedidoLimpio(i.body||i.title),sub=!/NO subir a TikTok|no lo subas|solo arm/i.test(i.body||'');
+  let h='<div class="card req'+(SEEN.has(i.number)?'':' in')+'" style="--i:'+Math.min(idx,6)+'" data-n="'+i.number+'"><div class="top"><b>'+esc(t)+'</b>'+
+   (a.error?'<span class="badge bad">Falló</span>':a.hecho?'<span class="badge ok">Listo ✓</span>':'<span class="badge">En marcha</span>')+'</div>';
+  if(!a.hecho){
+    const nombres=sub?['Pienso la frase','Armo tarjeta y video','Guardo el post','Envío a TikTok']:['Pienso la frase','Armo tarjeta y video','Guardo el post','Listo'];
+    const cur=Math.max(1,Math.min(4,a.paso||1));
+    const seg=Math.max(0,(Date.now()-new Date(i.created_at))/1000);
+    h+='<div class="steps">'+nombres.map((n,k)=>'<div class="step '+(k+1<cur?'done':k+1===cur?'cur':'')+'"><i>'+(k+1<cur?'✓':'')+'</i>'+n+'</div>').join('')+'</div>'+
+       '<div class="bar"><div style="width:'+(8+(cur-1)*24+Math.min(18,seg/10))+'%"></div></div><div class="est"><span>Suele tardar 2 a 4 minutos</span><span data-seg="'+new Date(i.created_at).getTime()+'">'+mmss(seg)+'</span></div>';
+  }else if(a.error){
+    h+='<div class="how err" style="border-color:#6b3a31;background:#25140f"><b style="color:var(--bad)">No pude terminarlo</b><div class="m">'+esc(a.texto.replace(/^No pude completar el pedido\.?/,'').replace(/`/g,'')).slice(0,220)+'</div></div><div class="rowb"><button class="btn" data-a="otra" data-n="'+i.number+'">Reintentar</button></div>';
+  }else if(a.res){
+    const r=a.res;
+    h+='<div class="res">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">“'+esc(r.frase)+'”</div><div class="chips"><span class="tag">#'+r.id+' '+esc(r.titulo)+'</span>'+(r.sonido?'<span class="tag">♪ '+esc(r.sonido)+'</span>':'')+'</div>'+
+       '<div class="rowb"><button class="btn sec" data-a="cf" data-n="'+i.number+'">Copiar frase</button><button class="btn sec" data-a="cc" data-n="'+i.number+'">Copiar texto</button></div></div></div>';
+    if(r.subido)h+='<div class="how"><b>✓ TikTok ya lo recibió. Ahora vos:</b><ol><li>Abrí la app de TikTok (cuenta @mentalidaddeacero.arg).</li><li>Tocá <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> y el aviso de tu video.</li><li>Ponele el sonido y publicalo.</li></ol><div class="rowb"><a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">Abrir TikTok</a></div></div>';
+    else h+='<div class="rowb"><button class="btn" data-a="subir" data-n="'+i.number+'" data-id="'+r.id+'">Mandarlo a TikTok</button></div>';
+  }else{
+    h+='<div class="ans">'+esc(a.texto).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')+'</div>';
+  }
+  return h+'</div>';
+}
+function pintaPedidos(){
+  const el=$('reqs');
+  if(!conectado){el.innerHTML='<div class="empty">Cuando conectes la app, tus pedidos aparecen acá.</div>';return}
+  if(!ISSUES.length){el.innerHTML='<div class="empty in">Todavía no pediste nada.<br>Tocá <b>Sorprendeme</b> para probar ✨</div>';return}
+  const raw=ISSUES.slice(0,8).map(tarjeta).join('');
+  const norm=raw.replace(/ in"/g,'"').replace(/(\d+:\d\d)<\/span>/g,'0:00</span>').replace(/width:[\d.]+%/g,'');
+  ISSUES.slice(0,8).forEach(i=>SEEN.add(i.number));
+  if(norm!==pintaPedidos.last){pintaPedidos.last=norm;el.innerHTML=raw}
+  const prev=window.__hecho||{};ISSUES.forEach(i=>{const h=analiza(i).hecho;if(h&&prev[i.number]===false){const c=document.querySelector('[data-n="'+i.number+'"]');if(c){const b=c.getBoundingClientRect();confeti(b.left+b.width/2,b.top+40)}}prev[i.number]=h});window.__hecho=prev;
+}
+$('reqs').onclick=async e=>{
+  const b=e.target.closest('button');if(!b)return;
+  const i=ISSUES.find(x=>x.number==b.dataset.n),a=i&&analiza(i);
+  if(b.dataset.a==='cf')copiar(a.res.frase,'Frase copiada');
+  if(b.dataset.a==='cc')copiar(a.res.caption+' '+a.res.hashtags.join(' '),'Texto copiado');
+  if(b.dataset.a==='subir')pedir('Subí el post '+b.dataset.id,e);
+  if(b.dataset.a==='otra')pedir(pedidoLimpio(i.body),e);
+};
+async function cargarPedidos(){
+  if(!tok()){estadoConexion(false);pintaPedidos();return}
+  try{
+    ISSUES=await gh('/issues?labels=pedido&state=all&per_page=8&sort=created&direction=desc');
+    estadoConexion(true);
+    await Promise.all(ISSUES.map(async i=>{
+      const a=CACHE[i.number];
+      if(a&&analiza(i).hecho)return;
+      if(i.comments>0||i.state==='closed')CACHE[i.number]=await gh('/issues/'+i.number+'/comments?per_page=30');
+    }));
+    pintaPedidos();iniciarPoll();
+  }catch(e){estadoConexion(false);$('reqs').innerHTML='<div class="card err">'+esc(e.message)+'</div>'}
+}
+function iniciarPoll(){
+  clearTimeout(pollT);clearInterval(tickT);
+  const vivo=ISSUES.some(i=>!analiza(i).hecho&&(Date.now()-new Date(i.created_at))<25*60000);
+  if(vivo){pollT=setTimeout(cargarPedidos,4000);tickT=setInterval(()=>{document.querySelectorAll('[data-seg]').forEach(e=>e.textContent=mmss((Date.now()-e.dataset.seg)/1000))},1000)}
+}
+
+/* ---------- biblioteca ---------- */
+function cuenta(c){const o={};POSTS.forEach(p=>(Array.isArray(p[c])?p[c]:[p[c]]).forEach(v=>{if(v)o[v]=(o[v]||0)+1}));return Object.entries(o).sort((a,b)=>b[1]-a[1])}
+const chip=(c,v,l)=>'<button class="chip'+(F[c]===v?' on':'')+'" data-c="'+c+'" data-v="'+esc(v)+'">'+esc(l||v||'Todos')+'</button>';
+function filtros(){
+  const n=(F.tema?1:0)+(F.estilo?1:0);
+  $('fl').innerHTML=chip('tipo','','Todos')+chip('tipo','video','🎬 Videos')+chip('tipo','carrusel','🖼️ Carruseles')+'<button class="chip'+(n?' on':'')+'" id="mas-f">⚙ Filtrar'+(n?' ('+n+')':'')+'</button>';
+  $('f-tema').innerHTML=chip('tema','','Todos')+cuenta('temas').filter(x=>x[1]>=3).map(x=>chip('tema',x[0])).join('');
+  $('f-estilo').innerHTML=chip('estilo','','Todos')+cuenta('estilos').map(x=>chip('estilo',x[0])).join('');
+}
+['fl','f-tema','f-estilo'].forEach(id=>$(id).addEventListener('click',e=>{
+  if(e.target.id==='mas-f'){$('panel').classList.toggle('on');return}
+  const b=e.target.closest('.chip');if(!b||!b.dataset.c)return;F[b.dataset.c]=b.dataset.v;SHOW=24;filtros();grilla()}));
+$('q').oninput=()=>{SHOW=24;grilla()};
+function badge(p){return p.estado==='PENDIENTE'?'<span class="st q">En cola</span>':p.borrador?'<span class="st">En TikTok</span>':'<span class="st">Publicado</span>'}
+function grilla(){
   const q=$('q').value.trim().toLowerCase();
   const l=POSTS.filter(p=>p.estado!=='DESCARTADO'&&(!F.tipo||p.tipo===F.tipo)&&(!F.tema||p.temas.includes(F.tema))&&(!F.estilo||p.estilos.includes(F.estilo))&&
-    (!q||[p.titulo,p.caption,p.sonido,p.formato,p.hashtags.join(' '),p.frases.join(' '),p.temas.join(' ')].join(' ').toLowerCase().includes(q))).reverse();
+    (!q||[p.titulo,p.caption,p.sonido,p.hashtags.join(' '),p.frases.join(' '),p.temas.join(' ')].join(' ').toLowerCase().includes(q))).reverse();
   $('count').textContent=l.length+' posts';
-  $('lista').innerHTML=l.slice(0,50).map(p=>{const img=portada(p);
-    return '<div class="card" data-id="'+p.id+'"><div class="row">'+(img?'<img class="thumb" loading="lazy" src="'+url(p.carpeta,img)+'">':'<div class="thumb"></div>')+
-    '<div class="grow"><div class="t">#'+p.id+' · '+esc(p.titulo)+'</div><div class="m">'+esc(p.frases[0]||p.caption).slice(0,80)+'</div><div>'+etiqueta(p)+p.temas.slice(0,2).map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div></div></div></div>'}).join('')+
-    (l.length>50?'<div class="m">Mostrando 50. Afiná la búsqueda para ver más.</div>':'');
+  $('grid').innerHTML=l.slice(0,SHOW).map((p,k)=>{const im=portada(p);return '<button class="po in" style="--i:'+(k%8)+'" data-id="'+p.id+'">'+(im?'<img loading="lazy" src="'+url(p.carpeta,im)+'" alt="">':'')+badge(p)+'<div class="ov"><b>'+esc(p.titulo)+'</b><small>#'+p.id+' · '+esc(p.estilos[0]||'')+'</small></div></button>'}).join('');
+  $('mas').innerHTML=l.length>SHOW?'<button class="btn sec" id="vermas">Ver más ('+(l.length-SHOW)+')</button>':'';
+  if($('vermas'))$('vermas').onclick=()=>{SHOW+=24;grilla()};
 }
-$('lista').onclick=e=>{const c=e.target.closest('.card');if(c)abrir(+c.dataset.id)};
-function abrir(id){
-  const p=POSTS.find(x=>x.id===id);
-  $('sheet').innerHTML='<div class="row"><div class="grow"><b>#'+p.id+' · '+esc(p.titulo)+'</b><div class="m">'+esc(p.formato)+(p.sonido?' · ♪ '+esc(p.sonido):'')+'</div><div>'+etiqueta(p)+p.temas.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+p.estilos.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div></div><button class="btn sec" data-a="cerrar">✕</button></div>'+
-   '<div class="imgs">'+p.archivos.filter(f=>/\.jpe?g$/i.test(f)).map(f=>'<img loading="lazy" src="'+url(p.carpeta,f)+'">').join('')+'</div>'+
-   p.frases.map(f=>'<div class="q">'+esc(f)+'</div>').join('')+
-   '<div class="m" style="margin:8px 0">'+esc(p.caption)+'<br>'+esc(p.hashtags.join(' '))+'</div>'+
-   '<div style="display:flex;gap:8px;flex-wrap:wrap">'+
-   '<button class="btn" data-a="chat" data-id="'+p.id+'">Hacer variante en el chat</button>'+
-   '<button class="btn sec" data-a="resubir" data-id="'+p.id+'">'+(p.estado==='PENDIENTE'?'Subir a borradores':'Volver a subir')+'</button>'+
-   '<button class="btn sec" data-a="copiar" data-id="'+p.id+'">Copiar frase</button></div>';
-  $('modal').classList.add('on');
+$('grid').onclick=e=>{const b=e.target.closest('.po');if(b)abrirPost(+b.dataset.id)};
+function abrirPost(id){
+  const p=POSTS.find(x=>x.id===id),im=p.archivos.filter(f=>/\.jpe?g$/i.test(f))[0];
+  hoja((im?'<img class="big-img" src="'+url(p.carpeta,im)+'" alt="">':'')+
+   '<b style="font-size:18px">#'+p.id+' · '+esc(p.titulo)+'</b>'+
+   '<div class="chips" style="margin:8px 0">'+(p.sonido?'<span class="tag">♪ '+esc(p.sonido)+'</span>':'')+p.temas.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+p.estilos.map(t=>'<span class="tag">'+esc(t)+'</span>').join('')+'</div>'+
+   p.frases.map(f=>'<div class="quote">'+esc(f)+'</div>').join('')+
+   '<div class="m" style="margin:6px 0 14px">'+esc(p.caption)+'<br>'+esc(p.hashtags.join(' '))+'</div>'+
+   '<button class="btn big" data-a="var" data-id="'+id+'">✨ Hacer uno parecido</button>'+
+   '<div class="rowb"><button class="btn sec" data-a="resub" data-id="'+id+'">'+(p.estado==='PENDIENTE'?'Mandarlo a TikTok':'Mandar de nuevo a TikTok')+'</button><button class="btn sec" data-a="cop" data-id="'+id+'">Copiar frase</button></div>');
 }
-$('modal').onclick=async e=>{
-  if(e.target===$('modal')){$('modal').classList.remove('on');return}
-  const b=e.target.closest('button');if(!b)return;
+$('sheet').onclick=async e=>{
+  const b=e.target.closest('button[data-a]');if(!b)return;
   const id=+b.dataset.id,p=POSTS.find(x=>x.id===id);
-  if(b.dataset.a==='cerrar')$('modal').classList.remove('on');
-  if(b.dataset.a==='chat'){$('modal').classList.remove('on');go('chat');$('txt').value='Hacé una variante del post #'+id+' ("'+p.titulo+'"): ';$('txt').focus()}
-  if(b.dataset.a==='copiar'){try{await navigator.clipboard.writeText(p.frases.join('\n\n'));toast('Copiado','ok')}catch(x){toast('No se pudo copiar','bad')}}
-  if(b.dataset.a==='resubir'){
-    if(!confirm('¿Subir "'+p.titulo+'" a tus borradores de TikTok?'))return;
-    try{await gh('/actions/workflows/subir.yml/dispatches',{method:'POST',body:JSON.stringify({ref:'main',inputs:{post:String(id)}})});toast('Subiendo #'+id+'. En 1-2 minutos aparece en tus borradores.','ok');$('modal').classList.remove('on')}catch(x){toast(esc(x.message),'bad')}
-  }
+  if(b.dataset.a==='var'){cerrarHoja();go('crear');if(!conectado)return;pedir('Hacé un post parecido al #'+id+' ("'+p.titulo+'") pero con otra frase distinta',e)}
+  if(b.dataset.a==='resub'){if(!conectado){cerrarHoja();return go('ajustes')}cerrarHoja();go('crear');pedir('Subí el post '+id,e)}
+  if(b.dataset.a==='cop')copiar(p.frases.join('\n\n'),'Frase copiada');
 };
 
-/* ---------- Ajustes ---------- */
-$('auto').checked=lsGet('auto','1')==='1';
-$('auto').onchange=e=>lsSet('auto',e.target.checked?'1':'0');
-$('b-guardar').onclick=async()=>{
-  const v=$('tok').value.trim();if(v)lsSet('gh_token',v);$('tok').value='';
-  await probar();
-};
-async function probar(){
-  if(!tok()){$('conexion').textContent='Sin token. Hace falta una sola vez para que el chat pueda trabajar.';return}
-  try{await gh('');$('conexion').innerHTML='<span class="ok">Conectado.</span> El chat ya puede crear y subir posts.';cargarChat()}
-  catch(e){$('conexion').innerHTML='<span class="bad">'+esc(e.message)+'</span>'}
-}
-function info(){
-  const pub=POSTS.filter(p=>p.estado==='SUBIDO').length;
-  $('info').innerHTML='Biblioteca: '+POSTS.length+' posts ('+pub+' subidos, '+POSTS.filter(p=>p.estado==='PENDIENTE').length+' en cola).<br>Las subidas van a <b>borradores</b>: el sonido y el "Publicar" los hacés vos en TikTok.';
-  probar();
+/* ---------- ajustes ---------- */
+function pintaAjustes(){
+  $('conn').innerHTML=conectado
+   ?'<div class="stat ok"><div class="ic">✓</div><div><b>Todo conectado</b><div class="m">Podés crear y mandar posts desde esta app.</div></div></div><div class="rowb"><button class="btn sec" id="cambiar">Cambiar token</button></div>'
+   :'<div class="stat no"><div class="ic">🔑</div><div><b>Falta conectar</b><div class="m">Se hace una sola vez en este teléfono.</div></div></div><label class="m" style="display:block;margin:14px 0 6px">Pegá tu token de GitHub</label><input id="tok" type="password" placeholder="github_pat_…" autocomplete="off"><button class="btn big" id="guardar" style="margin-top:12px">Guardar y conectar</button>';
+  if($('cambiar'))$('cambiar').onclick=()=>{lsSet('gh_token','');estadoConexion(false);pintaAjustes()};
+  if($('guardar'))$('guardar').onclick=async()=>{const v=$('tok').value.trim();if(!v)return;lsSet('gh_token',v);$('guardar').textContent='Conectando…';await cargarPedidos();if(conectado){pintaAjustes();toast('✓ Conectado','ok');confeti(innerWidth/2,200)}else{pintaAjustes();toast('El token no funcionó','bad')}};
+  const sub=POSTS.filter(p=>p.estado==='SUBIDO').length,cola=POSTS.filter(p=>p.estado==='PENDIENTE').length;
+  $('info').innerHTML='Biblioteca: <b>'+POSTS.length+'</b> posts ('+sub+' subidos, '+cola+' en cola).<br>El sonido y el botón "Publicar" siempre los hacés vos en TikTok.';
 }
 
-/* ---------- Inicio ---------- */
-async function cargar(){
-  try{POSTS=(await (await fetch('data/posts.json?'+Date.now())).json()).posts}
-  catch(e){$('sub').textContent='No se pudo cargar la biblioteca';return}
-  const sub=POSTS.filter(p=>p.estado==='SUBIDO');
-  const cola=POSTS.filter(p=>p.estado==='PENDIENTE').length;
-  $('sub').textContent=sub.length+' posts publicados · '+cola+' en cola · último '+(sub.map(p=>p.subido).sort().pop()||'—');
-  renderFiltros();renderBiblio();cargarChat();
+/* ---------- inicio ---------- */
+$('grid').innerHTML=Array.from({length:6},()=>'<div class="sk"></div>').join('');
+async function iniciar(){
+  try{POSTS=(await (await fetch('data/posts.json?'+Date.now())).json()).posts}catch(e){$('sub').textContent='No se pudo cargar la biblioteca';return}
+  const sub=POSTS.filter(p=>p.estado==='SUBIDO'),cola=POSTS.filter(p=>p.estado==='PENDIENTE').length;
+  $('sub').textContent=sub.length+' posts · '+cola+' en cola';
+  filtros();grilla();cargarPedidos();
 }
 if('serviceWorker'in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
-cargar();
+iniciar();
 </script>
 </body>
 </html>
