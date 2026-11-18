@@ -23,7 +23,7 @@ concurrency:
 jobs:
   auto:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - name: Decidir si toca publicar
         id: decidir
@@ -32,8 +32,8 @@ jobs:
           FORZAR: ${{ inputs.forzar }}
         run: |
           CONF=$(gh issue list --repo "${{ github.repository }}" --label config --state open --json body --jq '.[0].body // "{}"')
-          ACTIVO=$(echo "$CONF" | jq -r '.activo // false')
-          POR_DIA=$(echo "$CONF" | jq -r '.porDia // 2')
+          ACTIVO=$(echo "$CONF" | jq -r '.activo // false' 2>/dev/null || echo false)
+          POR_DIA=$(echo "$CONF" | jq -r '.porDia // 2' 2>/dev/null || echo 2)
           HORA=$(TZ=America/Argentina/Buenos_Aires date +%-H)
           case "$POR_DIA" in 1) HORAS="20";; 3) HORAS="9 14 20";; *) HORAS="13 20";; esac
           echo "activo=$ACTIVO porDia=$POR_DIA hora=$HORA horas=[$HORAS] forzar=$FORZAR"

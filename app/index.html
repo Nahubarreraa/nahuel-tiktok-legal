@@ -101,14 +101,14 @@ input:focus,textarea:focus{border-color:var(--ac)}
 .qty{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px}
 .qty small{color:var(--mut);font-size:13px;margin-right:4px}
 .qty .chip{width:44px;height:44px;padding:0;border-radius:50%;font-size:17px;font-weight:700}
-.x2{background:none;border:0;color:var(--mut);font-size:20px;padding:0 4px;margin-left:2px;line-height:1}
+.x2{background:none;border:0;color:var(--mut);font-size:22px;min-width:44px;min-height:44px;margin:-8px -8px -8px 0;line-height:1}
 .ok2{width:100%;margin-top:12px;background:var(--ok);color:#06210c;border:0;border-radius:14px;padding:14px;font-weight:800;font-size:16px}
 .mini{display:flex;gap:12px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
 .mini:first-of-type{border-top:0;padding-top:0}
 .mini img{width:72px;height:128px;object-fit:cover;border-radius:10px;flex:none;background:#000}
 .mini .tx{flex:1;min-width:0}
 .mini .q{font-size:14px;line-height:1.35;margin-bottom:6px}
-.lim{float:right;background:none;border:0;color:var(--ac);font-size:13px;text-decoration:underline;text-underline-offset:3px;padding:0;margin-top:-2px}
+.lim{float:right;background:none;border:0;color:var(--ac);font-size:13px;text-decoration:underline;text-underline-offset:3px;padding:12px 4px;margin:-12px 0}
 .req.out{animation:salir .3s ease forwards;overflow:hidden}
 @keyframes salir{to{opacity:0;transform:translateX(50px);max-height:0;margin:0;padding-top:0;padding-bottom:0;border-width:0}}
 .todo{text-align:center;padding:30px 10px;color:var(--mut);animation:up .5s both}
@@ -157,7 +157,7 @@ input:focus,textarea:focus{border-color:var(--ac)}
 .search input{padding-left:42px}
 .search::before{content:'🔍';position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:16px;opacity:.7}
 .fl{display:flex;gap:8px;margin:12px 0 0;overflow-x:auto;padding-bottom:4px}
-.chip{flex:none;background:var(--card2);border:1px solid var(--line);color:var(--tx);border-radius:20px;padding:8px 14px;font-size:14px;white-space:nowrap}
+.chip{min-height:42px;flex:none;background:var(--card2);border:1px solid var(--line);color:var(--tx);border-radius:20px;padding:8px 14px;font-size:14px;white-space:nowrap}
 .chip.on{background:var(--ac);color:#1a1405;border-color:var(--ac);font-weight:600}
 .panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s ease}
 .panel.on{grid-template-rows:1fr}
@@ -354,6 +354,7 @@ $('a-idea').onclick=()=>{if(!conectado)return go('ajustes');
   $('idea-ok').onclick=e=>{const t=$('idea').value.trim();if(!t)return;cerrarHoja();pedir(t,e,CANT)}};
 
 async function pedir(texto,ev,n){
+  if(ISSUES.some(i=>!OC.has(i.number)&&!analiza(i).hecho)){toast('Ya hay un pedido en marcha. Esperá a que termine.','bad');return}
   if(ev&&ev.clientX)confeti(ev.clientX,ev.clientY);
   n=n||1;
   const cuerpo=texto+(n>1?'\n\n(Cantidad: '+n+')':'')+(auto()?'':NO_SUBIR_TXT);
@@ -370,15 +371,30 @@ const OC=new Set((()=>{try{return JSON.parse(lsGet('ocultos','[]'))}catch(e){ret
 function ocultar(n){OC.add(n);lsSet('ocultos',JSON.stringify([...OC].slice(-80)))}
 const HORAS_VIEJO=36;
 
+const SITE_IMG='https://nahubarreraa.github.io/';
+function limpiaRes(r){
+  r=r&&typeof r==='object'?r:{};
+  const t=v=>typeof v==='string'?v:'';
+  return {id:Math.abs(parseInt(r.id,10))||0,titulo:t(r.titulo),frase:t(r.frase),caption:t(r.caption),
+    hashtags:Array.isArray(r.hashtags)?r.hashtags.map(String):[],sonido:t(r.sonido),subido:r.subido===true,
+    img:t(r.img).startsWith(SITE_IMG)?r.img:''};
+}
+const MIN_PERDIDO=40;
 function analiza(i){
   const cs=CACHE[i.number]||[];
   let paso=0,fin=null,ptxt='';
-  for(const c of cs){const m=/^\[\[paso:(\d)\]\]\s*(.*)/.exec(c.body);if(m){paso=Math.max(paso,+m[1]);ptxt=m[2]}else fin=c.body}
+  for(const c of cs){
+    if(!c.user||c.user.login!=='github-actions[bot]')continue;
+    const m=/^\[\[paso:(\d)\]\]\s*(.*)/.exec(c.body);
+    if(m){paso=Math.max(paso,+m[1]);ptxt=m[2]}else fin=c.body;
+  }
   const r=fin&&/<!--RESULT (.*?)-->/s.exec(fin);let res=null;
   if(r){try{res=JSON.parse(r[1])}catch(e){}}
-  const rs=res?(Array.isArray(res)?res:[res]):[];
-  const texto=fin?fin.replace(/<!--RESULT.*?-->/s,'').trim():'';
-  return {paso,ptxt,fin,rs,texto,error:!!(fin&&/^No pude completar/.test(fin)),hecho:!!fin};
+  const rs=res?(Array.isArray(res)?res:[res]).map(limpiaRes).filter(x=>x.id):[];
+  // un pedido sin respuesta pasados 40 minutos se cortó o se canceló: no lo dejamos clavado en pantalla
+  const perdido=!fin&&(Date.now()-new Date(i.created_at))>MIN_PERDIDO*60000;
+  const texto=perdido?'No pude completar el pedido. Se cortó o se canceló antes de terminar.':(fin?fin.replace(/<!--RESULT.*?-->/s,'').trim():'');
+  return {paso,ptxt,fin,rs,texto,error:perdido||!!(fin&&/^No pude completar/.test(fin)),hecho:!!fin||perdido};
 }
 const pedidoLimpio=b=>(b||'').replace(NO_SUBIR_TXT.trim(),'').replace(/\(Opción de la app[^)]*\)/,'').replace(/\(Cantidad: \d\)/,'').trim();
 const cantDe=b=>{const m=/\(Cantidad: (\d)\)/.exec(b||'');return m?+m[1]:1};
@@ -451,15 +467,23 @@ async function cargarPedidos(){
     await Promise.all(ISSUES.filter(i=>!OC.has(i.number)&&!viejo(i)).slice(0,3).map(async i=>{
       const a=CACHE[i.number];
       if(a&&analiza(i).hecho)return;
-      if(i.comments>0||i.state==='closed')CACHE[i.number]=await gh('/issues/'+i.number+'/comments?per_page=60');
+      if(i.comments>0||i.state==='closed')CACHE[i.number]=(await gh('/issues/'+i.number+'/comments?per_page=60')).filter(c=>c.user&&c.user.login==='github-actions[bot]');
     }));
     pintaPedidos();iniciarPoll();
-  }catch(e){estadoConexion(false);$('reqs').innerHTML='<div class="card err">'+esc(e.message)+'</div>'}
+    cargarPedidos.avisado=false;
+  }catch(e){
+    const m=String(e.message);
+    if(/^401/.test(m)){estadoConexion(false);pintaPedidos()}
+    else{
+      if(!cargarPedidos.avisado){cargarPedidos.avisado=true;toast('Sin conexión con GitHub por un momento. Reintento solo…','bad')}
+      clearTimeout(pollT);pollT=setTimeout(cargarPedidos,/^(403|429)/.test(m)?30000:10000);
+    }
+  }
 }
 function iniciarPoll(){
   clearTimeout(pollT);clearInterval(tickT);
   const vivo=ISSUES.some(i=>!OC.has(i.number)&&!analiza(i).hecho&&(Date.now()-new Date(i.created_at))<40*60000);
-  if(vivo){pollT=setTimeout(cargarPedidos,4000);tickT=setInterval(()=>{document.querySelectorAll('[data-seg]').forEach(e=>e.textContent=mmss((Date.now()-e.dataset.seg)/1000))},1000)}
+  if(vivo){pollT=setTimeout(cargarPedidos,6000);tickT=setInterval(()=>{document.querySelectorAll('[data-seg]').forEach(e=>e.textContent=mmss((Date.now()-e.dataset.seg)/1000))},1000)}
 }
 
 /* ---------- biblioteca ---------- */
