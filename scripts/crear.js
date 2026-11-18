@@ -148,6 +148,42 @@ async function esperarSitio(url) {
   return false;
 }
 
+
+const clampN = (n) => Math.max(1, Math.min(5, n || 1));
+const PALABRAS = { un: 1, uno: 1, dos: 2, tres: 3, cuatro: 4, cinco: 5 };
+// Cuántos posts pide el usuario: "(Cantidad: 3)" de la app, o texto libre ("subime 3", "tres posts").
+function cantidadDe(m) {
+  const t = /\(Cantidad: (\d)\)/.exec(m);
+  if (t) return clampN(+t[1]);
+  const w = /\b(un|uno|dos|tres|cuatro|cinco)\s+posts?\b/i.exec(m);
+  if (w) return clampN(PALABRAS[w[1].toLowerCase()]);
+  const r = /(?:sub[ií]me|cre[aá](?:me)?|hac[eé](?:me)?|arm[aá](?:me)?|mand[aá](?:me)?)\s+(?:de una\s+)?(\d)\b/i.exec(m) || /\b(\d)\s+posts?\b/i.exec(m);
+  return r ? clampN(+r[1]) : 1;
+}
+
+// Valida el post del plan; si falla pide otro al modelo (hasta 3 intentos).
+async function obtenerPost(plan, mensajes, existentes) {
+  const msgs = mensajes.slice();
+  for (let intento = 0; intento < 3; intento++) {
+    const p = plan.post || {};
+    let problema = '';
+    if (!p.frase || p.frase.length > 160) problema = 'La frase falta o supera 140 caracteres.';
+    else if (PLATA.test(p.frase + ' ' + (p.caption || ''))) problema = 'Habla de plata/dinero, está prohibido.';
+    else if (existentes.has(norm(p.frase))) problema = 'La frase ya fue publicada.';
+    else if (!/Compartilo/.test(p.caption || '') && p.tipo !== 'enigma') problema = 'Al caption le falta "Compartilo con el que ...".';
+    if (!problema) {
+      p.hashtags = (p.hashtags || []).map((h) => (h.startsWith('#') ? h : '#' + h)).slice(0, 6);
+      p.sonido = p.sonido || SONIDOS[0];
+      p.titulo = p.tipo === 'enigma' ? 'Leelo otra vez' : String(p.titulo || 'Sin título').slice(0, 60);
+      return p;
+    }
+    if (intento === 2) throw new Error('No logré una frase válida: ' + problema);
+    console.log('Reintento por:', problema);
+    msgs.push({ role: 'assistant', content: JSON.stringify(plan) }, { role: 'user', content: `Rechazado: ${problema} Devolvé el JSON completo corregido, con otra frase.` });
+    plan = await llamarModelo(msgs);
+  }
+}
+
 const responder = (texto) => { fs.writeFileSync(RESPUESTA, texto); console.log('\n--- RESPUESTA ---\n' + texto); };
 
 // Avisos de progreso: comentarios "[[paso:N]] texto" en el issue; la app los muestra como barra de pasos.
@@ -179,55 +215,75 @@ const COMO_ABRIR = '**TikTok ya lo tiene.** Abrí la app de TikTok (con la cuent
   console.log('Plan:', JSON.stringify(plan).slice(0, 600));
 
   if (plan.accion === 'crear') {
+    const N = cantidadDe(MENSAJE);
     const existentes = new Set(lib.flatMap((p) => p.frases.map(norm)));
-    for (let intento = 0; intento < 3; intento++) {
-      const p = plan.post || {};
-      let problema = '';
-      if (!p.frase || p.frase.length > 160) problema = 'La frase falta o supera 140 caracteres.';
-      else if (PLATA.test(p.frase + ' ' + (p.caption || ''))) problema = 'Habla de plata/dinero, está prohibido.';
-      else if (existentes.has(norm(p.frase))) problema = 'La frase ya fue publicada.';
-      else if (!/Compartilo/.test(p.caption || '') && p.tipo !== 'enigma') problema = 'Al caption le falta "Compartilo con el que ...".';
-      if (!problema) break;
-      if (intento === 2) throw new Error('No logré una frase válida: ' + problema);
-      console.log('Reintento por:', problema);
-      mensajes.push({ role: 'assistant', content: JSON.stringify(plan) }, { role: 'user', content: `Rechazado: ${problema} Devolvé el JSON completo corregido, con otra frase.` });
-      plan = await llamarModelo(mensajes);
+    let siguiente = Math.max(...lib.map((x) => x.id)) + 1;
+    const hechos = []; // { id, dir, p }
+    const base = mensajes[1].content;
+
+    for (let k = 0; k < N; k++) {
+      if (k > 0) {
+        await progreso(1, `Pensando la frase ${k + 1} de ${N}`);
+        const ya = hechos.map((h) => `- ${h.p.frase}`).join('\n');
+        mensajes[1] = { role: 'user', content: `${base}\n\nIMPORTANTE: en este mismo pedido ya armaste estas frases, hacé una DISTINTA (otro ángulo, otras palabras):\n${ya}` };
+        plan = await llamarModelo(mensajes.slice(0, 2));
+      }
+      const p = await obtenerPost(plan, mensajes.slice(0, 2), existentes);
+      existentes.add(norm(p.frase));
+      const id = siguiente++;
+      const dir = `posts/cola/${id}-${slug(p.tipo === 'enigma' ? p.frase.split(' ').slice(0, 4).join(' ') : p.titulo)}`;
+      fs.mkdirSync(path.join(ROOT, dir), { recursive: true });
+      const fondo = elegirFondo();
+      const q = envolver(p.frase.replace(/"/g, '\\"'));
+      fs.writeFileSync(path.join(ROOT, dir, 'cards.js'),
+        `window.CARDS=[\n{q:"${q}",${p.tipo === 'enigma' ? 'cta:"Leelo otra vez.",' : ''}a:"Mentalidad de Acero",bg:"../../../fondos/${fondo}"}\n];\n`);
+      await progreso(2, N > 1 ? `Armando la tarjeta y el video ${k + 1} de ${N}` : 'Armando la tarjeta y el video');
+      renderizar(dir);
+      guardarCola(id, dir, p, 'PENDIENTE');
+      hechos.push({ id, dir, p });
     }
-    const p = plan.post;
-    p.hashtags = (p.hashtags || []).map((h) => (h.startsWith('#') ? h : '#' + h)).slice(0, 6);
-    p.sonido = p.sonido || SONIDOS[0];
-    p.titulo = p.tipo === 'enigma' ? 'Leelo otra vez' : p.titulo.slice(0, 60);
 
-    const id = Math.max(...lib.map((x) => x.id)) + 1;
-    const dir = `posts/cola/${id}-${slug(p.tipo === 'enigma' ? p.frase.split(' ').slice(0, 4).join(' ') : p.titulo)}`;
-    fs.mkdirSync(path.join(ROOT, dir), { recursive: true });
-    const fondo = elegirFondo();
-    const q = envolver(p.frase.replace(/"/g, '\\"'));
-    fs.writeFileSync(path.join(ROOT, dir, 'cards.js'),
-      `window.CARDS=[\n{q:"${q}",${p.tipo === 'enigma' ? 'cta:"Leelo otra vez.",' : ''}a:"Mentalidad de Acero",bg:"../../../fondos/${fondo}"}\n];\n`);
-    await progreso(2, 'Armando la tarjeta y el video');
-    renderizar(dir);
-    guardarCola(id, dir, p, 'PENDIENTE');
-    await progreso(3, 'Guardando el post');
-    publicarCambios(`Post ${id} creado desde la app: ${p.titulo}`);
+    await progreso(3, N > 1 ? `Guardando los ${N} posts` : 'Guardando el post');
+    const ids = hechos.map((h) => h.id);
+    publicarCambios(N > 1 ? `Posts ${ids[0]}-${ids[N - 1]} creados desde la app` : `Post ${ids[0]} creado desde la app: ${hechos[0].p.titulo}`);
 
-    let estadoSubida = 'Quedó guardado en la cola (no lo subí a TikTok). Cuando quieras, decime "subí el ' + id + '".';
-    let subido = false;
-    if (!NO_SUBIR.test(MENSAJE)) {
-      await progreso(4, 'Enviando a TikTok');
-      const url = `${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/video.mp4`;
+    const enviar = !NO_SUBIR.test(MENSAJE);
+    const fallas = [];
+    const subidos = new Set();
+    if (enviar) {
+      const ult = hechos[hechos.length - 1];
+      const url = `${SITE}/${ult.dir.split('/').map(encodeURIComponent).join('/')}/video.mp4`;
+      await progreso(4, 'Esperando que el video esté listo en la web');
       console.log('Esperando que el sitio publique', url);
       if (!(await esperarSitio(url))) throw new Error('El video tardó demasiado en estar disponible en la web.');
-      const post = leerLib().find((x) => x.id === id);
-      await subirABorradores(post, SITE);
-      marcarSubido(id);
-      publicarCambios(`Post ${id} subido a borradores`);
-      estadoSubida = COMO_ABRIR;
-      subido = true;
+      for (let k = 0; k < hechos.length; k++) {
+        const h = hechos[k];
+        await progreso(4, N > 1 ? `Enviando a TikTok (${k + 1} de ${N})` : 'Enviando a TikTok');
+        try {
+          const post = leerLib().find((x) => x.id === h.id);
+          await subirABorradores(post, SITE);
+          marcarSubido(h.id);
+          subidos.add(h.id);
+        } catch (e) {
+          console.log('Falló el envío del post', h.id, e.message);
+          fallas.push({ id: h.id, error: e.message });
+          if (/spam_risk|too_many_pending|429/i.test(e.message)) break; // TikTok no deja mandar más
+        }
+        if (k < hechos.length - 1) await new Promise((res) => setTimeout(res, 4000));
+      }
+      if (subidos.size) publicarCambios(`Posts ${[...subidos].join(', ')} enviados a TikTok`);
     }
-    const img = `${SITE}/${dir.split('/').map(encodeURIComponent).join('/')}/tarjeta_1.jpg`;
-    const resultado = { id, titulo: p.titulo, frase: p.frase, caption: p.caption, hashtags: p.hashtags, sonido: p.sonido, subido, img };
-    responder(`Listo, armé el post.\n\n**#${id} · ${p.titulo}**\n> ${p.frase}\n\n${p.caption} ${p.hashtags.join(' ')}\n\n♪ Sonido sugerido: ${p.sonido}\n\n${estadoSubida}\n\n![tarjeta](${img})\n\n<!--RESULT ${JSON.stringify(resultado)}-->`);
+
+    const resultados = hechos.map((h) => ({
+      id: h.id, titulo: h.p.titulo, frase: h.p.frase, caption: h.p.caption, hashtags: h.p.hashtags, sonido: h.p.sonido,
+      subido: subidos.has(h.id), img: `${SITE}/${h.dir.split('/').map(encodeURIComponent).join('/')}/tarjeta_1.jpg`,
+    }));
+    const lista = resultados.map((r) => `**#${r.id} · ${r.titulo}**\n> ${r.frase}\n\n${r.caption} ${r.hashtags.join(' ')}\n\n♪ Sonido sugerido: ${r.sonido}`).join('\n\n---\n\n');
+    let estado;
+    if (!enviar) estado = `Quedó guardado en la cola (no lo mandé a TikTok). Cuando quieras, decime "subí el ${ids[0]}".`;
+    else if (!fallas.length) estado = COMO_ABRIR;
+    else estado = `${subidos.size ? COMO_ABRIR + '\n\n' : ''}**No pude mandar ${fallas.length === N ? 'ninguno' : 'todos'}:** ${fallas.map((f) => `#${f.id}`).join(', ')}. ${/spam_risk|too_many_pending/i.test(fallas[0].error) ? 'TikTok tiene demasiados envíos pendientes: publicá o descartá los avisos de tu Bandeja de entrada y volvé a pedirlos.' : fallas[0].error.slice(0, 200)}`;
+    responder(`${N > 1 ? `Listo, armé ${N} posts.` : 'Listo, armé el post.'}\n\n${lista}\n\n${estado}\n\n<!--RESULT ${JSON.stringify(N > 1 ? resultados : resultados[0])}-->`);
   } else if (plan.accion === 'resubir') {
     const post = lib.find((x) => x.id === Number(plan.resubir_id));
     if (!post) throw new Error('No encontré el post #' + plan.resubir_id);

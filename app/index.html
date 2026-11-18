@@ -97,6 +97,22 @@ input:focus,textarea:focus{border-color:var(--ac)}
 .cta span{font-size:30px}
 .link{display:block;margin:14px auto 0;background:none;border:0;color:var(--ac);font-size:14px;text-decoration:underline;text-underline-offset:4px;padding:8px}
 .hero{padding:26px 0 8px}
+.cta b{font-weight:800}
+.qty{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px}
+.qty small{color:var(--mut);font-size:13px;margin-right:4px}
+.qty .chip{width:44px;height:44px;padding:0;border-radius:50%;font-size:17px;font-weight:700}
+.x2{background:none;border:0;color:var(--mut);font-size:20px;padding:0 4px;margin-left:2px;line-height:1}
+.ok2{width:100%;margin-top:12px;background:var(--ok);color:#06210c;border:0;border-radius:14px;padding:14px;font-weight:800;font-size:16px}
+.mini{display:flex;gap:12px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.mini:first-of-type{border-top:0;padding-top:0}
+.mini img{width:72px;height:128px;object-fit:cover;border-radius:10px;flex:none;background:#000}
+.mini .tx{flex:1;min-width:0}
+.mini .q{font-size:14px;line-height:1.35;margin-bottom:6px}
+.lim{float:right;background:none;border:0;color:var(--ac);font-size:13px;text-decoration:underline;text-underline-offset:3px;padding:0;margin-top:-2px}
+.req.out{animation:salir .3s ease forwards;overflow:hidden}
+@keyframes salir{to{opacity:0;transform:translateX(50px);max-height:0;margin:0;padding-top:0;padding-bottom:0;border-width:0}}
+.todo{text-align:center;padding:30px 10px;color:var(--mut);animation:up .5s both}
+.todo .ck{display:inline-flex;width:54px;height:54px;border-radius:50%;background:var(--ok);color:#06210c;font-size:28px;align-items:center;justify-content:center;margin-bottom:10px;animation:pop .45s both}
 .act:hover{border-color:var(--ac)}
 .act.main b,.act.main small{display:block}
 .act.main small{margin-top:3px}
@@ -193,7 +209,8 @@ input:focus,textarea:focus{border-color:var(--ac)}
     <div id="aviso"></div>
     <div id="conBot" style="text-align:center"></div>
     <div class="hero in">
-      <button class="cta" id="a-sorp"><span>✨</span> Crear un post</button>
+      <button class="cta" id="a-sorp"><span>✨</span> <b id="ctatx">Crear un post</b></button>
+      <div class="qty" id="qty"></div>
       <div class="m" style="margin-top:14px">Armo la frase, la tarjeta y el video, y lo mando a TikTok.</div>
       <button class="link" id="a-idea">¿Querés algo en particular? Pedilo acá</button>
     </div>
@@ -321,15 +338,25 @@ function hoja(html){$('sheet').innerHTML='<div class="grab"></div>'+html;$('moda
 function cerrarHoja(){$('modal').classList.remove('on')}
 $('modal').onclick=e=>{if(e.target===$('modal'))cerrarHoja()};
 
-$('a-sorp').onclick=e=>{if(!conectado)return go('ajustes');pedir('Creá un post nuevo',e)};
-$('a-idea').onclick=()=>{if(!conectado)return go('ajustes');
-  hoja('<h2 style="margin-top:4px">¿Sobre qué?</h2><div class="m">Tocá un tema o escribí lo que quieras.</div><div class="topics">'+TEMAS.map((t,k)=>'<button class="chip" style="--i:'+k+'" data-t="'+esc(t)+'">'+esc(t)+'</button>').join('')+'</div><textarea id="idea" rows="3" placeholder="O contame tu idea…"></textarea><button class="btn big" id="idea-ok" style="margin-top:12px">Crear mi post</button>');
-  document.querySelectorAll('.topics .chip').forEach(b=>b.onclick=e=>{cerrarHoja();pedir('Creá un post nuevo sobre '+b.dataset.t.toLowerCase(),e)});
-  $('idea-ok').onclick=e=>{const t=$('idea').value.trim();if(!t)return;cerrarHoja();pedir(t,e)}};
+/* cantidad de posts por pedido */
+let CANT=Math.min(5,Math.max(1,+lsGet('cant','1')||1));
+function pintaCant(){
+  $('qty').innerHTML='<small>Cuántos:</small>'+[1,2,3,4,5].map(n=>'<button class="chip'+(CANT===n?' on':'')+'" data-n="'+n+'">'+n+'</button>').join('');
+  $('ctatx').textContent=CANT>1?'Crear '+CANT+' posts':'Crear un post';
+}
+$('qty').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;CANT=+b.dataset.n;lsSet('cant',String(CANT));pintaCant()};
+pintaCant();
 
-async function pedir(texto,ev){
+$('a-sorp').onclick=e=>{if(!conectado)return go('ajustes');pedir('Creá un post nuevo',e,CANT)};
+$('a-idea').onclick=()=>{if(!conectado)return go('ajustes');
+  hoja('<h2 style="margin-top:4px">¿Sobre qué?</h2><div class="m">Tocá un tema o escribí lo que quieras'+(CANT>1?' (se arman '+CANT+' posts)':'')+'.</div><div class="topics">'+TEMAS.map((t,k)=>'<button class="chip" style="--i:'+k+'" data-t="'+esc(t)+'">'+esc(t)+'</button>').join('')+'</div><textarea id="idea" rows="3" placeholder="O contame tu idea…"></textarea><button class="btn big" id="idea-ok" style="margin-top:12px">Crear '+(CANT>1?CANT+' posts':'mi post')+'</button>');
+  document.querySelectorAll('.topics .chip').forEach(b=>b.onclick=e=>{cerrarHoja();pedir('Creá un post nuevo sobre '+b.dataset.t.toLowerCase(),e,CANT)});
+  $('idea-ok').onclick=e=>{const t=$('idea').value.trim();if(!t)return;cerrarHoja();pedir(t,e,CANT)}};
+
+async function pedir(texto,ev,n){
   if(ev&&ev.clientX)confeti(ev.clientX,ev.clientY);
-  const cuerpo=texto+(auto()?'':NO_SUBIR_TXT);
+  n=n||1;
+  const cuerpo=texto+(n>1?'\n\n(Cantidad: '+n+')':'')+(auto()?'':NO_SUBIR_TXT);
   try{
     const i=await gh('/issues',{method:'POST',body:JSON.stringify({title:texto.slice(0,70),body:cuerpo,labels:['pedido']})});
     ISSUES.unshift({number:i.number,body:cuerpo,title:texto,state:'open',created_at:i.created_at,comments:0});
@@ -338,38 +365,51 @@ async function pedir(texto,ev){
   }catch(e){toast(esc(e.message),'bad')}
 }
 
+/* pedidos terminados: se pueden sacar de la pantalla */
+const OC=new Set((()=>{try{return JSON.parse(lsGet('ocultos','[]'))}catch(e){return[]}})());
+function ocultar(n){OC.add(n);lsSet('ocultos',JSON.stringify([...OC].slice(-80)))}
+const HORAS_VIEJO=36;
+
 function analiza(i){
   const cs=CACHE[i.number]||[];
-  let paso=0,fin=null;
-  for(const c of cs){const m=/^\[\[paso:(\d)\]\]/.exec(c.body);if(m)paso=Math.max(paso,+m[1]);else fin=c.body}
+  let paso=0,fin=null,ptxt='';
+  for(const c of cs){const m=/^\[\[paso:(\d)\]\]\s*(.*)/.exec(c.body);if(m){paso=Math.max(paso,+m[1]);ptxt=m[2]}else fin=c.body}
   const r=fin&&/<!--RESULT (.*?)-->/s.exec(fin);let res=null;
   if(r){try{res=JSON.parse(r[1])}catch(e){}}
+  const rs=res?(Array.isArray(res)?res:[res]):[];
   const texto=fin?fin.replace(/<!--RESULT.*?-->/s,'').trim():'';
-  return {paso,fin,res,texto,error:!!(fin&&/^No pude completar/.test(fin)),hecho:!!fin};
+  return {paso,ptxt,fin,rs,texto,error:!!(fin&&/^No pude completar/.test(fin)),hecho:!!fin};
 }
-const pedidoLimpio=b=>(b||'').replace(NO_SUBIR_TXT.trim(),'').replace(/\(Opción de la app[^)]*\)/,'').trim();
+const pedidoLimpio=b=>(b||'').replace(NO_SUBIR_TXT.trim(),'').replace(/\(Opción de la app[^)]*\)/,'').replace(/\(Cantidad: \d\)/,'').trim();
+const cantDe=b=>{const m=/\(Cantidad: (\d)\)/.exec(b||'');return m?+m[1]:1};
 const mmss=s=>Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0');
+const viejo=i=>analiza(i).hecho&&(Date.now()-new Date(i.created_at))>HORAS_VIEJO*3600000;
 
 function tarjeta(i,idx){
-  const a=analiza(i),t=pedidoLimpio(i.body||i.title),sub=!/NO subir a TikTok|no lo subas|solo arm/i.test(i.body||'');
-  let h='<div class="card req'+(SEEN.has(i.number)?'':' in')+'" style="--i:'+Math.min(idx,6)+'" data-n="'+i.number+'"><div class="top"><b>'+esc(t)+'</b>'+
-   (a.error?'<span class="badge bad">Falló</span>':a.hecho?'<span class="badge ok">Listo ✓</span>':'<span class="badge">En marcha</span>')+'</div>';
+  const a=analiza(i),t=pedidoLimpio(i.body||i.title),cant=cantDe(i.body),sub=!/NO subir a TikTok|no lo subas|solo arm/i.test(i.body||'');
+  let h='<div class="card req'+(SEEN.has(i.number)?'':' in')+'" style="--i:'+Math.min(idx,6)+'" data-n="'+i.number+'"><div class="top"><b>'+(cant>1?cant+' posts · ':'')+esc(t)+'</b>'+
+   (a.error?'<span class="badge bad">Falló</span>':a.hecho?'<span class="badge ok">Listo ✓</span>':'<span class="badge">En marcha</span>')+
+   (a.hecho?'<button class="x2" data-a="ok" data-n="'+i.number+'" aria-label="Sacar de la pantalla">✕</button>':'')+'</div>';
   if(!a.hecho){
     const nombres=sub?['Pienso la frase','Armo tarjeta y video','Guardo el post','Envío a TikTok']:['Pienso la frase','Armo tarjeta y video','Guardo el post','Listo'];
     const cur=Math.max(1,Math.min(4,a.paso||1));
     const seg=Math.max(0,(Date.now()-new Date(i.created_at))/1000);
+    const min=2+(cant-1)*2,max=4+(cant-1)*3;
     h+='<div class="steps">'+nombres.map((n,k)=>'<div class="step '+(k+1<cur?'done':k+1===cur?'cur':'')+'"><i>'+(k+1<cur?'✓':'')+'</i>'+n+'</div>').join('')+'</div>'+
-       '<div class="bar"><div style="width:'+(8+(cur-1)*24+Math.min(18,seg/10))+'%"></div></div><div class="est"><span>Suele tardar 2 a 4 minutos</span><span data-seg="'+new Date(i.created_at).getTime()+'">'+mmss(seg)+'</span></div>';
+       '<div class="bar"><div style="width:'+(8+(cur-1)*24+Math.min(18,seg/10))+'%"></div></div><div class="est"><span>'+esc(a.ptxt||'Empezando…')+'</span><span data-seg="'+new Date(i.created_at).getTime()+'">'+mmss(seg)+'</span></div><div class="m" style="margin-top:2px">Suele tardar '+min+' a '+max+' minutos. Podés cerrar la app, sigue solo.</div>';
   }else if(a.error){
-    h+='<div class="how err" style="border-color:#6b3a31;background:#25140f"><b style="color:var(--bad)">No pude terminarlo</b><div class="m">'+esc(a.texto.replace(/^No pude completar el pedido\.?/,'').replace(/`/g,'')).slice(0,220)+'</div></div><div class="rowb"><button class="btn" data-a="otra" data-n="'+i.number+'">Reintentar</button></div>';
-  }else if(a.res){
-    const r=a.res;
-    h+='<div class="res">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">“'+esc(r.frase)+'”</div><div class="rowb"><button class="btn sec" data-a="otra" data-n="'+i.number+'">↻ Otra frase</button></div></div></div>';
-    if(r.subido)h+='<div class="how"><b>✓ TikTok ya lo recibió. Te faltan 3 toques:</b><ol>'+
-      '<li><div>Copiá la descripción<div class="rowb"><button class="btn sec" data-a="cc" data-n="'+i.number+'">📋 Copiar descripción</button></div></div></li>'+
-      '<li><div>Abrí TikTok → <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> ✉️ → tocá el aviso de tu video<div class="rowb"><a class="btn" href="https://www.tiktok.com/" data-a="tt">Abrir TikTok</a></div></div></li>'+
-      '<li><div>Pegá la descripción, ponele el sonido y publicá'+(r.sonido?'<div class="rowb"><button class="btn sec" data-a="cs" data-n="'+i.number+'">♪ Copiar nombre del sonido</button></div><div class="m" style="margin-top:4px">Sugerido: '+esc(r.sonido)+'</div>':'')+'</div></li></ol></div>';
-    else h+='<div class="rowb"><button class="btn" data-a="subir" data-n="'+i.number+'" data-id="'+r.id+'">Mandarlo a TikTok</button></div>';
+    h+='<div class="how err" style="border-color:#6b3a31;background:#25140f"><b style="color:var(--bad)">No pude terminarlo</b><div class="m">'+esc(a.texto.replace(/^No pude completar el pedido\.?/,'').replace(/`/g,'')).slice(0,220)+'</div></div><div class="rowb"><button class="btn" data-a="reint" data-n="'+i.number+'">Reintentar</button></div>';
+  }else if(a.rs.length){
+    const enviados=a.rs.filter(r=>r.subido).length,uno=a.rs.length===1;
+    h+=a.rs.map((r,k)=>'<div class="mini">'+(r.img?'<img loading="lazy" src="'+esc(r.img)+'" alt="">':'')+'<div class="tx"><div class="q">'+(uno?'':'<b style="color:var(--ac)">#'+r.id+'</b> ')+'“'+esc(r.frase)+'”</div><div class="rowb" style="margin-top:6px">'+
+      (r.subido?'<button class="btn sec" data-a="cc" data-n="'+i.number+'" data-k="'+k+'">📋 Descripción</button><button class="btn sec" data-a="cs" data-n="'+i.number+'" data-k="'+k+'">♪ Sonido</button>':'<button class="btn" data-a="subir" data-n="'+i.number+'" data-id="'+r.id+'">Mandarlo a TikTok</button>')+
+      (uno?'<button class="btn sec" data-a="otra" data-n="'+i.number+'">↻ Otra frase</button>':'')+'</div>'+
+      (r.subido&&r.sonido?'<div class="m" style="margin-top:4px">♪ '+esc(r.sonido)+'</div>':'')+'</div></div>').join('');
+    if(enviados)h+='<div class="how"><b>✓ TikTok ya recibió '+(enviados>1?'los '+enviados+' videos':'el video')+'. Ahora vos:</b><ol>'+
+      '<li><div>Abrí TikTok → <b style="display:inline;color:var(--tx)">Bandeja de entrada</b> ✉️<div class="rowb"><a class="btn" href="https://www.tiktok.com/" data-a="tt">Abrir TikTok</a></div></div></li>'+
+      '<li><div>Tocá '+(enviados>1?'cada aviso':'el aviso')+', pegá la descripción, ponele el sonido y publicá.'+(enviados>1?'<div class="m" style="margin-top:4px">Cada video llegó como un aviso distinto. Los botones de arriba copian la descripción y el sonido de cada uno.</div>':'')+'</div></li></ol></div>'+
+      '<button class="ok2" data-a="ok" data-n="'+i.number+'">✓ '+(enviados>1?'Ya los publiqué':'Ya lo publiqué')+'</button>';
+    else h+='<button class="ok2" style="background:var(--card2);color:var(--tx)" data-a="ok" data-n="'+i.number+'">Listo, sacar de la pantalla</button>';
   }else{
     h+='<div class="ans">'+esc(a.texto).replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>').replace(/\n/g,'<br>')+'</div>';
   }
@@ -378,39 +418,47 @@ function tarjeta(i,idx){
 function pintaPedidos(){
   const el=$('reqs');
   if(!conectado){el.innerHTML='<div class="empty">Cuando conectes la app, tus pedidos aparecen acá.</div>';return}
-  if(!ISSUES.length){el.innerHTML='<div class="empty in">Todavía no pediste nada.<br>Tocá <b>Crear un post</b> ✨</div>';return}
-  const raw=ISSUES.slice(0,3).map(tarjeta).join('');
+  const vis=ISSUES.filter(i=>!OC.has(i.number)&&!viejo(i)).slice(0,3);
+  if(!vis.length){const h='<div class="todo"><div class="ck">✓</div><div><b style="color:var(--tx)">Todo al día</b></div><div class="m">No tenés nada pendiente.<br>Tocá <b>Crear un post</b> cuando quieras más.</div></div>';
+    if(pintaPedidos.last!==h){pintaPedidos.last=h;el.innerHTML=h}return}
+  const raw=vis.map(tarjeta).join('');
   const norm=raw.replace(/ in"/g,'"').replace(/(\d+:\d\d)<\/span>/g,'0:00</span>').replace(/width:[\d.]+%/g,'');
-  ISSUES.slice(0,3).forEach(i=>SEEN.add(i.number));
-  if(norm!==pintaPedidos.last){pintaPedidos.last=norm;el.innerHTML='<h3>TUS PEDIDOS</h3>'+raw}
-  const prev=window.__hecho||{};ISSUES.forEach(i=>{const h=analiza(i).hecho;if(h&&prev[i.number]===false){const c=document.querySelector('[data-n="'+i.number+'"]');if(c){const b=c.getBoundingClientRect();confeti(b.left+b.width/2,b.top+40)}}prev[i.number]=h});window.__hecho=prev;
+  vis.forEach(i=>SEEN.add(i.number));
+  const hechos=vis.filter(i=>analiza(i).hecho).length;
+  if(norm!==pintaPedidos.last){pintaPedidos.last=norm;el.innerHTML='<h3>TUS PEDIDOS'+(hechos>1?'<button class="lim" data-a="limpiar">Limpiar terminados</button>':'')+'</h3>'+raw}
+  const prev=window.__hecho||{};vis.forEach(i=>{const h=analiza(i).hecho;if(h&&prev[i.number]===false){const c=document.querySelector('[data-n="'+i.number+'"]');if(c){const b=c.getBoundingClientRect();confeti(b.left+b.width/2,b.top+40)}}prev[i.number]=h});window.__hecho=prev;
 }
 $('reqs').onclick=async e=>{
   if(e.target.closest('[data-a="tt"]')){abrirTikTok(e);return}
   const b=e.target.closest('button');if(!b)return;
-  const i=ISSUES.find(x=>x.number==b.dataset.n),a=i&&analiza(i);
-  if(b.dataset.a==='cf')copiar(a.res.frase,'Frase copiada');
-  if(b.dataset.a==='cc')copiar(a.res.caption+' '+a.res.hashtags.join(' '),'Descripción copiada');
-  if(b.dataset.a==='cs')copiar(a.res.sonido,'Sonido copiado: buscalo en TikTok');
+  if(b.dataset.a==='limpiar'){
+    const quitar=[...document.querySelectorAll('.req')].filter(c=>{const i=ISSUES.find(x=>x.number==c.dataset.n);return i&&analiza(i).hecho});
+    quitar.forEach(c=>c.classList.add('out'));
+    setTimeout(()=>{quitar.forEach(c=>ocultar(+c.dataset.n));pintaPedidos()},300);return}
+  const i=ISSUES.find(x=>x.number==b.dataset.n),a=i&&analiza(i),r=a&&a.rs[+b.dataset.k||0];
+  if(b.dataset.a==='ok'){const c=b.closest('.req');if(c)c.classList.add('out');setTimeout(()=>{ocultar(+b.dataset.n);pintaPedidos()},300);return}
+  if(b.dataset.a==='cc'&&r)copiar(r.caption+' '+r.hashtags.join(' '),'Descripción copiada');
+  if(b.dataset.a==='cs'&&r)copiar(r.sonido,'Sonido copiado: buscalo en TikTok');
   if(b.dataset.a==='subir')pedir('Subí el post '+b.dataset.id,e);
-  if(b.dataset.a==='otra')pedir(pedidoLimpio(i.body),e);
+  if(b.dataset.a==='otra')pedir(pedidoLimpio(i.body),e,1);
+  if(b.dataset.a==='reint')pedir(pedidoLimpio(i.body),e,cantDe(i.body));
 };
 async function cargarPedidos(){
   if(!tok()){estadoConexion(false);pintaPedidos();return}
   try{
-    ISSUES=await gh('/issues?labels=pedido&state=all&per_page=5&sort=created&direction=desc');
+    ISSUES=await gh('/issues?labels=pedido&state=all&per_page=10&sort=created&direction=desc');
     estadoConexion(true);cargarConf();
-    await Promise.all(ISSUES.map(async i=>{
+    await Promise.all(ISSUES.filter(i=>!OC.has(i.number)&&!viejo(i)).slice(0,3).map(async i=>{
       const a=CACHE[i.number];
       if(a&&analiza(i).hecho)return;
-      if(i.comments>0||i.state==='closed')CACHE[i.number]=await gh('/issues/'+i.number+'/comments?per_page=30');
+      if(i.comments>0||i.state==='closed')CACHE[i.number]=await gh('/issues/'+i.number+'/comments?per_page=60');
     }));
     pintaPedidos();iniciarPoll();
   }catch(e){estadoConexion(false);$('reqs').innerHTML='<div class="card err">'+esc(e.message)+'</div>'}
 }
 function iniciarPoll(){
   clearTimeout(pollT);clearInterval(tickT);
-  const vivo=ISSUES.some(i=>!analiza(i).hecho&&(Date.now()-new Date(i.created_at))<25*60000);
+  const vivo=ISSUES.some(i=>!OC.has(i.number)&&!analiza(i).hecho&&(Date.now()-new Date(i.created_at))<40*60000);
   if(vivo){pollT=setTimeout(cargarPedidos,4000);tickT=setInterval(()=>{document.querySelectorAll('[data-seg]').forEach(e=>e.textContent=mmss((Date.now()-e.dataset.seg)/1000))},1000)}
 }
 
