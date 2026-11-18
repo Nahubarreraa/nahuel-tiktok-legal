@@ -357,11 +357,11 @@ Cuando el usuario diga "subí": tomá el primer post con estado `SUBIDO 2026-10-
 
 | # | Carpeta | Título | Descripción | Formato | Sonido pedido | Estado |
 |---|---|---|---|---|---|---|
-| 189 | `posts/cola/189-del-otro-lado` | Del otro lado | Cruzalo. Compartilo con el que está evitando algo. #mentalidad #disciplina #valentia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
-| 190 | `posts/cola/190-compararte` | Compará con tu ayer | Superá tu ayer. Compartilo con el que se compara con todos. #mentalidad #disciplina #crecimiento #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | PENDIENTE |
-| 191 | `posts/cola/191-dormir-excusas` | Leelo otra vez | Despertá hoy. #mentalidad #disciplina #excusas #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
-| 192 | `posts/cola/192-despues-emocion` | Cuando se fue la emoción | Cumplí igual. Compartilo con el que empieza con todo y abandona. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | PENDIENTE |
-| 193 | `posts/cola/193-ya-tenes-info` | Empezá con lo que tenés | Empezá ya. Compartilo con el que sigue investigando antes de actuar. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | PENDIENTE |
+| 189 | `posts/cola/189-del-otro-lado` | Del otro lado | Cruzalo. Compartilo con el que está evitando algo. #mentalidad #disciplina #valentia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | SUBIDO 2026-11-18 |
+| 190 | `posts/cola/190-compararte` | Compará con tu ayer | Superá tu ayer. Compartilo con el que se compara con todos. #mentalidad #disciplina #crecimiento #motivacion #parati #fyp | video | Kiss the Rain - Yiruma | SUBIDO 2026-11-18 |
+| 191 | `posts/cola/191-dormir-excusas` | Leelo otra vez | Despertá hoy. #mentalidad #disciplina #excusas #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | SUBIDO 2026-11-18 |
+| 192 | `posts/cola/192-despues-emocion` | Cuando se fue la emoción | Cumplí igual. Compartilo con el que empieza con todo y abandona. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Comptine d'un autre été - Yann Tiersen | SUBIDO 2026-11-18 |
+| 193 | `posts/cola/193-ya-tenes-info` | Empezá con lo que tenés | Empezá ya. Compartilo con el que sigue investigando antes de actuar. #mentalidad #disciplina #accion #motivacion #parati #fyp | video | Nuvole Bianche - Einaudi | SUBIDO 2026-11-18 |
 | 194 | `posts/cola/194-limites-opiniones` | Tus límites | Desafialos. Compartilo con el que dice que no puede. #mentalidad #disciplina #limites #motivacion #parati #fyp | video | River Flows in You - Yiruma | PENDIENTE |
 | 195 | `posts/cola/195-sin-aplausos` | Sin aplausos | Construí en silencio. Compartilo con el que trabaja sin que lo vean. #mentalidad #disciplina #constancia #motivacion #parati #fyp | video | Experience - Ludovico Einaudi | PENDIENTE |
 | 196 | `posts/cola/196-lo-que-duele` | Leelo otra vez | Aguantá. #mentalidad #disciplina #resiliencia #reflexion #frasesmotivadoras | video enigma | Hallelujah - piano | PENDIENTE |
