@@ -1,5 +1,5 @@
 {
- "generado": "2026-11-17T21:51:53.838Z",
+ "generado": "2026-11-18T21:00:44.284Z",
  "posts": [
   {
    "id": 1,
@@ -6781,6 +6781,352 @@
    "lote": "Lote 2026-11-17 tarde (183-188, piano + frases que interpelan)",
    "frases": [
     "Lo difícil no es empezar. Es volver al día siguiente."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 189,
+   "carpeta": "posts/cola/189-del-otro-lado",
+   "titulo": "Del otro lado",
+   "caption": "Cruzalo. Compartilo con el que está evitando algo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#valentia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Valentía"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "Tu futuro te espera del otro lado de lo que hoy evitás."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 190,
+   "carpeta": "posts/cola/190-compararte",
+   "titulo": "Compará con tu ayer",
+   "caption": "Superá tu ayer. Compartilo con el que se compara con todos.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#crecimiento",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "El que se compara con otros pierde. El que se compara con su ayer, gana."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 191,
+   "carpeta": "posts/cola/191-dormir-excusas",
+   "titulo": "Leelo otra vez",
+   "caption": "Despertá hoy.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#excusas",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Excusas"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "Dormir en tus excusas se siente bien hasta que despertás."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 192,
+   "carpeta": "posts/cola/192-despues-emocion",
+   "titulo": "Cuando se fue la emoción",
+   "caption": "Cumplí igual. Compartilo con el que empieza con todo y abandona.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "Disciplina es cumplir lo que dijiste cuando ya se fue la emoción con la que lo dijiste."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 193,
+   "carpeta": "posts/cola/193-ya-tenes-info",
+   "titulo": "Empezá con lo que tenés",
+   "caption": "Empezá ya. Compartilo con el que sigue investigando antes de actuar.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#accion",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Nuvole Bianche - Einaudi",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "No necesitás más información. Necesitás empezar con la que ya tenés."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 194,
+   "carpeta": "posts/cola/194-limites-opiniones",
+   "titulo": "Tus límites",
+   "caption": "Desafialos. Compartilo con el que dice que no puede.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#limites",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "River Flows in You - Yiruma",
+   "temas": [
+    "Disciplina"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "Tus límites casi siempre son opiniones que nunca desafiaste."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 195,
+   "carpeta": "posts/cola/195-sin-aplausos",
+   "titulo": "Sin aplausos",
+   "caption": "Construí en silencio. Compartilo con el que trabaja sin que lo vean.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#constancia",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Experience - Ludovico Einaudi",
+   "temas": [
+    "Disciplina",
+    "Constancia"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "El silencio de nadie aplaudiéndote es donde se construyen los campeones."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 196,
+   "carpeta": "posts/cola/196-lo-que-duele",
+   "titulo": "Leelo otra vez",
+   "caption": "Aguantá.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#resiliencia",
+    "#reflexion",
+    "#frasesmotivadoras"
+   ],
+   "formato": "video enigma",
+   "sonido": "Hallelujah - piano",
+   "temas": [
+    "Disciplina",
+    "Resiliencia"
+   ],
+   "estilos": [
+    "Enigma (leelo otra vez)"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "Lo que hoy duele es lo que mañana te sostiene."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 197,
+   "carpeta": "posts/cola/197-voto-confianza",
+   "titulo": "Un voto de confianza",
+   "caption": "Cumplite hoy. Compartilo con el que dejó de confiar en sí mismo.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#confianza",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Kiss the Rain - Yiruma",
+   "temas": [
+    "Disciplina",
+    "Confianza"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "Cada día que cumplís es un voto de confianza hacia vos mismo."
+   ],
+   "archivos": [
+    "tarjeta_1.jpg",
+    "video.mp4"
+   ]
+  },
+  {
+   "id": 198,
+   "carpeta": "posts/cola/198-empujala",
+   "titulo": "Empujala vos",
+   "caption": "Movete. Compartilo con el que espera que algo cambie.",
+   "hashtags": [
+    "#mentalidad",
+    "#disciplina",
+    "#accion",
+    "#motivacion",
+    "#parati",
+    "#fyp"
+   ],
+   "formato": "video",
+   "sonido": "Comptine d'un autre été - Yann Tiersen",
+   "temas": [
+    "Disciplina",
+    "Acción"
+   ],
+   "estilos": [
+    "Frase directa"
+   ],
+   "tipo": "video",
+   "borrador": false,
+   "estado": "PENDIENTE",
+   "subido": null,
+   "lote": "Lote 2026-11-18 (189-198, piano + frases que interpelan)",
+   "frases": [
+    "Dejá de esperar que la vida te empuje. Empujala vos."
    ],
    "archivos": [
     "tarjeta_1.jpg",
